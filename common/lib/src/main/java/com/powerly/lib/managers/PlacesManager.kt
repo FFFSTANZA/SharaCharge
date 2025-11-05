@@ -9,12 +9,15 @@ import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.AutocompletePrediction
 import com.google.android.libraries.places.api.model.AutocompleteSessionToken
 import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.model.RectangularBounds
 import com.google.android.libraries.places.api.net.FetchPlaceRequest
 import com.google.android.libraries.places.api.net.FindAutocompletePredictionsRequest
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.SharaSpot.core.model.location.MyAddress
 import com.SharaSpot.core.model.location.Target
 import com.SharaSpot.core.network.DeviceHelper
+import com.powerly.lib.data.TamilNaduConstants
+import com.google.android.gms.maps.model.LatLng
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.core.annotation.Single
@@ -53,6 +56,7 @@ class PlacesManager(
 
     /**
      * Performs autocomplete queries, returning a list of places.
+     * Biased to Tamil Nadu region for better local search results.
      *
      * @param query The search query.
      * @param onSuccess Called when the query successfully completes, providing a list of places.
@@ -67,10 +71,19 @@ class PlacesManager(
 
         // Create a new token for the autocomplete session.
         val token = AutocompleteSessionToken.newInstance()
+
+        // Define Tamil Nadu bounds for location bias
+        val tamilNaduBounds = RectangularBounds.newInstance(
+            LatLng(TamilNaduConstants.Bounds.SOUTH_LATITUDE, TamilNaduConstants.Bounds.WEST_LONGITUDE),
+            LatLng(TamilNaduConstants.Bounds.NORTH_LATITUDE, TamilNaduConstants.Bounds.EAST_LONGITUDE)
+        )
+
         val autocompletePlacesRequest = FindAutocompletePredictionsRequest
             .builder()
             .setSessionToken(token)
             .setQuery(query)
+            .setLocationBias(tamilNaduBounds)  // Bias results to Tamil Nadu
+            .setCountries("IN")  // Restrict to India
             .build()
 
         // Perform autocomplete query
