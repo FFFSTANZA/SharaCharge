@@ -14,6 +14,7 @@ import com.SharaSpot.core.model.SharaSpot.PowerSource
 import com.SharaSpot.lib.managers.UserLocationManager
 import com.SharaSpot.lib.usecases.LocationServicesUseCase
 import com.SharaSpot.ui.map.initMapViewState
+import com.powerly.lib.data.TamilNaduConstants
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.launch
 
@@ -27,9 +28,11 @@ class MyMapViewModel (
 
     val userLocation = mutableStateOf<Target?>(null)
 
+    // Initialize map with Tamil Nadu default location (Chennai)
+    // This ensures the map always shows Tamil Nadu region even without user location
     val mapState = initMapViewState(
-        initialLocation = userLocation.value,
-        zoom = 11f,
+        initialLocation = userLocation.value ?: TamilNaduConstants.DEFAULT_CENTER,
+        zoom = TamilNaduConstants.Zoom.CITY_LEVEL,
         observeLocation = false,
         scrollGesturesEnabled = true,
         zoomGesturesEnabled = true,
@@ -68,8 +71,9 @@ class MyMapViewModel (
 
 
     suspend fun loadNearPowerSources() {
-        val target = userLocation.value ?: return
-        Log.v(TAG, "loadNearPowerSources - ($target.latitude, $target.longitude)")
+        // Use user location if available, otherwise default to Tamil Nadu center (Chennai)
+        val target = userLocation.value ?: TamilNaduConstants.DEFAULT_CENTER
+        Log.v(TAG, "loadNearPowerSources - (${target.latitude}, ${target.longitude})")
         powerSourcesMap.clear()
         nearPowerSources.clear()
         val result = powerSourceRepository.getNearPowerSources(target.latitude, target.longitude)
@@ -117,6 +121,9 @@ class MyMapViewModel (
         if (location != null) {
             userLocation.value = location
             mapState.initCenterLocation(location)
+        } else {
+            // Fallback to Tamil Nadu default location if user location unavailable
+            mapState.initCenterLocation(TamilNaduConstants.DEFAULT_CENTER)
         }
     }
 
