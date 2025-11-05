@@ -38,7 +38,7 @@ private fun ShowBalanceScreenPreview() {
     AppTheme {
         ShowBalanceScreenContent(
             balanceState = ApiStatus.Success(balanceItems),
-            currency = "SAR",
+            currency = "INR",
             balance = 150.0,
             onClose = {},
             onAddBalance = {}

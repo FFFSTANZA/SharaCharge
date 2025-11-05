@@ -98,7 +98,7 @@ private val powerSource = PowerSource(
     price = 3.0,
     rating = 3.53,
 ).apply {
-    currency = "USD"
+    currency = "INR"
 }
 
 @Preview

@@ -69,7 +69,7 @@ import kotlinx.coroutines.launch
 private fun ChargingScreenPreview() {
     val session = Session(
         id = "123", appFees = 25.0,
-        quantity = "30", currency = "SAR",
+        quantity = "30", currency = "INR",
         chargePoint = PowerSource(
             id = "410",
             price = 1.5,

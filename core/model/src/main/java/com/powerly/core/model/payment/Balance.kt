@@ -12,7 +12,7 @@ data class BalanceItem(
     @SerializedName("bonus") val bonus: Double = 0.0,
     @SerializedName("popular") val popular: Boolean = false
 ) {
-    var currency: String = ""
+    var currency: String = "INR"
     val totalBalance: Double get() = price + bonus
     val vat = 0.0
     val active: Boolean get() = true

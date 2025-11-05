@@ -86,7 +86,7 @@ private fun MapScreenPreview() {
                 pageCount = { 0 }
             ),
             balance = { "40.0" },
-            currency = { "SAR" },
+            currency = { "INR" },
             selectedPowerSource = { null },
             nearPowerSources = { nearSources },
             uiEvents = {},

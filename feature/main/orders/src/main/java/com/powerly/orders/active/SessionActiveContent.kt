@@ -49,7 +49,7 @@ private fun SessionActiveScreenPreview() {
     val sessions = listOf(
         Session(
             id = "3387",
-            currency = "SR",
+            currency = "INR",
             price = 30.0,
             chargePoint = PowerSource(title = "station 1"),
         )
@@ -61,7 +61,7 @@ private fun SessionActiveScreenPreview() {
 
     AppTheme {
         SessionActiveScreenContent(
-            currency = "SAR",
+            currency = "INR",
             sessionsFlow = sessionsFlow,
             onItemClick = {},
             onStopCharging = {}

@@ -27,7 +27,7 @@ private fun SectionBalancePreview() {
     AppTheme {
         SectionBalance(
             balance = "200",
-            currency = "SAR",
+            currency = "INR",
             onClick = {},
             modifier = Modifier.width(IntrinsicSize.Min)
         )

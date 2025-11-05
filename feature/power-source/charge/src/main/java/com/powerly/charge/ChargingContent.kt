@@ -73,7 +73,7 @@ private fun ChargingScreenPreview() {
         quantity = "30",
         chargePoint = PowerSource(price = 1.5)
     ).apply {
-        currency = "SAR"
+        currency = "INR"
     }
     AppTheme {
         ChargingScreenContent(

@@ -10,7 +10,7 @@ data class Wallet(
     @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String,
     @SerializedName("balance") val balance: Double,
-    @SerializedName("currency") var currency: String = "",
+    @SerializedName("currency") var currency: String = "INR",
     @SerializedName("type") val type: String = "",
     @SerializedName("payable") val payable: Boolean = false,
     @SerializedName("rechargeable") val rechargeable: Boolean = false,
