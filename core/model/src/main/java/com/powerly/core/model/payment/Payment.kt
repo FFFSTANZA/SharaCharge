@@ -3,10 +3,10 @@ package com.SharaSpot.core.model.payment
 import com.SharaSpot.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
-class CardsResponse : BaseResponse<List<StripCard>>()
+class CardsResponse : BaseResponse<List<PaymentCard>>()
 class CardUpdateResponse : BaseResponse<Any>()
 
-data class StripCard(
+data class PaymentCard(
     @SerializedName("id") val id: String,
     @SerializedName("card_number") val cardNumber: String?,
     @SerializedName("payment_option") val paymentOption: String,
@@ -34,5 +34,3 @@ data class StripCard(
         const val PAYMENT_STATUS = "paymentStatus"
     }
 }
-
-data class AddCardBody(val token: String)

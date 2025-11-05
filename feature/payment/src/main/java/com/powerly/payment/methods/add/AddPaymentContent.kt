@@ -24,7 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.dialogs.loading.ScreenState
@@ -35,9 +34,6 @@ import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.theme.AppTheme
 import com.SharaSpot.ui.theme.MyColors
 import com.SharaSpot.ui.theme.myBorder
-import com.stripe.android.model.PaymentMethodCreateParams
-import com.stripe.android.view.CardInputListener
-import com.stripe.android.view.CardInputWidget
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -60,12 +56,12 @@ private fun AddPaymentScreenPreview() {
 internal fun AddPaymentScreenContent(
     screenState: ScreenState = rememberScreenState(),
     cardNumber: Flow<String>,
-    onAddCard: (PaymentMethodCreateParams) -> Unit,
+    onAddCard: (Map<String, Any>) -> Unit,
     onScanCard: () -> Unit,
     onClose: () -> Unit
 ) {
     var cardParms by remember {
-        mutableStateOf<PaymentMethodCreateParams?>(null)
+        mutableStateOf<Map<String, Any>?>(null)
     }
 
     MyScreen(
@@ -89,102 +85,24 @@ internal fun AddPaymentScreenContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(
-                        vertical = 8.dp,
+                        vertical = 16.dp,
                         horizontal = 16.dp
                     )
             ) {
-                if (isPreview().not()) CardInput(
-                    cardNumber = cardNumber,
-                    onFillCard = { cardParms = it }
-                ) else Text(
-                    text = "Card Input Preview",
-                    modifier = Modifier
-                        .padding(vertical = 16.dp)
-                        .align(Alignment.CenterStart)
+                Text(
+                    text = "Payment card input removed - Stripe integration disabled",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.tertiary,
+                    modifier = Modifier.align(Alignment.CenterStart)
                 )
             }
         }
         Spacer(Modifier.height(8.dp))
-        ButtonLarge(
-            text = stringResource(R.string.payment_card_add),
-            color = Color.White,
-            modifier = Modifier.fillMaxWidth(),
-            background = MaterialTheme.colorScheme.secondary,
-            disabledBackground = MaterialTheme.colorScheme.secondary,
-            enabled = { cardParms != null },
-            onClick = { cardParms?.let { onAddCard(it) } }
-        )
-        ButtonLarge(
-            text = stringResource(R.string.payment_card_scan),
-            color = MaterialTheme.colorScheme.secondary,
-            layoutDirection = LayoutDirection.Rtl,
-            icon = R.drawable.card_scanner,
-            modifier = Modifier.fillMaxWidth(),
-            textStyle = MaterialTheme.typography.bodyLarge.copy(
-                fontWeight = FontWeight.Medium
-            ),
-            background = MyColors.grey200,
-            onClick = onScanCard
+        Text(
+            text = "Card payment functionality has been removed. Please integrate a new payment provider.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.tertiary,
+            modifier = Modifier.padding(horizontal = 8.dp)
         )
     }
-}
-
-@Composable
-private fun CardInput(
-    cardNumber: Flow<String>,
-    onFillCard: (PaymentMethodCreateParams?) -> Unit
-) {
-    var inputWidget by remember { mutableStateOf<CardInputWidget?>(null) }
-    var cardComplete by remember { mutableStateOf(false) }
-    var cvcComplete by remember { mutableStateOf(false) }
-    var codeComplete by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) {
-        cardNumber.collect { card ->
-            Log.v(TAG, "cardNumber = $card")
-            inputWidget?.setCardNumber(card)
-            inputWidget?.requestFocus()
-        }
-    }
-
-    LaunchedEffect(
-        cardComplete,
-        cvcComplete,
-        codeComplete
-    ) {
-        if (cardComplete && cvcComplete && codeComplete) {
-            inputWidget?.paymentMethodCreateParams?.let {
-                onFillCard(it)
-            }
-        } else onFillCard(null)
-    }
-
-    AndroidView(
-        modifier = Modifier.fillMaxWidth(),
-        factory = { context ->
-            CardInputWidget(context).apply {
-                inputWidget = this
-                postalCodeEnabled = false
-                setCardInputListener(object : CardInputListener {
-                    override fun onCardComplete() {
-                        cardComplete = true
-                    }
-
-                    override fun onCvcComplete() {
-                        cvcComplete = true
-                    }
-
-                    override fun onExpirationComplete() {
-                        codeComplete = true
-                    }
-
-                    override fun onFocusChange(focusField: CardInputListener.FocusField) {
-                    }
-
-                    override fun onPostalCodeComplete() {
-                    }
-
-                })
-            }
-        }
-    )
 }

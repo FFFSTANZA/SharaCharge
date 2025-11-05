@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.SharaSpot.core.model.payment.BalanceItem
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
@@ -52,7 +52,7 @@ private fun AddBalanceScreenPreview() {
         popular = true
     ).apply { currency = "SAR" }
 
-    val stripCard = StripCard(
+    val paymentCard = PaymentCard(
         paymentOption = "Visa",
         cardNumber = "42424",
         id = "1",
@@ -62,7 +62,7 @@ private fun AddBalanceScreenPreview() {
     AppTheme {
         AddBalanceScreenContent(
             balanceItem = balanceItem,
-            paymentMethod = { stripCard },
+            paymentMethod = { paymentCard },
             onClose = {},
             onAddBalance = {},
             onSelectMethod = {}
@@ -74,7 +74,7 @@ private fun AddBalanceScreenPreview() {
 internal fun AddBalanceScreenContent(
     screenState: ScreenState = rememberScreenState(),
     balanceItem: BalanceItem,
-    paymentMethod: () -> StripCard?,
+    paymentMethod: () -> PaymentCard?,
     onSelectMethod: () -> Unit,
     onAddBalance: () -> Unit,
     onClose: () -> Unit
@@ -207,7 +207,7 @@ private fun SectionDetail(balanceItem: BalanceItem) {
 
 @Composable
 private fun SectionPaymentMethod(
-    payment: () -> StripCard?,
+    payment: () -> PaymentCard?,
     changeMethod: () -> Unit,
     modifier: Modifier = Modifier,
     canChange: Boolean = true,
