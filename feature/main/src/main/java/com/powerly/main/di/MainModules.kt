@@ -1,9 +1,9 @@
-package com.powerly.main.di
+package com.SharaSpot.main.di
 
-import com.powerly.account.di.AccountModule
-import com.powerly.home.di.HomeModule
-import com.powerly.orders.di.OrdersModule
-import com.powerly.scan.di.ScanModule
+import com.SharaSpot.account.di.AccountModule
+import com.SharaSpot.home.di.HomeModule
+import com.SharaSpot.orders.di.OrdersModule
+import com.SharaSpot.scan.di.ScanModule
 import org.koin.ksp.generated.module
 
 object MainModules {

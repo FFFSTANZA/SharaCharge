@@ -1,4 +1,4 @@
-package com.powerly.lib
+package com.SharaSpot.lib
 
 import android.content.Intent
 
@@ -36,5 +36,5 @@ object MainScreen {
 }
 
 object MyPackages {
-    const val MAIN = "com.powerly.MainActivity"
+    const val MAIN = "com.SharaSpot.MainActivity"
 }

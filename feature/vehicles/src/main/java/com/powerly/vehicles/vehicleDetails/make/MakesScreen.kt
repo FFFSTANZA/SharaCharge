@@ -1,10 +1,10 @@
-package com.powerly.vehicles.vehicleDetails.make
+package com.SharaSpot.vehicles.vehicleDetails.make
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.powerly.core.model.powerly.VehicleMaker
-import com.powerly.lib.IRoute
-import com.powerly.vehicles.VehiclesViewModel
+import com.SharaSpot.core.model.SharaSpot.VehicleMaker
+import com.SharaSpot.lib.IRoute
+import com.SharaSpot.vehicles.VehiclesViewModel
 
 private const val TAG = "MakesScreen"
 

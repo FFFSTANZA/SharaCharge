@@ -1,4 +1,4 @@
-package com.powerly.account
+package com.SharaSpot.account
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -23,17 +23,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.ui.HomeUiState
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.components.MyIcon
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.components.SectionBalance
-import com.powerly.ui.extensions.isArabic
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.ui.HomeUiState
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.components.MyIcon
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.components.SectionBalance
+import com.SharaSpot.ui.extensions.isArabic
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 
 @Preview(locale = "en")

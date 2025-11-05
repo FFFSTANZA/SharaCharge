@@ -1,7 +1,7 @@
-package com.powerly.core.model.powerly
+package com.SharaSpot.core.model.SharaSpot
 
-import com.powerly.core.model.api.BaseResponse
-import com.powerly.core.model.api.BaseResponsePaginated
+import com.SharaSpot.core.model.api.BaseResponse
+import com.SharaSpot.core.model.api.BaseResponsePaginated
 import com.google.gson.annotations.SerializedName
 import java.text.SimpleDateFormat
 import java.util.Locale

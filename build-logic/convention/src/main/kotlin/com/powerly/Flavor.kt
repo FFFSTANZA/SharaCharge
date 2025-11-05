@@ -1,4 +1,4 @@
-package com.powerly
+package com.SharaSpot
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.ApplicationProductFlavor

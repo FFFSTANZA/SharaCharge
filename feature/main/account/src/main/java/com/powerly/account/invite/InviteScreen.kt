@@ -1,4 +1,4 @@
-package com.powerly.account.invite
+package com.SharaSpot.account.invite
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -16,8 +16,8 @@ import androidx.compose.ui.platform.LocalContext
 import org.koin.androidx.compose.koinViewModel
 import com.github.alexzhirkevich.customqrgenerator.QrData
 import com.github.alexzhirkevich.customqrgenerator.vector.QrCodeDrawable
-import com.powerly.resources.R
-import com.powerly.ui.extensions.safeStartActivity
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.extensions.safeStartActivity
 
 /**
  * Composable function that displays the Invite screen.

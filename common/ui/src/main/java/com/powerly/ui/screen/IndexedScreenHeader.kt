@@ -1,4 +1,4 @@
-package com.powerly.ui.screen
+package com.SharaSpot.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -21,11 +21,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.containers.LayoutDirectionAny
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.LayoutDirectionAny
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.theme.MyColors
 
 @Composable
 fun IndexedScreenHeader(

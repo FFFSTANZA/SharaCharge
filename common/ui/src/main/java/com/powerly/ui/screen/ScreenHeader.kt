@@ -1,4 +1,4 @@
-package com.powerly.ui.screen
+package com.SharaSpot.ui.screen
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background
@@ -31,10 +31,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
-import com.powerly.resources.R
-import com.powerly.ui.containers.LayoutDirectionAny
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.LayoutDirectionAny
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

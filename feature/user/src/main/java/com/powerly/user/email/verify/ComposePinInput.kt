@@ -1,4 +1,4 @@
-package com.powerly.user.email.verify
+package com.SharaSpot.user.email.verify
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background

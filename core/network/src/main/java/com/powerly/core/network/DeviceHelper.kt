@@ -1,4 +1,4 @@
-package com.powerly.core.network
+package com.SharaSpot.core.network
 
 import android.content.Context
 import android.os.Build

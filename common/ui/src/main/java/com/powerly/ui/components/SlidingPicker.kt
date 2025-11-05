@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -47,8 +47,8 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 

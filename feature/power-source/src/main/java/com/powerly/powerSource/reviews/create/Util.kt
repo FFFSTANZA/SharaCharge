@@ -1,8 +1,8 @@
-package com.powerly.powerSource.reviews.create
+package com.SharaSpot.powerSource.reviews.create
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.powerly.resources.R
+import com.SharaSpot.resources.R
 
 
 internal data class Emoji(

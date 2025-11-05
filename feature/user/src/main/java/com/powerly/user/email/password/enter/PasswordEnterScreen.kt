@@ -1,4 +1,4 @@
-package com.powerly.user.email.password.enter
+package com.SharaSpot.user.email.password.enter
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -7,12 +7,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalAutofillManager
 import androidx.compose.ui.res.stringResource
-import com.powerly.user.email.EmailLoginViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.AlertDialogProperties
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.user.email.LoginResult
+import com.SharaSpot.user.email.EmailLoginViewModel
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.AlertDialogProperties
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.user.email.LoginResult
 import kotlinx.coroutines.launch
 
 private const val TAG = "PasswordEnterScreen"

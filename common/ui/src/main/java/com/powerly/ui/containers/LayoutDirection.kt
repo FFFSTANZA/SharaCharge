@@ -1,11 +1,11 @@
-package com.powerly.ui.containers
+package com.SharaSpot.ui.containers
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
-import com.powerly.ui.extensions.isArabic
-import com.powerly.ui.extensions.isArabic2
+import com.SharaSpot.ui.extensions.isArabic
+import com.SharaSpot.ui.extensions.isArabic2
 
 @Composable
 fun LayoutDirectionRtl(content: @Composable () -> Unit) {

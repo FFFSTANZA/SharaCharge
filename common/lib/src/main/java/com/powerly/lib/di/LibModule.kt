@@ -1,18 +1,18 @@
-package com.powerly.lib.di
+package com.SharaSpot.lib.di
 
 import android.app.Application
 import android.content.Context
-import com.powerly.core.analytics.EventsManager
-import com.powerly.core.analytics.UserIdentifier
-import com.powerly.core.analyticsImpl.EventsManagerImpl
-import com.powerly.core.network.DeviceHelper
-import com.powerly.lib.managers.StorageManager
+import com.SharaSpot.core.analytics.EventsManager
+import com.SharaSpot.core.analytics.UserIdentifier
+import com.SharaSpot.core.analyticsImpl.EventsManagerImpl
+import com.SharaSpot.core.network.DeviceHelper
+import com.SharaSpot.lib.managers.StorageManager
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 
 @Module
-@ComponentScan("com.powerly.lib")
+@ComponentScan("com.SharaSpot.lib")
 class LibModule {
     @Single
     fun provideContext(application: Application): Context = application

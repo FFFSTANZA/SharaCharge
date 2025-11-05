@@ -1,11 +1,11 @@
-package com.powerly.ui.dialogs.countries
+package com.SharaSpot.ui.dialogs.countries
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import com.powerly.core.model.location.Country
-import com.powerly.lib.managers.CountryManager
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.core.model.location.Country
+import com.SharaSpot.lib.managers.CountryManager
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 @Composable
 fun CountriesDialog(

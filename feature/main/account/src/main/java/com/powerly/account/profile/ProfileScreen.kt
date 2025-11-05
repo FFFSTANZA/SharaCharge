@@ -1,4 +1,4 @@
-package com.powerly.account.profile
+package com.SharaSpot.account.profile
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
@@ -8,12 +8,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.AlertDialogProperties
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.countries.CountriesDialog
-import com.powerly.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.AlertDialogProperties
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.countries.CountriesDialog
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
 import kotlinx.coroutines.launch
 
 private const val TAG = "ProfileScreen"

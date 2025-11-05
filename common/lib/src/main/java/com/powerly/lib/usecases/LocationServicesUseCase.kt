@@ -1,11 +1,11 @@
-package com.powerly.lib.usecases
+package com.SharaSpot.lib.usecases
 
 import android.content.Intent
 import android.provider.Settings
 import android.util.Log
-import com.powerly.core.data.model.ActivityResultState
-import com.powerly.core.data.model.PermissionsState
-import com.powerly.lib.managers.UserLocationManager
+import com.SharaSpot.core.data.model.ActivityResultState
+import com.SharaSpot.core.data.model.PermissionsState
+import com.SharaSpot.lib.managers.UserLocationManager
 import org.koin.core.annotation.Single
 
 @Single

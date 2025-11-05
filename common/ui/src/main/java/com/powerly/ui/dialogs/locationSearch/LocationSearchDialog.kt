@@ -1,9 +1,9 @@
-package com.powerly.ui.dialogs.locationSearch
+package com.SharaSpot.ui.dialogs.locationSearch
 
 import androidx.compose.runtime.Composable
-import com.powerly.core.model.location.Target
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 @Composable
 fun LocationSearchDialog(

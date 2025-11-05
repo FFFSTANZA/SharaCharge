@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.signIn
+package com.SharaSpot.ui.dialogs.signIn
 
 sealed class SignInOptions {
     data object Email : SignInOptions()

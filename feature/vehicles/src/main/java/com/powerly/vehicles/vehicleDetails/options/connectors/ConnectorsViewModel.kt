@@ -1,10 +1,10 @@
-package com.powerly.vehicles.vehicleDetails.options.connectors
+package com.SharaSpot.vehicles.vehicleDetails.options.connectors
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.data.repositories.PowerSourceRepository
-import com.powerly.core.model.powerly.Connector
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.data.repositories.PowerSourceRepository
+import com.SharaSpot.core.model.SharaSpot.Connector
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

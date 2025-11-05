@@ -1,4 +1,4 @@
-package com.powerly.ui.theme
+package com.SharaSpot.ui.theme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.Typography
@@ -9,7 +9,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.resources.R
+import com.SharaSpot.resources.R
 
 
 val myBorder = BorderStroke(1.dp, color = MyColors.borderColor)

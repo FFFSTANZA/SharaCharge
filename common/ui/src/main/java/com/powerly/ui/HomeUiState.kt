@@ -1,7 +1,7 @@
-package com.powerly.ui
+package com.SharaSpot.ui
 
 import androidx.compose.runtime.mutableStateOf
-import com.powerly.core.network.DeviceHelper
+import com.SharaSpot.core.network.DeviceHelper
 
 class HomeUiState(deviceHelper: DeviceHelper? = null) {
     val appVersion = String.format(

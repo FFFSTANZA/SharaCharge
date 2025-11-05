@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.success
+package com.SharaSpot.ui.dialogs.success
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,7 +22,7 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
-import com.powerly.ui.R
+import com.SharaSpot.ui.R
 
 
 @Preview

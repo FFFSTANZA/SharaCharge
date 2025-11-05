@@ -1,12 +1,12 @@
-package com.powerly.vehicles.vehicleList
+package com.SharaSpot.vehicles.vehicleList
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.Vehicle
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.ItemOptionsMenu
-import com.powerly.ui.dialogs.MyDropdownMenu
+import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.ItemOptionsMenu
+import com.SharaSpot.ui.dialogs.MyDropdownMenu
 
 @Composable
 internal fun OptionsMenu(

@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleDetails.options.connectors
+package com.SharaSpot.vehicles.vehicleDetails.options.connectors
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -22,18 +22,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Connector
-import com.powerly.vehicles.vehicleDetails.make.SectionSearch
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.components.NetworkImage
-import com.powerly.ui.dialogs.MyProgressView
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.vehicles.vehicleDetails.make.SectionSearch
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.components.NetworkImage
+import com.SharaSpot.ui.dialogs.MyProgressView
+import com.SharaSpot.ui.theme.MyColors
 
 private const val TAG = "ConnectorsDialog"
 

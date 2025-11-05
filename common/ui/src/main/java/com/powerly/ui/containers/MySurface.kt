@@ -1,4 +1,4 @@
-package com.powerly.ui.containers
+package com.SharaSpot.ui.containers
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement

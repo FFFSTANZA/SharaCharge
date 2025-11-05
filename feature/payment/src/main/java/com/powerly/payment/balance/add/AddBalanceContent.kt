@@ -1,4 +1,4 @@
-package com.powerly.payment.balance.add
+package com.SharaSpot.payment.balance.add
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -23,24 +23,24 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.core.model.payment.BalanceItem
-import com.powerly.core.model.payment.StripCard
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.containers.MySurface
-import com.powerly.ui.containers.MySurfaceColumn
-import com.powerly.ui.containers.MySurfaceRow
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.extensions.asPadding
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.components.MyIcon
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.payment.BalanceItem
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.containers.MySurface
+import com.SharaSpot.ui.containers.MySurfaceColumn
+import com.SharaSpot.ui.containers.MySurfaceRow
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.extensions.asPadding
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.components.MyIcon
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

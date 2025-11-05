@@ -1,4 +1,4 @@
-package com.powerly.home.map
+package com.SharaSpot.home.map
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -34,18 +34,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.Amenity
-import com.powerly.core.model.powerly.Connector
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.core.model.location.Target
-import com.powerly.core.model.powerly.SourceType
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Amenity
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.core.model.SharaSpot.SourceType
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import java.util.Locale
 
 private const val TAG = "MapSlider"

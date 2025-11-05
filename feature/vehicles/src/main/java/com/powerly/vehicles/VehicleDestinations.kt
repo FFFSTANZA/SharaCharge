@@ -1,16 +1,16 @@
-package com.powerly.vehicles
+package com.SharaSpot.vehicles
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.powerly.lib.AppRoutes
-import com.powerly.lib.IRoute
-import com.powerly.vehicles.newVehicle.VehicleAddScreen
-import com.powerly.vehicles.vehicleDetails.make.MakesScreen
-import com.powerly.vehicles.vehicleDetails.model.ModelScreen
-import com.powerly.vehicles.vehicleDetails.options.DetailsScreen
-import com.powerly.vehicles.vehicleList.VehiclesScreen
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.lib.IRoute
+import com.SharaSpot.vehicles.newVehicle.VehicleAddScreen
+import com.SharaSpot.vehicles.vehicleDetails.make.MakesScreen
+import com.SharaSpot.vehicles.vehicleDetails.model.ModelScreen
+import com.SharaSpot.vehicles.vehicleDetails.options.DetailsScreen
+import com.SharaSpot.vehicles.vehicleList.VehiclesScreen
 
 fun NavGraphBuilder.vehiclesDestinations(
     navController: NavHostController,

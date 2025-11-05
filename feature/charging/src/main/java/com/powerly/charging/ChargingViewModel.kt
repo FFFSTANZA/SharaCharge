@@ -1,4 +1,4 @@
-package com.powerly.charging
+package com.SharaSpot.charging
 
 import android.util.Log
 import androidx.compose.runtime.mutableStateOf
@@ -6,13 +6,13 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
-import com.powerly.charging.util.ChargingTimerManager
-import com.powerly.charging.util.ChargingTimerState
-import com.powerly.core.data.model.ChargingStatus
-import com.powerly.core.data.repositories.SessionsRepository
-import com.powerly.core.model.powerly.Session
-import com.powerly.lib.AppRoutes
-import com.powerly.lib.managers.StorageManager
+import com.SharaSpot.charging.util.ChargingTimerManager
+import com.SharaSpot.charging.util.ChargingTimerState
+import com.SharaSpot.core.data.model.ChargingStatus
+import com.SharaSpot.core.data.repositories.SessionsRepository
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.lib.managers.StorageManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

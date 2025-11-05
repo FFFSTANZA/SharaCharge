@@ -1,4 +1,4 @@
-package com.powerly.main
+package com.SharaSpot.main
 
 import android.util.Log
 import androidx.annotation.DrawableRes
@@ -7,9 +7,9 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.toRoute
-import com.powerly.lib.AppRoutes
-import com.powerly.lib.Route
-import com.powerly.resources.R
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.lib.Route
+import com.SharaSpot.resources.R
 
 internal sealed class NavScreens(
     val route: Route,

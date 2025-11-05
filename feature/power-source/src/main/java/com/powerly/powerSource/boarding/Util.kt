@@ -1,4 +1,4 @@
-package com.powerly.powerSource.boarding
+package com.SharaSpot.powerSource.boarding
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.text.appendInlineContent
@@ -8,8 +8,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import com.powerly.resources.R
-import com.powerly.ui.extensions.isArabic
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.extensions.isArabic
 
 
 internal data class OnBoardingItem(

@@ -1,7 +1,7 @@
-package com.powerly.payment.balance.withdraw
+package com.SharaSpot.payment.balance.withdraw
 
 import androidx.compose.runtime.Composable
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 @Composable
 internal fun WithdrawBalanceDialog(onDismiss: () -> Unit) {

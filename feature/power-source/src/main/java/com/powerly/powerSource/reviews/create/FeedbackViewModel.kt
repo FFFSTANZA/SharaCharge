@@ -1,13 +1,13 @@
-package com.powerly.powerSource.reviews.create
+package com.SharaSpot.powerSource.reviews.create
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
-import com.powerly.core.data.model.ReviewOptionsStatus
-import com.powerly.core.data.repositories.FeedbackRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.lib.AppRoutes
+import com.SharaSpot.core.data.model.ReviewOptionsStatus
+import com.SharaSpot.core.data.repositories.FeedbackRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.lib.AppRoutes
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.flow

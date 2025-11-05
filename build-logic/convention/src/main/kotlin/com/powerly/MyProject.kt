@@ -1,11 +1,11 @@
-package com.powerly
+package com.SharaSpot
 
 import org.gradle.api.JavaVersion
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 object MyProject {
-    const val NAMESPACE = "com.powerly"
-    const val DISPLAY_NAME = "open-powerly"
+    const val NAMESPACE = "com.SharaSpot"
+    const val DISPLAY_NAME = "open-SharaSpot"
 
     const val VERSION_CODE = 1
     const val VERSION_NAME = "0.1"

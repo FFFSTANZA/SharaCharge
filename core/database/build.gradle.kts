@@ -1,10 +1,10 @@
-import com.powerly.MyProject
+import com.SharaSpot.MyProject
 
 plugins {
-    alias(libs.plugins.powerly.library)
-    alias(libs.plugins.powerly.room)
-    alias(libs.plugins.powerly.koin)
-    alias(libs.plugins.powerly.serialization)
+    alias(libs.plugins.SharaSpot.library)
+    alias(libs.plugins.SharaSpot.room)
+    alias(libs.plugins.SharaSpot.koin)
+    alias(libs.plugins.SharaSpot.serialization)
 }
 
 android {

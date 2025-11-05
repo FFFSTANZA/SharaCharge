@@ -1,10 +1,10 @@
-package com.powerly.vehicles.vehicleDetails.model
+package com.SharaSpot.vehicles.vehicleDetails.model
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.powerly.core.model.powerly.VehicleModel
-import com.powerly.lib.IRoute
-import com.powerly.vehicles.VehiclesViewModel
+import com.SharaSpot.core.model.SharaSpot.VehicleModel
+import com.SharaSpot.lib.IRoute
+import com.SharaSpot.vehicles.VehiclesViewModel
 
 private const val TAG = "ModelScreen"
 

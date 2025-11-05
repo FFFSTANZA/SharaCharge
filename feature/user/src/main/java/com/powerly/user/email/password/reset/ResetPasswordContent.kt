@@ -1,4 +1,4 @@
-package com.powerly.user.email.password.reset
+package com.SharaSpot.user.email.password.reset
 
 import android.os.CountDownTimer
 import android.util.Log
@@ -29,27 +29,27 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.user.email.PASSWORD_MIN_LENGTH
-import com.powerly.user.email.checkPasswordStrength
-import com.powerly.user.email.verify.ComposePinInput
-import com.powerly.user.email.verify.ComposePinInputStyle
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.components.MyPasswordTextField
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.extensions.onClick
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
-import com.powerly.user.email.verify.SectionCounter
-import com.powerly.user.email.verify.VerificationEvents
+import com.SharaSpot.user.email.PASSWORD_MIN_LENGTH
+import com.SharaSpot.user.email.checkPasswordStrength
+import com.SharaSpot.user.email.verify.ComposePinInput
+import com.SharaSpot.user.email.verify.ComposePinInputStyle
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.components.MyPasswordTextField
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.extensions.onClick
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.user.email.verify.SectionCounter
+import com.SharaSpot.user.email.verify.VerificationEvents
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 
@@ -64,7 +64,7 @@ private fun VerificationScreenPreview() {
             resetPin = { false },
             timeout = { 60 },
             resetCounter = { false },
-            userId = "m@powerly.com",
+            userId = "m@SharaSpot.com",
             uiEvents = {}
         )
     }

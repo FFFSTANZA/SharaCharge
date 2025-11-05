@@ -1,4 +1,4 @@
-package com.powerly.payment.methods.select
+package com.SharaSpot.payment.methods.select
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -8,9 +8,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.core.model.payment.StripCard
-import com.powerly.payment.methods.PaymentViewModel
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.payment.methods.PaymentViewModel
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 import kotlinx.coroutines.launch
 
 @Composable

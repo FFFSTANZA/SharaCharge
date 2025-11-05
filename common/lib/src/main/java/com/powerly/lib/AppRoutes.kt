@@ -1,8 +1,8 @@
-package com.powerly.lib
+package com.SharaSpot.lib
 
 import androidx.navigation.NavHostController
-import com.powerly.core.model.powerly.OrderTab
-import com.powerly.core.model.util.Message
+import com.SharaSpot.core.model.SharaSpot.OrderTab
+import com.SharaSpot.core.model.util.Message
 import kotlinx.serialization.Serializable
 
 @Serializable

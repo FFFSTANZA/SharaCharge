@@ -1,9 +1,9 @@
-package com.powerly.powerSource.details
+package com.SharaSpot.powerSource.details
 
 import android.content.Context
 import androidx.annotation.DrawableRes
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.resources.R
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.resources.R
 
 /**
  * Data class representing the uptime and operational status of a power source.

@@ -1,7 +1,7 @@
-package com.powerly.vehicles.vehicleDetails.options
+package com.SharaSpot.vehicles.vehicleDetails.options
 
 import androidx.annotation.StringRes
-import com.powerly.resources.R
+import com.SharaSpot.resources.R
 import java.time.Year
 
 

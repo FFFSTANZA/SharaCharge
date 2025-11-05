@@ -1,4 +1,4 @@
-package com.powerly.core.model.util
+package com.SharaSpot.core.model.util
 
 data class Item(
     val label: String,

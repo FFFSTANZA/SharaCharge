@@ -1,4 +1,4 @@
-package com.powerly.home.home
+package com.SharaSpot.home.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -31,30 +31,30 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import com.powerly.core.model.powerly.Connector
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.home.home.slider.SectionSlider
-import com.powerly.powerSource.boarding.OnBoardingScreenContent
-import com.powerly.resources.R
-import com.powerly.ui.HomeUiState
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.components.SectionBalance
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MySurface
-import com.powerly.ui.containers.MySurfaceRow
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberBasicScreenState
-import com.powerly.ui.extensions.asPadding
-import com.powerly.ui.map.MapViewState
-import com.powerly.ui.map.MyMapView
-import com.powerly.ui.map.PowerSourceMarker
-import com.powerly.ui.map.rememberMapState
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.home.home.slider.SectionSlider
+import com.SharaSpot.powerSource.boarding.OnBoardingScreenContent
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.HomeUiState
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.components.SectionBalance
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MySurface
+import com.SharaSpot.ui.containers.MySurfaceRow
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberBasicScreenState
+import com.SharaSpot.ui.extensions.asPadding
+import com.SharaSpot.ui.map.MapViewState
+import com.SharaSpot.ui.map.MyMapView
+import com.SharaSpot.ui.map.PowerSourceMarker
+import com.SharaSpot.ui.map.rememberMapState
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 private const val TAG = "HomeScreen"
 
@@ -308,7 +308,7 @@ fun Header(
             spacing = 4.dp,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // powerly logo
+            // SharaSpot logo
             Image(
                 painter = painterResource(id = R.drawable.logo),
                 modifier = Modifier
@@ -317,7 +317,7 @@ fun Header(
                 contentDescription = "",
                 contentScale = ContentScale.Crop
             )
-            // powerly app name
+            // SharaSpot app name
             Box(Modifier.weight(1f)) {
                 MyTextDynamic(
                     text = stringResource(id = R.string.app_name),

@@ -1,4 +1,4 @@
-package com.powerly.ui.map
+package com.SharaSpot.ui.map
 
 
 import androidx.compose.runtime.Composable
@@ -9,8 +9,8 @@ import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.powerly.core.model.location.MyAddress
-import com.powerly.core.model.location.Target
+import com.SharaSpot.core.model.location.MyAddress
+import com.SharaSpot.core.model.location.Target
 
 @Composable
 fun rememberMapState(

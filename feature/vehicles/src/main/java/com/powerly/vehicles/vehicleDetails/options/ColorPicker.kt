@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleDetails.options
+package com.SharaSpot.vehicles.vehicleDetails.options
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -28,13 +28,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.dialogs.MyBasicBottomSheet
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.extensions.thenIf
-import com.powerly.ui.screen.DialogHeader
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.dialogs.MyBasicBottomSheet
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.extensions.thenIf
+import com.SharaSpot.ui.screen.DialogHeader
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

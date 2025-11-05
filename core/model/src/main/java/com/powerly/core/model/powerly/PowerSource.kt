@@ -1,10 +1,10 @@
-package com.powerly.core.model.powerly
+package com.SharaSpot.core.model.SharaSpot
 
 import android.util.Log
-import com.powerly.core.model.api.BaseResponse
-import com.powerly.core.model.api.BaseResponsePaginated
-import com.powerly.core.model.location.MyAddress
-import com.powerly.core.model.location.Target
+import com.SharaSpot.core.model.api.BaseResponse
+import com.SharaSpot.core.model.api.BaseResponsePaginated
+import com.SharaSpot.core.model.location.MyAddress
+import com.SharaSpot.core.model.location.Target
 import com.google.gson.annotations.SerializedName
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -103,7 +103,7 @@ data class PowerSource(
 
     val isAvailable: Boolean get() = isOffline.not() && isInUse.not() && isReserved.not()
 
-    val shareLink: String get() = "https://powerly.app/charging-point?cp_id=$identifier"
+    val shareLink: String get() = "https://SharaSpot.app/charging-point?cp_id=$identifier"
 
     /**
      * Time properties

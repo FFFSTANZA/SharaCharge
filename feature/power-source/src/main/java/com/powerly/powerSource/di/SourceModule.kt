@@ -1,12 +1,12 @@
-package com.powerly.powerSource.di
+package com.SharaSpot.powerSource.di
 
-import com.powerly.charge.di.ChargeModule
+import com.SharaSpot.charge.di.ChargeModule
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.ksp.generated.module
 
 @Module
-@ComponentScan("com.powerly.powerSource")
+@ComponentScan("com.SharaSpot.powerSource")
 class PowerSourceModule
 
 

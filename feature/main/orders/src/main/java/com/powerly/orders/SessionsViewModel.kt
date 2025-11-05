@@ -1,14 +1,14 @@
-package com.powerly.orders
+package com.SharaSpot.orders
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.powerly.core.data.repositories.FeedbackRepository
-import com.powerly.core.data.repositories.SessionsRepository
-import com.powerly.core.model.powerly.Session
-import com.powerly.lib.managers.StorageManager
+import com.SharaSpot.core.data.repositories.FeedbackRepository
+import com.SharaSpot.core.data.repositories.SessionsRepository
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.lib.managers.StorageManager
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn

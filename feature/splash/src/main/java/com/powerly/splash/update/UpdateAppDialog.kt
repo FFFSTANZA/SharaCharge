@@ -1,4 +1,4 @@
-package com.powerly.splash.update
+package com.SharaSpot.splash.update
 
 import android.content.Intent
 import androidx.activity.compose.BackHandler
@@ -7,10 +7,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.resources.R
-import com.powerly.splash.SplashViewModel
-import com.powerly.ui.dialogs.MyScreenBottomSheet
-import com.powerly.ui.extensions.safeStartActivity
+import com.SharaSpot.resources.R
+import com.SharaSpot.splash.SplashViewModel
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.ui.extensions.safeStartActivity
 
 @Composable
 internal fun UpdateAppDialog(

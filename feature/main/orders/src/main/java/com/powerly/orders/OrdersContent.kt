@@ -1,4 +1,4 @@
-package com.powerly.orders
+package com.SharaSpot.orders
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -40,19 +40,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.core.model.powerly.OrderTab
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.dialogs.loading.LoadingDialog
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.dialogs.message.MessageDialog
-import com.powerly.ui.dialogs.success.SuccessDialog
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.OrderTab
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.dialogs.loading.LoadingDialog
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.dialogs.message.MessageDialog
+import com.SharaSpot.ui.dialogs.success.SuccessDialog
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import kotlinx.coroutines.launch
 
 @Preview

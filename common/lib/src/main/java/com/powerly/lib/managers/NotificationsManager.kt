@@ -1,4 +1,4 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,11 +12,11 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.google.gson.annotations.SerializedName
-import com.powerly.core.data.repositories.AppRepository
-import com.powerly.core.model.user.DeviceBody
-import com.powerly.lib.MainScreen.setMainScreenHome
-import com.powerly.lib.MyPackages
-import com.powerly.resources.R
+import com.SharaSpot.core.data.repositories.AppRepository
+import com.SharaSpot.core.model.user.DeviceBody
+import com.SharaSpot.lib.MainScreen.setMainScreenHome
+import com.SharaSpot.lib.MyPackages
+import com.SharaSpot.resources.R
 import org.koin.core.annotation.Single
 import java.util.UUID
 
@@ -28,7 +28,7 @@ class NotificationsManager(
 ) {
     companion object {
         private const val TAG = "NotificationsManager"
-        private const val NOTIFICATION_CHANNEL_ID = "powerly_notification_channel"
+        private const val NOTIFICATION_CHANNEL_ID = "SharaSpot_notification_channel"
     }
 
     init {

@@ -1,4 +1,4 @@
-package com.powerly.core.data.di
+package com.SharaSpot.core.data.di
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -9,7 +9,7 @@ import org.koin.core.annotation.Single
 
 
 @Module
-@ComponentScan("com.powerly.core.data")
+@ComponentScan("com.SharaSpot.core.data")
 class DataModule {
     @Single
     @Named("IO") // The qualifier name

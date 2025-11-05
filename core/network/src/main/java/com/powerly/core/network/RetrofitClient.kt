@@ -1,4 +1,4 @@
-package com.powerly.core.network
+package com.SharaSpot.core.network
 
 import android.util.Log
 import com.google.gson.GsonBuilder

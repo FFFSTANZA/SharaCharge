@@ -1,12 +1,12 @@
-package com.powerly.payment.methods.add
+package com.SharaSpot.payment.methods.add
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
 import org.koin.androidx.compose.koinViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.powerly.payment.methods.PaymentViewModel
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.payment.methods.PaymentViewModel
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 private const val TAG = "AddPaymentScreen"
 

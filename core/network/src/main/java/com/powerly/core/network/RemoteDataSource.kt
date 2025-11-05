@@ -1,56 +1,56 @@
-package com.powerly.core.network
+package com.SharaSpot.core.network
 
 
-import com.powerly.core.model.location.CountriesResponse
-import com.powerly.core.model.location.CountryResponse
-import com.powerly.core.model.location.CurrenciesResponse
-import com.powerly.core.model.payment.AddCardBody
-import com.powerly.core.model.payment.BalanceRefillBody
-import com.powerly.core.model.payment.BalanceRefillResponse
-import com.powerly.core.model.payment.BalancesResponse
-import com.powerly.core.model.payment.CardUpdateResponse
-import com.powerly.core.model.payment.CardsResponse
-import com.powerly.core.model.payment.WalletsResponse
-import com.powerly.core.model.payment.WithdrawResponse
-import com.powerly.core.model.powerly.ChargingResponse
-import com.powerly.core.model.powerly.ConnectorsResponse
-import com.powerly.core.model.powerly.MakesResponse
-import com.powerly.core.model.powerly.MediaResponse
-import com.powerly.core.model.powerly.ModelsResponse
-import com.powerly.core.model.powerly.PowerSourceResponse
-import com.powerly.core.model.powerly.PowerSourcesResponse
-import com.powerly.core.model.powerly.ReviewAddResponse
-import com.powerly.core.model.powerly.ReviewBody
-import com.powerly.core.model.powerly.ReviewOptionsResponse
-import com.powerly.core.model.powerly.ReviewResponse
-import com.powerly.core.model.powerly.ReviewsResponse
-import com.powerly.core.model.powerly.SessionDetailsResponse
-import com.powerly.core.model.powerly.SessionsResponsePaginated
-import com.powerly.core.model.powerly.StartChargingBody
-import com.powerly.core.model.powerly.StopChargingBody
-import com.powerly.core.model.powerly.VehicleAddBody
-import com.powerly.core.model.powerly.VehicleAddResponse
-import com.powerly.core.model.powerly.VehiclesResponse
-import com.powerly.core.model.user.AuthenticationResponse
-import com.powerly.core.model.user.DeviceBody
-import com.powerly.core.model.user.EmailCheckBody
-import com.powerly.core.model.user.EmailCheckResponse
-import com.powerly.core.model.user.EmailForgetBody
-import com.powerly.core.model.user.EmailForgetResponse
-import com.powerly.core.model.user.EmailLoginBody
-import com.powerly.core.model.user.EmailLoginResponse
-import com.powerly.core.model.user.EmailRegisterBody
-import com.powerly.core.model.user.EmailRegisterResponse
-import com.powerly.core.model.user.EmailResetBody
-import com.powerly.core.model.user.EmailVerifyResendBody
-import com.powerly.core.model.user.EmailVerifyResendResponse
-import com.powerly.core.model.user.LogoutBody
-import com.powerly.core.model.user.RefreshTokenResponse
-import com.powerly.core.model.user.SocialLoginBody
-import com.powerly.core.model.user.UpdateDeviceResponse
-import com.powerly.core.model.user.UserResponse
-import com.powerly.core.model.user.UserUpdateBody
-import com.powerly.core.model.user.VerificationBody
+import com.SharaSpot.core.model.location.CountriesResponse
+import com.SharaSpot.core.model.location.CountryResponse
+import com.SharaSpot.core.model.location.CurrenciesResponse
+import com.SharaSpot.core.model.payment.AddCardBody
+import com.SharaSpot.core.model.payment.BalanceRefillBody
+import com.SharaSpot.core.model.payment.BalanceRefillResponse
+import com.SharaSpot.core.model.payment.BalancesResponse
+import com.SharaSpot.core.model.payment.CardUpdateResponse
+import com.SharaSpot.core.model.payment.CardsResponse
+import com.SharaSpot.core.model.payment.WalletsResponse
+import com.SharaSpot.core.model.payment.WithdrawResponse
+import com.SharaSpot.core.model.SharaSpot.ChargingResponse
+import com.SharaSpot.core.model.SharaSpot.ConnectorsResponse
+import com.SharaSpot.core.model.SharaSpot.MakesResponse
+import com.SharaSpot.core.model.SharaSpot.MediaResponse
+import com.SharaSpot.core.model.SharaSpot.ModelsResponse
+import com.SharaSpot.core.model.SharaSpot.PowerSourceResponse
+import com.SharaSpot.core.model.SharaSpot.PowerSourcesResponse
+import com.SharaSpot.core.model.SharaSpot.ReviewAddResponse
+import com.SharaSpot.core.model.SharaSpot.ReviewBody
+import com.SharaSpot.core.model.SharaSpot.ReviewOptionsResponse
+import com.SharaSpot.core.model.SharaSpot.ReviewResponse
+import com.SharaSpot.core.model.SharaSpot.ReviewsResponse
+import com.SharaSpot.core.model.SharaSpot.SessionDetailsResponse
+import com.SharaSpot.core.model.SharaSpot.SessionsResponsePaginated
+import com.SharaSpot.core.model.SharaSpot.StartChargingBody
+import com.SharaSpot.core.model.SharaSpot.StopChargingBody
+import com.SharaSpot.core.model.SharaSpot.VehicleAddBody
+import com.SharaSpot.core.model.SharaSpot.VehicleAddResponse
+import com.SharaSpot.core.model.SharaSpot.VehiclesResponse
+import com.SharaSpot.core.model.user.AuthenticationResponse
+import com.SharaSpot.core.model.user.DeviceBody
+import com.SharaSpot.core.model.user.EmailCheckBody
+import com.SharaSpot.core.model.user.EmailCheckResponse
+import com.SharaSpot.core.model.user.EmailForgetBody
+import com.SharaSpot.core.model.user.EmailForgetResponse
+import com.SharaSpot.core.model.user.EmailLoginBody
+import com.SharaSpot.core.model.user.EmailLoginResponse
+import com.SharaSpot.core.model.user.EmailRegisterBody
+import com.SharaSpot.core.model.user.EmailRegisterResponse
+import com.SharaSpot.core.model.user.EmailResetBody
+import com.SharaSpot.core.model.user.EmailVerifyResendBody
+import com.SharaSpot.core.model.user.EmailVerifyResendResponse
+import com.SharaSpot.core.model.user.LogoutBody
+import com.SharaSpot.core.model.user.RefreshTokenResponse
+import com.SharaSpot.core.model.user.SocialLoginBody
+import com.SharaSpot.core.model.user.UpdateDeviceResponse
+import com.SharaSpot.core.model.user.UserResponse
+import com.SharaSpot.core.model.user.UserUpdateBody
+import com.SharaSpot.core.model.user.VerificationBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.DELETE
@@ -101,7 +101,7 @@ private object ApiEndPoints {
     const val AUTH_LOGOUT = "auth/logout"
 
     /**
-     * Powerly
+     * SharaSpot
      */
 
     const val POWER_SOURCE = "stations"

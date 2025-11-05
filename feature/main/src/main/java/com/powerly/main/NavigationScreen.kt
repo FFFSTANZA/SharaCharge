@@ -1,4 +1,4 @@
-package com.powerly.main
+package com.SharaSpot.main
 
 import android.util.Log
 import androidx.compose.foundation.background
@@ -32,11 +32,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.powerly.lib.AppRoutes
-import com.powerly.lib.Route
-import com.powerly.orders.SessionViewModel
-import com.powerly.ui.HomeUiState
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.lib.Route
+import com.SharaSpot.orders.SessionViewModel
+import com.SharaSpot.ui.HomeUiState
+import com.SharaSpot.ui.theme.AppTheme
 
 @Preview
 @Composable

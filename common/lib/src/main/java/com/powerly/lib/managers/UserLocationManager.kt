@@ -1,11 +1,11 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import androidx.core.app.ActivityCompat
-import com.powerly.core.model.location.Target
+import com.SharaSpot.core.model.location.Target
 import org.koin.core.annotation.Single
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine

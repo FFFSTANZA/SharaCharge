@@ -1,4 +1,4 @@
-package com.powerly.account.invite
+package com.SharaSpot.account.invite
 
 import android.graphics.drawable.Drawable
 import androidx.compose.foundation.BorderStroke
@@ -29,13 +29,13 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import coil.compose.rememberAsyncImagePainter
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.extensions.isPreview
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.extensions.isPreview
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

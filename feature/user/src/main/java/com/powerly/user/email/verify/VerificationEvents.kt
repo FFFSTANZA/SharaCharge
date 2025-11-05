@@ -1,4 +1,4 @@
-package com.powerly.user.email.verify
+package com.SharaSpot.user.email.verify
 
 internal sealed class VerificationEvents {
     data object Edit : VerificationEvents()

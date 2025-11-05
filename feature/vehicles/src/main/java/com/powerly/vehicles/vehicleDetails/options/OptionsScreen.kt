@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleDetails.options
+package com.SharaSpot.vehicles.vehicleDetails.options
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -6,12 +6,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import com.powerly.lib.IRoute
-import com.powerly.vehicles.VehiclesViewModel
-import com.powerly.vehicles.vehicleDetails.options.connectors.ConnectorsDialog
-import com.powerly.resources.R
-import com.powerly.ui.components.rememberPickerState
-import com.powerly.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.lib.IRoute
+import com.SharaSpot.vehicles.VehiclesViewModel
+import com.SharaSpot.vehicles.vehicleDetails.options.connectors.ConnectorsDialog
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.rememberPickerState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
 
 private const val TAG = "OptionsScreen"
 

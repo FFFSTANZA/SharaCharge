@@ -1,4 +1,4 @@
-package com.powerly.orders.history
+package com.SharaSpot.orders.history
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
@@ -22,18 +22,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.paging.PagingData
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.core.model.powerly.Session
-import com.powerly.orders.SessionItemTitle
-import com.powerly.orders.SessionOutlinedButton
-import com.powerly.orders.active.ListSessions
-import com.powerly.resources.R
-import com.powerly.ui.components.RatingBar
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MyRefreshBox
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.orders.SessionItemTitle
+import com.SharaSpot.orders.SessionOutlinedButton
+import com.SharaSpot.orders.active.ListSessions
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.RatingBar
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MyRefreshBox
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

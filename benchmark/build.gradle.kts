@@ -1,7 +1,7 @@
-import com.powerly.MyProject
+import com.SharaSpot.MyProject
 
 plugins {
-    alias(libs.plugins.powerly.android.test)
+    alias(libs.plugins.SharaSpot.android.test)
 }
 
 android {

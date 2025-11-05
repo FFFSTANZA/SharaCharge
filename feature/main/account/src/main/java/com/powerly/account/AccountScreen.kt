@@ -1,7 +1,7 @@
-package com.powerly.account
+package com.SharaSpot.account
 
 import androidx.compose.runtime.Composable
-import com.powerly.ui.HomeUiState
+import com.SharaSpot.ui.HomeUiState
 
 
 private const val TAG = "AccountScreen"

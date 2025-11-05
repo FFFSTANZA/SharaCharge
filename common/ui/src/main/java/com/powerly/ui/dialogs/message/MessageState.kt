@@ -1,10 +1,10 @@
-package com.powerly.ui.dialogs.message
+package com.SharaSpot.ui.dialogs.message
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import com.powerly.core.model.util.Message
+import com.SharaSpot.core.model.util.Message
 
 @Composable
 fun rememberMessageState(

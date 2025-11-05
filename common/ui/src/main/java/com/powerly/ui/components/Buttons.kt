@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 
 import androidx.annotation.DrawableRes
@@ -47,8 +47,8 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import com.powerly.resources.R
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.theme.MyColors
 
 
 @Composable

@@ -1,6 +1,6 @@
-package com.powerly.core.model.powerly
+package com.SharaSpot.core.model.SharaSpot
 
-import com.powerly.core.model.api.BaseResponse
+import com.SharaSpot.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
 class MediaResponse : BaseResponse<List<Media>?>()

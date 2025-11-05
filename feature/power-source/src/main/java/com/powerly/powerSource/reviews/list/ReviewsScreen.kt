@@ -1,11 +1,11 @@
-package com.powerly.powerSource.reviews.list
+package com.SharaSpot.powerSource.reviews.list
 
 import androidx.compose.runtime.Composable
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.powerly.powerSource.PsViewModel
-import com.powerly.ui.dialogs.MyScreenBottomSheet
-import com.powerly.ui.dialogs.loading.rememberBasicScreenState
-import com.powerly.ui.dialogs.success.SuccessState
+import com.SharaSpot.powerSource.PsViewModel
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.ui.dialogs.loading.rememberBasicScreenState
+import com.SharaSpot.ui.dialogs.success.SuccessState
 
 private const val TAG = "ReviewScreen"
 

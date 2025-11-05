@@ -1,6 +1,6 @@
-package com.powerly.vehicles.vehicleList
+package com.SharaSpot.vehicles.vehicleList
 
-import com.powerly.core.model.powerly.Vehicle
+import com.SharaSpot.core.model.SharaSpot.Vehicle
 
 internal sealed class VehicleEvents {
     data object Close : VehicleEvents()

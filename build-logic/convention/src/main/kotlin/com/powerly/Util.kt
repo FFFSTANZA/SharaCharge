@@ -1,4 +1,4 @@
-package com.powerly
+package com.SharaSpot
 
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 import org.gradle.api.Project
@@ -108,6 +108,6 @@ fun getLocalProperties(root: Project): Properties {
     return localProperties
 }
 
-fun Properties.getPackageName() = (this["PACKAGE_NAME"] ?: "com.esttp.powerly").toString()
+fun Properties.getPackageName() = (this["PACKAGE_NAME"] ?: "com.esttp.SharaSpot").toString()
 fun Properties.hasDebugStoreConfig() = this.containsKey("DEBUG_STORE_FILE")
 fun Properties.hasReleaseStoreConfig() = this.containsKey("RELEASE_STORE_FILE")

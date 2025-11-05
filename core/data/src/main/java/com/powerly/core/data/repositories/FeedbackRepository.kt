@@ -1,8 +1,8 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
-import com.powerly.core.data.model.ReviewOptionsStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Session
+import com.SharaSpot.core.data.model.ReviewOptionsStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Session
 import kotlinx.coroutines.flow.Flow
 
 interface FeedbackRepository {

@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
@@ -29,13 +29,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.Connector
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.containers.MySurface
-import com.powerly.ui.containers.MySurfaceColumn
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.containers.MySurface
+import com.SharaSpot.ui.containers.MySurfaceColumn
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import kotlin.let
 
 @OptIn(ExperimentalLayoutApi::class)

@@ -1,7 +1,7 @@
-package com.powerly.core.model.powerly
+package com.SharaSpot.core.model.SharaSpot
 
-import com.powerly.core.model.api.BaseResponse
-import com.powerly.core.model.user.User
+import com.SharaSpot.core.model.api.BaseResponse
+import com.SharaSpot.core.model.user.User
 import com.google.gson.annotations.SerializedName
 
 class VehicleAddBody(

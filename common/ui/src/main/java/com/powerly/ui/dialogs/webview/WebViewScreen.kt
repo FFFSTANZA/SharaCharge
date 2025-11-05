@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.webview
+package com.SharaSpot.ui.dialogs.webview
 
 import android.annotation.SuppressLint
 import android.view.ViewGroup
@@ -6,9 +6,9 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.viewinterop.AndroidView
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.resources.R
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.resources.R
 
 private const val TAG = "WebViewScreen"
 

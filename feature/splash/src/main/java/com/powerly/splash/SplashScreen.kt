@@ -1,4 +1,4 @@
-package com.powerly.splash
+package com.SharaSpot.splash
 
 import android.os.Bundle
 import android.util.Log
@@ -11,13 +11,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.AlertDialogProperties
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.loading.LoadingDialog
-import com.powerly.ui.dialogs.loading.rememberLoadingState
-import com.powerly.ui.extensions.intent
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.AlertDialogProperties
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.loading.LoadingDialog
+import com.SharaSpot.ui.dialogs.loading.rememberLoadingState
+import com.SharaSpot.ui.extensions.intent
 
 private const val TAG = "SplashScreen"
 

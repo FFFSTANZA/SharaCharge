@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.padding
@@ -16,10 +16,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.theme.AppTheme
 
 @Preview
 @Composable

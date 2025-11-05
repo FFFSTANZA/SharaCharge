@@ -1,23 +1,23 @@
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="Powerly Logo" width="120" />
+  <img src="screenshots/logo.png" alt="SharaSpot Logo" width="120" />
 </p>
 
 <h1 align="center">Open EV Charge — Android App</h1>
-<p align="center">⚡Powerly EV charging app — manage chargers, enable peer-to-peer sharing, integrate payments, and launch your smart energy services, all powered by the Powerly platform.</p>
+<p align="center">⚡SharaSpot EV charging app — manage chargers, enable peer-to-peer sharing, integrate payments, and launch your smart energy services, all powered by the SharaSpot platform.</p>
 
 ---
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Issues](https://img.shields.io/github/issues/powerly-ev/open-ev-charge-android-app)](https://github.com/powerly-ev/open-ev-charge-android-app/issues)
-[![Releases](https://img.shields.io/github/v/release/powerly-ev/open-ev-charge-android-app?include_prereleases&sort=semver)](https://github.com/powerly-ev/open-ev-charge-android-app/releases)
-[![Stars](https://img.shields.io/github/stars/powerly-ev/open-ev-charge-android-app)](https://github.com/powerly-ev/open-ev-charge-android-app/stargazers)
+[![Issues](https://img.shields.io/github/issues/SharaSpot-ev/open-ev-charge-android-app)](https://github.com/SharaSpot-ev/open-ev-charge-android-app/issues)
+[![Releases](https://img.shields.io/github/v/release/SharaSpot-ev/open-ev-charge-android-app?include_prereleases&sort=semver)](https://github.com/SharaSpot-ev/open-ev-charge-android-app/releases)
+[![Stars](https://img.shields.io/github/stars/SharaSpot-ev/open-ev-charge-android-app)](https://github.com/SharaSpot-ev/open-ev-charge-android-app/stargazers)
 
 ---
 
 ## 🧭 Table of Contents
 
-- [🌐 About Powerly & Vision](#-about-powerly--vision)
+- [🌐 About SharaSpot & Vision](#-about-SharaSpot--vision)
 - [✨ Features](#-features)
 - [📷 Screenshots](#-screenshots)
 - [🏗 Architecture & Tech Stack](#-architecture--tech-stack)
@@ -29,15 +29,15 @@
 - [🔗 Acknowledgments & Links](#-acknowledgments--links)
 
 
-## 🌐 About Powerly & Vision
+## 🌐 About SharaSpot & Vision
 
-**Powerly** is an open-source EV charging platform designed to make electric mobility accessible, scalable, and customizable.  
+**SharaSpot** is an open-source EV charging platform designed to make electric mobility accessible, scalable, and customizable.  
 This Android app is part of that ecosystem, allowing businesses, fleet operators, municipalities, and individuals to launch **branded EV charging apps** in minutes.
 
 🔌 Supports **open protocols** like **OCPP** and **OCPI**, ensuring seamless charger compatibility, roaming, and backend integrations.  
 🌍 Features include **AI site planning**, **fleet tools**, **real-time analytics**, and **P2P charging** (share your private charger with others).
 
-📖 Read more: [Powerly Open Source](https://www.powerly.app/open-source/)
+📖 Read more: [SharaSpot Open Source](https://www.SharaSpot.app/open-source/)
 
 ---
 
@@ -51,7 +51,7 @@ This Android app is part of that ecosystem, allowing businesses, fleet operators
 - 🤝 Peer-to-peer charging support for private chargers
 - 🌐 Roaming & cross-network integration
 - 🔌 OCPP & OCPI protocol support
-- 🔑 Integration-ready with [Powerly API](https://api.powerly.app/docs/)
+- 🔑 Integration-ready with [SharaSpot API](https://api.SharaSpot.app/docs/)
 
 ---
 
@@ -129,7 +129,7 @@ SUPPORT_NUMBER=" "                       # optional
 In addition to the usual `sdk.dir`, `local.properties` may define package name and signing information:
 
 ```properties
-PACKAGE_NAME=com.powerly.open
+PACKAGE_NAME=com.SharaSpot.open
 
 # Optional for debug signing
 DEBUG_STORE_FILE=/path/to/debug.keystore
@@ -151,7 +151,7 @@ RELEASE_KEY_PASSWORD=your_release_key_password
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/powerly-ev/open-ev-charge-android-app.git
+git clone https://github.com/SharaSpot-ev/open-ev-charge-android-app.git
 cd open-ev-charge-android-app
 ```
 
@@ -208,10 +208,10 @@ See [LICENSE](LICENSE) for more information.
 
 ## 🔗 Acknowledgments & Links
 
-- 🌐 Website: [https://www.powerly.app](https://www.powerly.app)
-- 📘 API Docs: [https://api.powerly.app/docs/](https://api.powerly.app/docs/)
-- 📱 iOS App: [https://github.com/powerly-ev/open-ev-charge-ios-app](https://github.com/powerly-ev/open-ev-charge-ios-app)
-- 🛠 Powerly Open Source: [https://www.powerly.app/open-source/](https://www.powerly.app/open-source/)
+- 🌐 Website: [https://www.SharaSpot.app](https://www.SharaSpot.app)
+- 📘 API Docs: [https://api.SharaSpot.app/docs/](https://api.SharaSpot.app/docs/)
+- 📱 iOS App: [https://github.com/SharaSpot-ev/open-ev-charge-ios-app](https://github.com/SharaSpot-ev/open-ev-charge-ios-app)
+- 🛠 SharaSpot Open Source: [https://www.SharaSpot.app/open-source/](https://www.SharaSpot.app/open-source/)
 
 ---
 

@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.message
+package com.SharaSpot.ui.dialogs.message
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,8 +24,8 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
-import com.powerly.core.model.util.Message
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.util.Message
+import com.SharaSpot.ui.theme.MyColors
 import kotlinx.coroutines.delay
 
 @Preview

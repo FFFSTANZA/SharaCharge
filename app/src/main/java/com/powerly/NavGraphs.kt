@@ -1,4 +1,4 @@
-package com.powerly
+package com.SharaSpot
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -11,25 +11,25 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.powerly.account.accountDestinations
-import com.powerly.core.model.powerly.OrderTab
-import com.powerly.core.model.util.Message
-import com.powerly.main.NavigationScreen
-import com.powerly.lib.AppRoutes
-import com.powerly.lib.Route
-import com.powerly.orders.SessionViewModel
-import com.powerly.payment.balance.BalanceViewModel
-import com.powerly.payment.methods.PaymentViewModel
-import com.powerly.payment.paymentDestinations
-import com.powerly.powerSource.PsViewModel
-import com.powerly.powerSource.powersourceDestinations
-import com.powerly.splash.splashDestinations
-import com.powerly.ui.dialogs.message.MessageDialog
-import com.powerly.user.UserViewModel
-import com.powerly.user.email.EmailLoginViewModel
-import com.powerly.user.userDestinations
-import com.powerly.vehicles.VehiclesViewModel
-import com.powerly.vehicles.vehiclesDestinations
+import com.SharaSpot.account.accountDestinations
+import com.SharaSpot.core.model.SharaSpot.OrderTab
+import com.SharaSpot.core.model.util.Message
+import com.SharaSpot.main.NavigationScreen
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.lib.Route
+import com.SharaSpot.orders.SessionViewModel
+import com.SharaSpot.payment.balance.BalanceViewModel
+import com.SharaSpot.payment.methods.PaymentViewModel
+import com.SharaSpot.payment.paymentDestinations
+import com.SharaSpot.powerSource.PsViewModel
+import com.SharaSpot.powerSource.powersourceDestinations
+import com.SharaSpot.splash.splashDestinations
+import com.SharaSpot.ui.dialogs.message.MessageDialog
+import com.SharaSpot.user.UserViewModel
+import com.SharaSpot.user.email.EmailLoginViewModel
+import com.SharaSpot.user.userDestinations
+import com.SharaSpot.vehicles.VehiclesViewModel
+import com.SharaSpot.vehicles.vehiclesDestinations
 
 private const val TAG = "RootGraph"
 

@@ -15,12 +15,12 @@
  */
 
 import com.android.build.gradle.LibraryExtension
-import com.powerly.configureFlavors
-import com.powerly.configureKotlinAndroid
+import com.SharaSpot.configureFlavors
+import com.SharaSpot.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
-import com.powerly.MyProject as proj
+import com.SharaSpot.MyProject as proj
 
 class AndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {

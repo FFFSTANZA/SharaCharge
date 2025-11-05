@@ -1,4 +1,4 @@
-package com.powerly.splash
+package com.SharaSpot.splash
 
 sealed interface SplashAction {
     data object OpenHomeScreen : SplashAction

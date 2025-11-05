@@ -1,4 +1,4 @@
-package com.powerly.core.model.location
+package com.SharaSpot.core.model.location
 
 import android.location.Location
 import java.io.Serializable

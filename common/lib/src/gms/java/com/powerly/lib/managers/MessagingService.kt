@@ -1,10 +1,10 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.content.Context
 import android.util.Log
-import com.powerly.core.analytics.EventsManager
-import com.powerly.lib.CONSTANTS.NOTIFICATION_TYPE
-import com.powerly.resources.R
+import com.SharaSpot.core.analytics.EventsManager
+import com.SharaSpot.lib.CONSTANTS.NOTIFICATION_TYPE
+import com.SharaSpot.resources.R
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage

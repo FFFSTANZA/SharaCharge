@@ -1,14 +1,14 @@
-package com.powerly.payment.wallet.options
+package com.SharaSpot.payment.wallet.options
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
-import com.powerly.core.model.payment.StripCard
-import com.powerly.core.model.util.Item
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.MyDialogState
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.util.Item
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.MyDialogState
 
 
 @Composable

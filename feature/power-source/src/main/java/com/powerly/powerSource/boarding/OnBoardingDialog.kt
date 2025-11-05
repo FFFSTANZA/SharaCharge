@@ -1,10 +1,10 @@
-package com.powerly.powerSource.boarding
+package com.SharaSpot.powerSource.boarding
 
 import androidx.compose.runtime.Composable
 import org.koin.androidx.compose.koinViewModel
 import androidx.lifecycle.ViewModel
-import com.powerly.lib.managers.StorageManager
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 import org.koin.android.annotation.KoinViewModel
 
 

@@ -1,16 +1,16 @@
-package com.powerly.core.network.di
+package com.SharaSpot.core.network.di
 
 import android.content.Context
-import com.powerly.core.network.DeviceHelper
-import com.powerly.core.network.R
-import com.powerly.core.network.RemoteDataSource
-import com.powerly.core.network.RetrofitClient
+import com.SharaSpot.core.network.DeviceHelper
+import com.SharaSpot.core.network.R
+import com.SharaSpot.core.network.RemoteDataSource
+import com.SharaSpot.core.network.RetrofitClient
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 
 @Module
-@ComponentScan("com.powerly.core.network")
+@ComponentScan("com.SharaSpot.core.network")
 class NetworkModule {
     @Single
     fun provideRetrofitClient(

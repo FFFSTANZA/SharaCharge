@@ -1,4 +1,4 @@
-package com.powerly.orders.history.details
+package com.SharaSpot.orders.history.details
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.BorderStroke
@@ -33,19 +33,19 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.Price
-import com.powerly.core.model.powerly.Session
-import com.powerly.core.model.location.MyAddress
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.containers.LayoutDirectionAny
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.extensions.isArabic
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Price
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.core.model.location.MyAddress
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.containers.LayoutDirectionAny
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.extensions.isArabic
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 private const val TAG = "DeliveredOrderScreen"
 

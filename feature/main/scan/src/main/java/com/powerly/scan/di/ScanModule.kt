@@ -1,8 +1,8 @@
-package com.powerly.scan.di
+package com.SharaSpot.scan.di
 
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 
 @Module
-@ComponentScan("com.powerly.scan")
+@ComponentScan("com.SharaSpot.scan")
 class ScanModule

@@ -1,4 +1,4 @@
-package com.powerly.ui.map
+package com.SharaSpot.ui.map
 
 import android.util.Log
 import androidx.compose.animation.core.RepeatMode
@@ -30,12 +30,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.resources.R
-import com.powerly.ui.components.MyIcon
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.MyIcon
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.theme.AppTheme
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.MarkerComposable
 import com.google.maps.android.compose.rememberMarkerState

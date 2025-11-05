@@ -1,4 +1,4 @@
-package com.powerly.scan
+package com.SharaSpot.scan
 
 import android.Manifest
 import android.util.Log
@@ -11,16 +11,16 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.core.net.toUri
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.core.data.model.SourceStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.core.model.powerly.SourceCategory
-import com.powerly.lib.CONSTANTS
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.loading.LoadingState
-import com.powerly.ui.dialogs.loading.rememberBasicScreenState
-import com.powerly.ui.dialogs.message.MessageState
-import com.powerly.ui.util.rememberPermissionsState
+import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.core.model.SharaSpot.SourceCategory
+import com.SharaSpot.lib.CONSTANTS
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.loading.LoadingState
+import com.SharaSpot.ui.dialogs.loading.rememberBasicScreenState
+import com.SharaSpot.ui.dialogs.message.MessageState
+import com.SharaSpot.ui.util.rememberPermissionsState
 import kotlinx.coroutines.launch
 
 private const val TAG = "ScannerScreen"

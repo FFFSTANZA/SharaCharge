@@ -1,4 +1,4 @@
-package com.powerly.ui.util
+package com.SharaSpot.ui.util
 
 import android.Manifest
 import android.content.Intent
@@ -15,7 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.ActivityCompat
-import com.powerly.core.data.model.PermissionsState
+import com.SharaSpot.core.data.model.PermissionsState
 import kotlin.collections.get
 
 

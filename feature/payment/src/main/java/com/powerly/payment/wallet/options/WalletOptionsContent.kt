@@ -1,4 +1,4 @@
-package com.powerly.payment.wallet.options
+package com.SharaSpot.payment.wallet.options
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
@@ -7,13 +7,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.util.Item
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.dialogs.ItemOptionsMenu
-import com.powerly.ui.dialogs.MyBottomSheet
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.core.model.util.Item
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.dialogs.ItemOptionsMenu
+import com.SharaSpot.ui.dialogs.MyBottomSheet
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.theme.AppTheme
 
 /**
  * please start interactive mode to show bottom sheet preview

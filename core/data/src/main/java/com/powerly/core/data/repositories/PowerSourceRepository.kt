@@ -1,12 +1,12 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
 import androidx.paging.PagingData
-import com.powerly.core.data.model.SourceStatus
-import com.powerly.core.data.model.SourcesStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Connector
-import com.powerly.core.model.powerly.Media
-import com.powerly.core.model.powerly.Review
+import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.data.model.SourcesStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.core.model.SharaSpot.Media
+import com.SharaSpot.core.model.SharaSpot.Review
 import kotlinx.coroutines.flow.Flow
 
 
@@ -17,7 +17,7 @@ interface PowerSourceRepository {
      *
      * @param latitude The latitude.
      * @param longitude The longitude.
-     * @return  [com.powerly.core.data.model.SourcesStatus] results.
+     * @return  [com.SharaSpot.core.data.model.SourcesStatus] results.
      */
     suspend fun getNearPowerSources(
         latitude: Double,

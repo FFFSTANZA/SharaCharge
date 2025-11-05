@@ -1,4 +1,4 @@
-package com.powerly.powerSource.media
+package com.SharaSpot.powerSource.media
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -10,14 +10,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.Media
-import com.powerly.resources.R
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.components.NetworkImage
-import com.powerly.ui.components.SlidingCarousel
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Media
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.components.NetworkImage
+import com.SharaSpot.ui.components.SlidingCarousel
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

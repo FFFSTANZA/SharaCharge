@@ -1,4 +1,4 @@
-package com.powerly.scan
+package com.SharaSpot.scan
 
 import android.view.View
 import androidx.annotation.StringRes
@@ -33,19 +33,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.Lifecycle
-import com.powerly.resources.R
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.util.OnLifecycleEvent
-import com.powerly.ui.components.ButtonText
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.extensions.isPreview
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.util.OnLifecycleEvent
+import com.SharaSpot.ui.components.ButtonText
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.extensions.isPreview
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
 import com.journeyapps.barcodescanner.DefaultDecoderFactory
-import com.powerly.ui.screen.DialogHeader
+import com.SharaSpot.ui.screen.DialogHeader
 
 private const val TAG = "ScannerScreen"
 

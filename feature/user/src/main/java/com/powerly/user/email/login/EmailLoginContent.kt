@@ -1,4 +1,4 @@
-package com.powerly.user.email.login
+package com.SharaSpot.user.email.login
 
 import android.util.Patterns
 import androidx.compose.foundation.layout.Spacer
@@ -25,14 +25,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.components.MyTextField
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.components.MyTextField
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.theme.AppTheme
 
 @Preview
 @Composable

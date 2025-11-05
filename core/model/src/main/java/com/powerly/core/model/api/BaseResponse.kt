@@ -1,6 +1,6 @@
-package com.powerly.core.model.api
+package com.SharaSpot.core.model.api
 
-import com.powerly.core.model.util.Message
+import com.SharaSpot.core.model.util.Message
 import com.google.gson.annotations.SerializedName
 
 /**

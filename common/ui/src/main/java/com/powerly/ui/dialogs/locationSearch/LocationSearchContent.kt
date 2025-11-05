@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.locationSearch
+package com.SharaSpot.ui.dialogs.locationSearch
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -15,14 +15,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.lib.managers.PlaceItem
-import com.powerly.resources.R
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.containers.MyCardRow
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.components.MySearchBox
-import com.powerly.ui.screen.ScreenHeader
+import com.SharaSpot.lib.managers.PlaceItem
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.containers.MyCardRow
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.components.MySearchBox
+import com.SharaSpot.ui.screen.ScreenHeader
 
 private const val TAG = " LocationSearchScreen"
 

@@ -1,4 +1,4 @@
-package com.powerly.user.email.password.reset
+package com.SharaSpot.user.email.password.reset
 
 internal sealed class EmailResetEvents {
     data object Edit : EmailResetEvents()

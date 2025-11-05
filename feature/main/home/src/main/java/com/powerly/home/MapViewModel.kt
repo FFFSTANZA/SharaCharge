@@ -1,19 +1,19 @@
-package com.powerly.home
+package com.SharaSpot.home
 
 import android.util.Log
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.data.model.ActivityResultState
-import com.powerly.core.data.model.PermissionsState
-import com.powerly.core.data.model.SourcesStatus
-import com.powerly.core.data.repositories.PowerSourceRepository
-import com.powerly.core.model.location.Target
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.lib.managers.UserLocationManager
-import com.powerly.lib.usecases.LocationServicesUseCase
-import com.powerly.ui.map.initMapViewState
+import com.SharaSpot.core.data.model.ActivityResultState
+import com.SharaSpot.core.data.model.PermissionsState
+import com.SharaSpot.core.data.model.SourcesStatus
+import com.SharaSpot.core.data.repositories.PowerSourceRepository
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.lib.managers.UserLocationManager
+import com.SharaSpot.lib.usecases.LocationServicesUseCase
+import com.SharaSpot.ui.map.initMapViewState
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.launch
 

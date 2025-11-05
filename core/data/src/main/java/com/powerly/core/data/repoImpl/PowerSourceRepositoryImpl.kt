@@ -1,15 +1,15 @@
-package com.powerly.core.data.repoImpl
+package com.SharaSpot.core.data.repoImpl
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import com.powerly.core.data.model.SourceStatus
-import com.powerly.core.data.model.SourcesStatus
-import com.powerly.core.data.repositories.PowerSourceRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.api.BasePagingSource
-import com.powerly.core.model.powerly.Media
-import com.powerly.core.network.RemoteDataSource
-import com.powerly.core.network.asErrorMessage
+import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.data.model.SourcesStatus
+import com.SharaSpot.core.data.repositories.PowerSourceRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.api.BasePagingSource
+import com.SharaSpot.core.model.SharaSpot.Media
+import com.SharaSpot.core.network.RemoteDataSource
+import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import org.koin.core.annotation.Named

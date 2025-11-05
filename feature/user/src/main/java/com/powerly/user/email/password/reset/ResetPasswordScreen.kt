@@ -1,11 +1,11 @@
-package com.powerly.user.email.password.reset
+package com.SharaSpot.user.email.password.reset
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import com.powerly.user.email.EmailLoginViewModel
+import com.SharaSpot.user.email.EmailLoginViewModel
 import kotlinx.coroutines.launch
 
 

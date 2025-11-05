@@ -1,4 +1,4 @@
-package com.powerly
+package com.SharaSpot
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -8,10 +8,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.ui.Modifier
-import com.powerly.lib.MainScreen.getMainDestination
-import com.powerly.lib.managers.LocaleManager
-import com.powerly.lib.managers.StorageManager
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.lib.MainScreen.getMainDestination
+import com.SharaSpot.lib.managers.LocaleManager
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.ui.theme.AppTheme
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

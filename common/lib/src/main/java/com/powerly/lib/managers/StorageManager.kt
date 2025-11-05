@@ -1,4 +1,4 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.content.Context
 import androidx.core.content.edit
@@ -9,9 +9,9 @@ import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
 import com.google.gson.stream.JsonWriter
-import com.powerly.core.database.LocalDataSource
-import com.powerly.core.model.user.User
-import com.powerly.core.network.RetrofitClient
+import com.SharaSpot.core.database.LocalDataSource
+import com.SharaSpot.core.model.user.User
+import com.SharaSpot.core.network.RetrofitClient
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import org.koin.core.annotation.Named

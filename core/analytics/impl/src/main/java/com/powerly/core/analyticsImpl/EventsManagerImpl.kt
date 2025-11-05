@@ -1,8 +1,8 @@
-package com.powerly.core.analyticsImpl
+package com.SharaSpot.core.analyticsImpl
 
 import android.content.Context
-import com.powerly.core.analytics.EventsManager
-import com.powerly.core.analytics.UserIdentifier
+import com.SharaSpot.core.analytics.EventsManager
+import com.SharaSpot.core.analytics.UserIdentifier
 import org.koin.core.annotation.Single
 
 @Single

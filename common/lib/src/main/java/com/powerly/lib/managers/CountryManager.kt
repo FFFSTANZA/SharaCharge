@@ -1,10 +1,10 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.content.Context
 import android.content.Context.TELEPHONY_SERVICE
 import android.telephony.TelephonyManager
 import android.util.Log
-import com.powerly.core.model.location.Country
+import com.SharaSpot.core.model.location.Country
 import org.koin.core.annotation.Single
 
 /**

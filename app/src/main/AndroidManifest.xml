@@ -40,7 +40,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="www.powerly.app" />
+                <data android:host="www.SharaSpot.app" />
                 <data android:pathPrefix="/charging-point" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
@@ -50,8 +50,8 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="www.powerly.app" />
-                <data android:host="www.powerly.app" />
+                <data android:host="www.SharaSpot.app" />
+                <data android:host="www.SharaSpot.app" />
             </intent-filter>
         </activity>
 

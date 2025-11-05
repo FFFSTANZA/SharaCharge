@@ -1,15 +1,15 @@
-package com.powerly.payment.methods
+package com.SharaSpot.payment.methods
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.data.repositories.PaymentRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.payment.StripCard
-import com.powerly.core.model.util.asErrorMessage
-import com.powerly.payment.PaymentManager
-import com.powerly.ui.dialogs.loading.initScreenState
+import com.SharaSpot.core.data.repositories.PaymentRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.util.asErrorMessage
+import com.SharaSpot.payment.PaymentManager
+import com.SharaSpot.ui.dialogs.loading.initScreenState
 import com.stripe.android.model.PaymentMethodCreateParams
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.Flow

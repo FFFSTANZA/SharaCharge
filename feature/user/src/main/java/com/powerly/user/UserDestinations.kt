@@ -1,4 +1,4 @@
-package com.powerly.user
+package com.SharaSpot.user
 
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavGraphBuilder
@@ -7,19 +7,19 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
 import androidx.navigation.navigation
 import androidx.navigation.toRoute
-import com.powerly.lib.AppRoutes
-import com.powerly.ui.dialogs.countries.CountriesDialog
-import com.powerly.ui.dialogs.signIn.SignInOptions
-import com.powerly.ui.extensions.openCall
-import com.powerly.user.email.EmailLoginViewModel
-import com.powerly.user.email.login.EmailLoginScreen
-import com.powerly.user.email.password.create.EmailPasswordCreateScreen
-import com.powerly.user.email.password.enter.EmailPasswordEnterScreen
-import com.powerly.user.email.password.reset.EmailPasswordResetScreen
-import com.powerly.user.email.verify.RegisterVerificationScreen
-import com.powerly.user.welcome.WelcomeScreen
-import com.powerly.user.welcome.agreement.UserAgreementDialog
-import com.powerly.user.welcome.language.LanguagesDialog
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.ui.dialogs.countries.CountriesDialog
+import com.SharaSpot.ui.dialogs.signIn.SignInOptions
+import com.SharaSpot.ui.extensions.openCall
+import com.SharaSpot.user.email.EmailLoginViewModel
+import com.SharaSpot.user.email.login.EmailLoginScreen
+import com.SharaSpot.user.email.password.create.EmailPasswordCreateScreen
+import com.SharaSpot.user.email.password.enter.EmailPasswordEnterScreen
+import com.SharaSpot.user.email.password.reset.EmailPasswordResetScreen
+import com.SharaSpot.user.email.verify.RegisterVerificationScreen
+import com.SharaSpot.user.welcome.WelcomeScreen
+import com.SharaSpot.user.welcome.agreement.UserAgreementDialog
+import com.SharaSpot.user.welcome.language.LanguagesDialog
 
 fun NavGraphBuilder.userDestinations(
     navController: NavHostController,

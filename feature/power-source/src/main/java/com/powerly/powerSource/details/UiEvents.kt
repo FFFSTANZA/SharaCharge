@@ -1,6 +1,6 @@
-package com.powerly.powerSource.details
+package com.SharaSpot.powerSource.details
 
-import com.powerly.core.model.location.Target
+import com.SharaSpot.core.model.location.Target
 
 sealed class SourceEvents() {
     data object Close : SourceEvents()

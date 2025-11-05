@@ -1,4 +1,4 @@
-package com.powerly.charging.util
+package com.SharaSpot.charging.util
 
 import android.util.Log
 import java.util.Timer

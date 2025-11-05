@@ -1,15 +1,15 @@
-package com.powerly.core.database.di
+package com.SharaSpot.core.database.di
 
 
 import android.content.Context
 import androidx.room.Room
-import com.powerly.core.database.AppDatabase
+import com.SharaSpot.core.database.AppDatabase
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 
 @Module
-@ComponentScan("com.powerly.core.database")
+@ComponentScan("com.SharaSpot.core.database")
 class DatabaseModule
 
 
@@ -20,6 +20,6 @@ fun provideAppDatabase(
     return Room.databaseBuilder(
         applicationContext,
         AppDatabase::class.java,
-        "powerly-database"
+        "SharaSpot-database"
     ).fallbackToDestructiveMigration(true).build()
 }

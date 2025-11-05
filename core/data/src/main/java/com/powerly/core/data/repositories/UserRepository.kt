@@ -1,9 +1,9 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
-import com.powerly.core.data.model.AuthStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.user.User
-import com.powerly.core.model.user.UserUpdateBody
+import com.SharaSpot.core.data.model.AuthStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.user.User
+import com.SharaSpot.core.model.user.UserUpdateBody
 
 interface UserRepository {
 
@@ -32,7 +32,7 @@ interface UserRepository {
     /**
      * Checks authentication status.
      *
-     * @return  [com.powerly.core.data.model.AuthStatus] results.
+     * @return  [com.SharaSpot.core.data.model.AuthStatus] results.
      */
     suspend fun checkAuthentication(): AuthStatus
 

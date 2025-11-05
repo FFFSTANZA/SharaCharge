@@ -1,4 +1,4 @@
-package com.powerly.charge
+package com.SharaSpot.charge
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -43,23 +43,23 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.charge.util.ChargingTimerState
-import com.powerly.charge.util.asFormattedTime
-import com.powerly.charge.util.chargingAnimation
-import com.powerly.charge.util.rememberChargingTimerState
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.core.model.powerly.Session
-import com.powerly.resources.R
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.theme.MyColors
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.extensions.thenIf
+import com.SharaSpot.charge.util.ChargingTimerState
+import com.SharaSpot.charge.util.asFormattedTime
+import com.SharaSpot.charge.util.chargingAnimation
+import com.SharaSpot.charge.util.rememberChargingTimerState
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.extensions.thenIf
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

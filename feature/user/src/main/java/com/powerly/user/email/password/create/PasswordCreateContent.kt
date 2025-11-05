@@ -1,4 +1,4 @@
-package com.powerly.user.email.password.create
+package com.SharaSpot.user.email.password.create
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -24,21 +24,21 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.user.email.PASSWORD_MIN_LENGTH
-import com.powerly.user.email.PasswordStrength
-import com.powerly.user.email.checkPasswordStrength
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.components.MyIcon
-import com.powerly.ui.components.MyPasswordTextField
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.extensions.onClick
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.user.email.PASSWORD_MIN_LENGTH
+import com.SharaSpot.user.email.PasswordStrength
+import com.SharaSpot.user.email.checkPasswordStrength
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.components.MyIcon
+import com.SharaSpot.ui.components.MyPasswordTextField
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.extensions.onClick
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

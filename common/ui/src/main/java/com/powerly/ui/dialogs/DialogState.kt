@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs
+package com.SharaSpot.ui.dialogs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable

@@ -1,4 +1,4 @@
-package com.powerly.user.reminder
+package com.SharaSpot.user.reminder
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,9 +10,9 @@ import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
-import com.powerly.lib.managers.StorageManager
-import com.powerly.resources.R
-import com.powerly.ui.extensions.intent
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.extensions.intent
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

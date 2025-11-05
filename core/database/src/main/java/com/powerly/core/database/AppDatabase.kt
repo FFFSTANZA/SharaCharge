@@ -1,9 +1,9 @@
-package com.powerly.core.database
+package com.SharaSpot.core.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.powerly.core.database.dao.CountriesDao
-import com.powerly.core.database.model.CountryEntity
+import com.SharaSpot.core.database.dao.CountriesDao
+import com.SharaSpot.core.database.model.CountryEntity
 
 @Database(
     entities = [CountryEntity::class],

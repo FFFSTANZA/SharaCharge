@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleDetails.model
+package com.SharaSpot.vehicles.vehicleDetails.model
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,17 +14,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.core.data.model.ModelsStatus
-import com.powerly.core.model.powerly.VehicleModel
-import com.powerly.vehicles.vehicleDetails.make.ItemName
-import com.powerly.vehicles.vehicleDetails.make.SectionSearch
-import com.powerly.resources.R
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
-import com.powerly.ui.theme.MyColors.dividerColor
-import com.powerly.ui.dialogs.MyProgressView
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.IndexedScreenHeader
+import com.SharaSpot.core.data.model.ModelsStatus
+import com.SharaSpot.core.model.SharaSpot.VehicleModel
+import com.SharaSpot.vehicles.vehicleDetails.make.ItemName
+import com.SharaSpot.vehicles.vehicleDetails.make.SectionSearch
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.MyColors.dividerColor
+import com.SharaSpot.ui.dialogs.MyProgressView
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.IndexedScreenHeader
 
 
 @Preview

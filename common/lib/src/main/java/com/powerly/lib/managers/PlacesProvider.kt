@@ -1,11 +1,11 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.content.Context
 import android.location.Address
 import android.location.Geocoder
 import android.os.Build
 import android.util.Log
-import com.powerly.core.model.location.MyAddress
+import com.SharaSpot.core.model.location.MyAddress
 import org.koin.core.annotation.Single
 import java.util.Locale
 import kotlin.coroutines.resume

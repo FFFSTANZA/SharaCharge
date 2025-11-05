@@ -1,9 +1,9 @@
-package com.powerly.user.welcome.language
+package com.SharaSpot.user.welcome.language
 
 import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.Composable
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.ui.dialogs.languages.LanguagesDialogContent
+import com.SharaSpot.ui.dialogs.languages.LanguagesDialogContent
 
 
 @Composable

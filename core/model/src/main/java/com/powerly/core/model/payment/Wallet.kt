@@ -1,6 +1,6 @@
-package com.powerly.core.model.payment
+package com.SharaSpot.core.model.payment
 
-import com.powerly.core.model.api.BaseResponse
+import com.SharaSpot.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
 class WithdrawResponse : BaseResponse<Any>()

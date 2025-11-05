@@ -1,4 +1,4 @@
-package com.powerly.charging
+package com.SharaSpot.charging
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.horizontalScroll
@@ -34,16 +34,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.powerly.ChargingQuantity
-import com.powerly.core.model.powerly.Connector
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.dialogs.MyDialog
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.ChargingQuantity
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.dialogs.MyDialog
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import java.util.Locale
 
 private val connectors = listOf(

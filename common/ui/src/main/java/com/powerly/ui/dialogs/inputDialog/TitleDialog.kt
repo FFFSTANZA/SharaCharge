@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.inputDialog
+package com.SharaSpot.ui.dialogs.inputDialog
 
 import android.app.Dialog
 import androidx.annotation.StringRes
@@ -16,15 +16,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.dialogs.MyDialog
-import com.powerly.ui.components.MyTextField
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.theme.AppTheme
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.screen.DialogHeader
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.dialogs.MyDialog
+import com.SharaSpot.ui.components.MyTextField
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.screen.DialogHeader
 
 
 @Preview

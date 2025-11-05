@@ -1,4 +1,4 @@
-package com.powerly.core.analytics
+package com.SharaSpot.core.analytics
 
 interface EventsManager {
     fun log(event: String, key: String? = null, value: String? = null)

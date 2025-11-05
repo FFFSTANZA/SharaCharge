@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.powerly
+package com.SharaSpot
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project

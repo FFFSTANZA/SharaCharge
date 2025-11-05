@@ -1,7 +1,7 @@
-package com.powerly.home.home
+package com.SharaSpot.home.home
 
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.ui.dialogs.signIn.SignInOptions
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.ui.dialogs.signIn.SignInOptions
 
 internal sealed class HomeEvents {
     data object SliderClick : HomeEvents()

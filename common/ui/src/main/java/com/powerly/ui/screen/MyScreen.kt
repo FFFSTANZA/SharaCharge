@@ -1,4 +1,4 @@
-package com.powerly.ui.screen
+package com.SharaSpot.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -17,12 +17,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.dialogs.loading.LoadingDialog
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.message.MessageDialog
-import com.powerly.ui.dialogs.success.SuccessDialog
-import com.powerly.ui.extensions.thenIf
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.dialogs.loading.LoadingDialog
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.message.MessageDialog
+import com.SharaSpot.ui.dialogs.success.SuccessDialog
+import com.SharaSpot.ui.extensions.thenIf
 
 
 @Composable

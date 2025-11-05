@@ -1,7 +1,7 @@
-package com.powerly.account.invite
+package com.SharaSpot.account.invite
 
 import androidx.lifecycle.ViewModel
-import com.powerly.core.network.DeviceHelper
+import com.SharaSpot.core.network.DeviceHelper
 import org.koin.android.annotation.KoinViewModel
 
 

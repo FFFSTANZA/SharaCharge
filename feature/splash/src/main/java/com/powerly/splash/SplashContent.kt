@@ -1,4 +1,4 @@
-package com.powerly.splash
+package com.SharaSpot.splash
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -35,10 +35,10 @@ import coil.decode.GifDecoder
 import coil.request.ImageRequest
 import coil.request.repeatCount
 import coil.size.Size
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.extensions.isPreview
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.extensions.isPreview
+import com.SharaSpot.ui.theme.AppTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

@@ -179,11 +179,11 @@ room = { id = "androidx.room", version.ref = "room" }
 android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
 
 # Plugins defined by this project
-powerly-application = { id = "powerly.application" }
-powerly-library = { id = "powerly.library" }
-powerly-koin = { id = "powerly.koin" }
-powerly-compose = { id = "powerly.compose" }
-powerly-application-compose = { id = "powerly.application.compose" }
-powerly-serialization = { id = "powerly.serialization" }
-powerly-room = { id = "powerly.room" }
-powerly-android-test = { id = "powerly.android.test" }
+SharaSpot-application = { id = "SharaSpot.application" }
+SharaSpot-library = { id = "SharaSpot.library" }
+SharaSpot-koin = { id = "SharaSpot.koin" }
+SharaSpot-compose = { id = "SharaSpot.compose" }
+SharaSpot-application-compose = { id = "SharaSpot.application.compose" }
+SharaSpot-serialization = { id = "SharaSpot.serialization" }
+SharaSpot-room = { id = "SharaSpot.room" }
+SharaSpot-android-test = { id = "SharaSpot.android.test" }

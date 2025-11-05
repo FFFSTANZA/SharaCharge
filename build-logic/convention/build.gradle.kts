@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.powerly.buildlogic"
+group = "com.SharaSpot.buildlogic"
 
 // Configure the build-logic plugins to target JDK 18
 // This matches the JDK used to build the project, and is not related to what is running on device.
@@ -39,35 +39,35 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApp") {
-            id = "powerly.application"
+            id = "SharaSpot.application"
             implementationClass = "AndroidAppConventionPlugin"
         }
         register("androidLibrary") {
-            id = "powerly.library"
+            id = "SharaSpot.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("koin") {
-            id = "powerly.koin"
+            id = "SharaSpot.koin"
             implementationClass = "KoinConventionPlugin"
         }
         register("compose") {
-            id = "powerly.compose"
+            id = "SharaSpot.compose"
             implementationClass = "LibraryComposeConventionPlugin"
         }
         register("appCompose") {
-            id = "powerly.application.compose"
+            id = "SharaSpot.application.compose"
             implementationClass = "AppComposeConventionPlugin"
         }
         register("androidTest") {
-            id = "powerly.android.test"
+            id = "SharaSpot.android.test"
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("serialization") {
-            id = "powerly.serialization"
+            id = "SharaSpot.serialization"
             implementationClass = "SerializationConventionPlugin"
         }
         register("androidRoom") {
-            id = "powerly.room"
+            id = "SharaSpot.room"
             implementationClass = "RoomConventionPlugin"
         }
     }

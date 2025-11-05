@@ -1,8 +1,8 @@
-package com.powerly.scan
+package com.SharaSpot.scan
 
 import androidx.lifecycle.ViewModel
-import com.powerly.core.data.repositories.PowerSourceRepository
-import com.powerly.core.model.api.ApiStatus
+import com.SharaSpot.core.data.repositories.PowerSourceRepository
+import com.SharaSpot.core.model.api.ApiStatus
 import kotlinx.coroutines.flow.flow
 import org.koin.android.annotation.KoinViewModel
 

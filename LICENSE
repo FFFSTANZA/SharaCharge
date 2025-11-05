@@ -13,48 +13,48 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ---
-## **ADDITIONAL TERMS FOR POWERLY LONDON LIMITED**
-The following additional terms apply **specifically to the Powerly project** and modify the conditions of use.
+## **ADDITIONAL TERMS FOR SharaSpot LONDON LIMITED**
+The following additional terms apply **specifically to the SharaSpot project** and modify the conditions of use.
 
 ### **1. Trademark & Branding Restrictions**
-- "Powerly," the Powerly logo, and all related trademarks are **owned by POWERLY LONDON LIMITED**.
-- Any **forked or modified version** of this software **must remove** all Powerly branding (name, logo, and API keys).
-- You may **not market, advertise, or distribute** any modified version under the name "Powerly" or claim official affiliation.
+- "SharaSpot," the SharaSpot logo, and all related trademarks are **owned by SharaSpot LONDON LIMITED**.
+- Any **forked or modified version** of this software **must remove** all SharaSpot branding (name, logo, and API keys).
+- You may **not market, advertise, or distribute** any modified version under the name "SharaSpot" or claim official affiliation.
 
 ### **2. API Access & Usage Restrictions**
-- This software **is open-source, but the Powerly API is proprietary**.
-- Use of the Powerly API **requires explicit approval** and compliance with the [Powerly API Terms of Use](https://powerly.app/api-terms).
-- Unauthorized attempts to connect to the Powerly API may result in termination of access.
-- To request API access, users must register at [Powerly Developer Portal](https://powerly.app/developers) and agree to API Terms.
-- **Powerly reserves the right to suspend or revoke API keys** if the Licensee exceeds usage limits, violates API Terms, or engages in unauthorized commercial use.
+- This software **is open-source, but the SharaSpot API is proprietary**.
+- Use of the SharaSpot API **requires explicit approval** and compliance with the [SharaSpot API Terms of Use](https://SharaSpot.app/api-terms).
+- Unauthorized attempts to connect to the SharaSpot API may result in termination of access.
+- To request API access, users must register at [SharaSpot Developer Portal](https://SharaSpot.app/developers) and agree to API Terms.
+- **SharaSpot reserves the right to suspend or revoke API keys** if the Licensee exceeds usage limits, violates API Terms, or engages in unauthorized commercial use.
 
 ### **3. Enterprise Version (Commercial License)**
 - A **commercial license is required** for access to **AI-powered analytics, premium support, and enterprise features**.
 - The commercial version includes **priority API access, advanced reporting, and custom business integrations**.
-- For enterprise licensing inquiries, contact **sales@powerly.app**.
+- For enterprise licensing inquiries, contact **sales@SharaSpot.app**.
 
 ### **4. Competitive Use Restrictions (Covered Under API Terms)**
-- Competitive use restrictions are covered in the **Powerly API Terms of Use** rather than this license.
-- A "competing EV charging service" includes any **marketplace, platform, or software** that provides a **peer-to-peer or B2B EV charging network** similar to Powerly.
+- Competitive use restrictions are covered in the **SharaSpot API Terms of Use** rather than this license.
+- A "competing EV charging service" includes any **marketplace, platform, or software** that provides a **peer-to-peer or B2B EV charging network** similar to SharaSpot.
 - General-purpose energy or mapping applications that do not provide **monetized EV charger access** are **not considered competing services**.
 
 ### **5. License Enforcement**
 - Failure to comply with these additional terms may result in **revocation of API access**, but not the open-source license.
-- Powerly London Limited **reserves the right to monitor API usage** and take appropriate action against violations.
+- SharaSpot London Limited **reserves the right to monitor API usage** and take appropriate action against violations.
 
 ### **6. Disclaimer of Warranty & Limitation of Liability**
 - The Software is provided “as-is” without warranty of any kind.
-- Powerly London Limited shall not be liable for any **direct, indirect, or incidental damages** resulting from the use or inability to use the API or Enterprise services.
+- SharaSpot London Limited shall not be liable for any **direct, indirect, or incidental damages** resulting from the use or inability to use the API or Enterprise services.
 
 ### **7. Contributions & Open-Source Submissions**
 - We welcome contributions from developers worldwide. Contributions can include **bug fixes, new features, translations, and documentation improvements**.
-- Contributors retain copyright to their submissions but **grant Powerly a non-exclusive, worldwide, irrevocable, royalty-free license** to use, modify, and distribute their contributions.
+- Contributors retain copyright to their submissions but **grant SharaSpot a non-exclusive, worldwide, irrevocable, royalty-free license** to use, modify, and distribute their contributions.
 - Contributions must **not** include proprietary or third-party code **without explicit permission**.
-- All contributors must follow the [Powerly Contributor Guidelines](https://powerly.app/contributor-guidelines).
+- All contributors must follow the [SharaSpot Contributor Guidelines](https://SharaSpot.app/contributor-guidelines).
 
 ### **8. Governing Law & Dispute Resolution**
 - This Agreement shall be governed by and construed under the laws of **England and Wales**.
 - Any disputes arising from this License shall first be resolved through **good faith negotiations**. If unresolved, disputes shall be submitted to **binding arbitration in London, UK**.
 
 ---
-Copyright © 2025 POWERLY LONDON LIMITED. All Rights Reserved.
+Copyright © 2025 SharaSpot LONDON LIMITED. All Rights Reserved.

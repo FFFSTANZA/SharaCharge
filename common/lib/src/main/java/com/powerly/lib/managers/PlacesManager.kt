@@ -1,4 +1,4 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,9 +12,9 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.FetchPlaceRequest
 import com.google.android.libraries.places.api.net.FindAutocompletePredictionsRequest
 import com.google.android.libraries.places.api.net.PlacesClient
-import com.powerly.core.model.location.MyAddress
-import com.powerly.core.model.location.Target
-import com.powerly.core.network.DeviceHelper
+import com.SharaSpot.core.model.location.MyAddress
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.core.network.DeviceHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.core.annotation.Single

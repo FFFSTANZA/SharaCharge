@@ -1,8 +1,8 @@
-package com.powerly.user.welcome.language
+package com.SharaSpot.user.welcome.language
 
 import android.app.Activity
 import androidx.lifecycle.ViewModel
-import com.powerly.lib.managers.LocaleManager
+import com.SharaSpot.lib.managers.LocaleManager
 import org.koin.android.annotation.KoinViewModel
 
 

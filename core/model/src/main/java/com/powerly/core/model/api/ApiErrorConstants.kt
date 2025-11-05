@@ -1,4 +1,4 @@
-package com.powerly.core.model.api
+package com.SharaSpot.core.model.api
 
 object ApiErrorConstants {
     const val SUCCESS_NO_CONTENT = 204

@@ -1,4 +1,4 @@
-package com.powerly.payment.balance.show
+package com.SharaSpot.payment.balance.show
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Spacer
@@ -18,15 +18,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.payment.BalanceItem
-import com.powerly.resources.R
-import com.powerly.ui.containers.MySurfaceRow
-import com.powerly.ui.dialogs.ProgressView
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.payment.BalanceItem
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MySurfaceRow
+import com.SharaSpot.ui.dialogs.ProgressView
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

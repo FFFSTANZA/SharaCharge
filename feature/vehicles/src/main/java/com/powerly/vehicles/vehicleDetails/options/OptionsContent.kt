@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleDetails.options
+package com.SharaSpot.vehicles.vehicleDetails.options
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -21,18 +21,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.core.model.powerly.Connector
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MyCardRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.screen.IndexedScreenHeader
-import com.powerly.ui.components.MySlidingPicker
-import com.powerly.ui.components.PickerState
-import com.powerly.ui.components.rememberPickerState
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MyCardRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.screen.IndexedScreenHeader
+import com.SharaSpot.ui.components.MySlidingPicker
+import com.SharaSpot.ui.components.PickerState
+import com.SharaSpot.ui.components.rememberPickerState
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

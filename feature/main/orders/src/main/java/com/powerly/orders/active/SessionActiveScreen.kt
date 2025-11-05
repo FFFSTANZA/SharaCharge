@@ -1,4 +1,4 @@
-package com.powerly.orders.active
+package com.SharaSpot.orders.active
 
 import android.util.Log
 import androidx.compose.runtime.Composable
@@ -8,14 +8,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import com.powerly.core.data.model.ChargingStatus
-import com.powerly.core.model.powerly.Session
-import com.powerly.orders.ChargerViewModel
-import com.powerly.orders.SessionViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.loading.ScreenState
+import com.SharaSpot.core.data.model.ChargingStatus
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.orders.ChargerViewModel
+import com.SharaSpot.orders.SessionViewModel
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.loading.ScreenState
 import kotlinx.coroutines.launch
 
 

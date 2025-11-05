@@ -1,4 +1,4 @@
-package com.powerly.ui.theme
+package com.SharaSpot.ui.theme
 
 import android.os.Build
 import androidx.activity.compose.LocalActivity
@@ -11,8 +11,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.colorResource
 import androidx.core.view.WindowCompat
-import com.powerly.resources.R
-import com.powerly.ui.extensions.isArabic
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.extensions.isArabic
 
 
 @Composable

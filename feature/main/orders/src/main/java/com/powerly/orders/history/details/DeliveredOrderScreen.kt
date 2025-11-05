@@ -1,10 +1,10 @@
-package com.powerly.orders.history.details
+package com.SharaSpot.orders.history.details
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import com.powerly.orders.SessionViewModel
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.orders.SessionViewModel
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 private const val TAG = "DeliveredOrderScreen"
 

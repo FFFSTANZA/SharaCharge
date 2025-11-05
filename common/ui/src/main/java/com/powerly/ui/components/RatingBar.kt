@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 import android.graphics.BlendMode
 import android.graphics.BlendModeColorFilter
@@ -30,8 +30,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.theme.AppTheme
 import kotlin.math.ceil
 import kotlin.math.floor
 

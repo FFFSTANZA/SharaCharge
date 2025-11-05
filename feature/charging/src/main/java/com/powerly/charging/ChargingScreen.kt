@@ -1,4 +1,4 @@
-package com.powerly.charging
+package com.SharaSpot.charging
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
@@ -9,12 +9,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.powerly.core.data.model.ChargingStatus
-import com.powerly.core.model.powerly.Session
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.core.data.model.ChargingStatus
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 
 private const val TAG = "ChargingScreen"
 

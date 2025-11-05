@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.alert
+package com.SharaSpot.ui.dialogs.alert
 
 import android.text.SpannableString
 import android.text.Spanned
@@ -21,11 +21,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.AppTheme
 import kotlinx.coroutines.launch
 
 /**
- * Data class to hold additional properties for PowerlyDialog.
+ * Data class to hold additional properties for SharaSpotDialog.
  */
 data class AlertDialogProperties(
     val type: Int = ALERT_DIALOG,
@@ -210,7 +210,7 @@ fun MyAlertDialog(
 
 @Preview(showBackground = true, name = "Alert Dialog - Default")
 @Composable
-fun PreviewPowerlyDialog_AlertDialog_Default() {
+fun PreviewSharaSpotDialog_AlertDialog_Default() {
     MyAlertDialog(
         title = "Alert Dialog",
         message = "This is a default alert dialog.",
@@ -222,7 +222,7 @@ fun PreviewPowerlyDialog_AlertDialog_Default() {
 
 @Preview(showBackground = true, name = "Alert Dialog - Custom")
 @Composable
-fun PreviewPowerlyDialog_AlertDialog_Custom() {
+fun PreviewSharaSpotDialog_AlertDialog_Custom() {
     MyAlertDialog(
         title = "Custom Alert",
         message = "This is a custom alert dialog with more options.",
@@ -247,7 +247,7 @@ fun PreviewPowerlyDialog_AlertDialog_Custom() {
 
 @Preview(showBackground = true, name = "Alert Dialog - Spanned Message")
 @Composable
-fun PreviewPowerlyDialog_AlertDialog_SpannedMessage() {
+fun PreviewSharaSpotDialog_AlertDialog_SpannedMessage() {
     val spannedMessage: Spanned = SpannableString("This is a spanned message with color.").apply {
         setSpan(
             ForegroundColorSpan(Color.Red.hashCode()),
@@ -268,7 +268,7 @@ fun PreviewPowerlyDialog_AlertDialog_SpannedMessage() {
 
 @Preview(showBackground = true, name = "Bottom Dialog - Default")
 @Composable
-fun PreviewPowerlyDialog_BottomDialog_Default() {
+fun PreviewSharaSpotDialog_BottomDialog_Default() {
     MyAlertDialog(
         title = "Bottom Sheet",
         message = "This is a default bottom sheet dialog.",
@@ -280,7 +280,7 @@ fun PreviewPowerlyDialog_BottomDialog_Default() {
 
 @Preview(showBackground = true, name = "Bottom Dialog - Custom")
 @Composable
-fun PreviewPowerlyDialog_BottomDialog_Custom() {
+fun PreviewSharaSpotDialog_BottomDialog_Custom() {
     MyAlertDialog(
         title = "Custom Bottom Sheet",
         message = "This is a custom bottom sheet dialog with more options.",
@@ -305,7 +305,7 @@ fun PreviewPowerlyDialog_BottomDialog_Custom() {
 
 @Preview(showBackground = true, name = "Bottom Dialog - Spanned Message")
 @Composable
-fun PreviewPowerlyDialog_BottomDialog_SpannedMessage() {
+fun PreviewSharaSpotDialog_BottomDialog_SpannedMessage() {
     val spannedMessage: Spanned =
         SpannableString("Spanned message with different color for bottom sheet").apply {
             setSpan(

@@ -1,4 +1,4 @@
-package com.powerly.ui.util
+package com.SharaSpot.ui.util
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -11,7 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
-import com.powerly.core.data.model.ActivityResultState
+import com.SharaSpot.core.data.model.ActivityResultState
 
 /**
  * Creates and remembers an [ActivityResultState] object.

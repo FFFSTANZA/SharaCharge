@@ -1,11 +1,11 @@
-package com.powerly.core.data.repoImpl
+package com.SharaSpot.core.data.repoImpl
 
-import com.powerly.core.data.model.ReviewOptionsStatus
-import com.powerly.core.data.repositories.FeedbackRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.ReviewBody
-import com.powerly.core.network.RemoteDataSource
-import com.powerly.core.network.asErrorMessage
+import com.SharaSpot.core.data.model.ReviewOptionsStatus
+import com.SharaSpot.core.data.repositories.FeedbackRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.ReviewBody
+import com.SharaSpot.core.network.RemoteDataSource
+import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext

@@ -1,4 +1,4 @@
-package com.powerly.ui.map
+package com.SharaSpot.ui.map
 
 import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
@@ -22,11 +22,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.powerly.core.model.location.Target
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonRound
-import com.powerly.ui.containers.MyCardRow
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonRound
+import com.SharaSpot.ui.containers.MyCardRow
+import com.SharaSpot.ui.theme.MyColors
 import com.google.android.gms.maps.model.LatLng
 import java.util.Locale
 import kotlin.math.atan2
@@ -158,5 +158,5 @@ object Distance {
     }
 }
 
-val com.powerly.core.model.location.Target.toLatLng: LatLng get() = LatLng(this.latitude, this.longitude)
-val LatLng.toTarget: com.powerly.core.model.location.Target get() = Target(this.latitude, this.longitude)
+val com.SharaSpot.core.model.location.Target.toLatLng: LatLng get() = LatLng(this.latitude, this.longitude)
+val LatLng.toTarget: com.SharaSpot.core.model.location.Target get() = Target(this.latitude, this.longitude)

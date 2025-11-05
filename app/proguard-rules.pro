@@ -1,6 +1,6 @@
--keep class com.powerly.core.model.** { *; }
--keep class com.powerly.lib.managers.MessagingService { *; }
--dontwarn com.powerly.payment.BR
+-keep class com.SharaSpot.core.model.** { *; }
+-keep class com.SharaSpot.lib.managers.MessagingService { *; }
+-dontwarn com.SharaSpot.payment.BR
 
 # Retrofit, Gson, and Coroutines
 -keep class retrofit2.** { *; }

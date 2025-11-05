@@ -1,4 +1,4 @@
-package com.powerly.user.reminder
+package com.SharaSpot.user.reminder
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.Log
-import com.powerly.user.reminder.ReminderManager.Companion.destination
+import com.SharaSpot.user.reminder.ReminderManager.Companion.destination
 import org.koin.core.annotation.Single
 import java.util.Calendar
 

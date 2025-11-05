@@ -1,4 +1,4 @@
-package com.powerly.user.email
+package com.SharaSpot.user.email
 
 internal const val PASSWORD_MIN_LENGTH = 8
 

@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.signIn
+package com.SharaSpot.ui.dialogs.signIn
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -23,17 +23,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.dialogs.MyBottomSheet
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.screen.DialogHeader
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
-import com.powerly.ui.theme.myBorder
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.dialogs.MyBottomSheet
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.screen.DialogHeader
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.myBorder
 
 /**
  * please start interactive mode to show bottom sheet preview

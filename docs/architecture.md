@@ -1,6 +1,6 @@
-# 📐 Application Architecture — Open Powerly Android
+# 📐 Application Architecture — Open SharaSpot Android
 
-This document provides a detailed overview of the architecture for the **`open-powerly-android`** application — part of the **Powerly** open-source EV charging ecosystem.  
+This document provides a detailed overview of the architecture for the **`open-SharaSpot-android`** application — part of the **SharaSpot** open-source EV charging ecosystem.  
 It is designed to ensure the app remains **scalable**, **modular**, **testable**, and **maintainable** as it evolves.
 
 ---

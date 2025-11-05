@@ -1,9 +1,9 @@
-package com.powerly.splash
+package com.SharaSpot.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import com.powerly.lib.CONSTANTS
+import com.SharaSpot.lib.CONSTANTS
 
 private const val TAG = "SplashScreen"
 

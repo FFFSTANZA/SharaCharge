@@ -1,4 +1,4 @@
-package com.powerly.ui.theme
+package com.SharaSpot.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

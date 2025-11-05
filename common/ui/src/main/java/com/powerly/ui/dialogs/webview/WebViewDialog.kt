@@ -1,8 +1,8 @@
-package com.powerly.ui.dialogs.webview
+package com.SharaSpot.ui.dialogs.webview
 
 import androidx.compose.runtime.Composable
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 @Composable
 fun WebViewDialog(

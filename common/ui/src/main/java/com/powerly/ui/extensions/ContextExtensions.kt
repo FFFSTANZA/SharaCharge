@@ -1,4 +1,4 @@
-package com.powerly.ui.extensions
+package com.SharaSpot.ui.extensions
 
 import android.content.Context
 import android.content.Intent

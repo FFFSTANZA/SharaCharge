@@ -1,4 +1,4 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -1,9 +1,9 @@
-import com.powerly.MyProject
-import com.powerly.getPropertiesFileName
+import com.SharaSpot.MyProject
+import com.SharaSpot.getPropertiesFileName
 
 plugins {
-    alias(libs.plugins.powerly.library)
-    alias(libs.plugins.powerly.koin)
+    alias(libs.plugins.SharaSpot.library)
+    alias(libs.plugins.SharaSpot.koin)
     alias(libs.plugins.secrets)
 }
 

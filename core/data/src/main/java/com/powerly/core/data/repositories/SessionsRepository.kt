@@ -1,8 +1,8 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
 import androidx.paging.PagingData
-import com.powerly.core.data.model.ChargingStatus
-import com.powerly.core.model.powerly.Session
+import com.SharaSpot.core.data.model.ChargingStatus
+import com.SharaSpot.core.model.SharaSpot.Session
 import kotlinx.coroutines.flow.Flow
 
 interface SessionsRepository {
@@ -13,7 +13,7 @@ interface SessionsRepository {
      * @param chargePointId The ID of the charge point.
      * @param quantity The charging quantity.
      * @param connector The connector number.
-     * @return  [com.powerly.core.data.model.ChargingStatus] results.
+     * @return  [com.SharaSpot.core.data.model.ChargingStatus] results.
      */
     suspend fun startCharging(
         chargePointId: String,

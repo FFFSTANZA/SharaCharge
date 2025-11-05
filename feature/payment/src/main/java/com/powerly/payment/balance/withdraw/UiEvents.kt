@@ -1,4 +1,4 @@
-package com.powerly.payment.balance.withdraw
+package com.SharaSpot.payment.balance.withdraw
 
 sealed class WithdrawEvents {
     data object Close : WithdrawEvents()

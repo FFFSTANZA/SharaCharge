@@ -1,4 +1,4 @@
-package com.powerly.home.home.slider
+package com.SharaSpot.home.home.slider
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -23,11 +23,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.powerly.ui.components.SlidingCarousel
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MySurfaceColumn
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.ui.components.SlidingCarousel
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MySurfaceColumn
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 
 @Preview(locale = "ar")

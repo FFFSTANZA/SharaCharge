@@ -1,14 +1,14 @@
-package com.powerly.core.data.repoImpl
+package com.SharaSpot.core.data.repoImpl
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import com.powerly.core.data.model.ChargingStatus
-import com.powerly.core.data.repositories.SessionsRepository
-import com.powerly.core.model.api.BasePagingSource
-import com.powerly.core.model.powerly.StartChargingBody
-import com.powerly.core.model.powerly.StopChargingBody
-import com.powerly.core.network.RemoteDataSource
-import com.powerly.core.network.asErrorMessage
+import com.SharaSpot.core.data.model.ChargingStatus
+import com.SharaSpot.core.data.repositories.SessionsRepository
+import com.SharaSpot.core.model.api.BasePagingSource
+import com.SharaSpot.core.model.SharaSpot.StartChargingBody
+import com.SharaSpot.core.model.SharaSpot.StopChargingBody
+import com.SharaSpot.core.network.RemoteDataSource
+import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException

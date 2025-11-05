@@ -1,4 +1,4 @@
-package com.powerly.powerSource
+package com.SharaSpot.powerSource
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
@@ -6,17 +6,17 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
 import androidx.navigation.navigation
 import androidx.navigation.toRoute
-import com.powerly.charge.ChargingDialog
-import com.powerly.charge.ChargingScreen
-import com.powerly.lib.AppRoutes
-import com.powerly.lib.showMessage
-import com.powerly.powerSource.boarding.OnBoardingDialog
-import com.powerly.powerSource.details.PowerSourceScreen
-import com.powerly.powerSource.details.SourceEvents
-import com.powerly.powerSource.media.MediaScreen
-import com.powerly.powerSource.reviews.create.FeedbackDialog
-import com.powerly.powerSource.reviews.list.ReviewScreen
-import com.powerly.ui.HomeUiState
+import com.SharaSpot.charge.ChargingDialog
+import com.SharaSpot.charge.ChargingScreen
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.lib.showMessage
+import com.SharaSpot.powerSource.boarding.OnBoardingDialog
+import com.SharaSpot.powerSource.details.PowerSourceScreen
+import com.SharaSpot.powerSource.details.SourceEvents
+import com.SharaSpot.powerSource.media.MediaScreen
+import com.SharaSpot.powerSource.reviews.create.FeedbackDialog
+import com.SharaSpot.powerSource.reviews.list.ReviewScreen
+import com.SharaSpot.ui.HomeUiState
 
 fun NavGraphBuilder.powersourceDestinations(
     navController: NavHostController,

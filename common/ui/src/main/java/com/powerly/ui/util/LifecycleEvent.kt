@@ -1,4 +1,4 @@
-package com.powerly.ui.util
+package com.SharaSpot.ui.util
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect

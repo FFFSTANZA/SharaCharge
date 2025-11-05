@@ -1,9 +1,9 @@
-package com.powerly.orders
+package com.SharaSpot.orders
 
 import androidx.lifecycle.ViewModel
-import com.powerly.core.data.model.ChargingStatus
-import com.powerly.core.data.repositories.SessionsRepository
-import com.powerly.core.model.powerly.Session
+import com.SharaSpot.core.data.model.ChargingStatus
+import com.SharaSpot.core.data.repositories.SessionsRepository
+import com.SharaSpot.core.model.SharaSpot.Session
 import org.koin.android.annotation.KoinViewModel
 
 

@@ -1,4 +1,4 @@
-package com.powerly.payment.wallet
+package com.SharaSpot.payment.wallet
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -9,14 +9,14 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.core.model.payment.StripCard
-import com.powerly.payment.methods.PaymentViewModel
-import com.powerly.payment.wallet.options.WalletOptionsDialog
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.payment.methods.PaymentViewModel
+import com.SharaSpot.payment.wallet.options.WalletOptionsDialog
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
 import kotlinx.coroutines.launch
 
 private const val TAG = "WalletScreen"

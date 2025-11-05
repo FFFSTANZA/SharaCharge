@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs
+package com.SharaSpot.ui.dialogs
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -43,13 +43,13 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.PopupProperties
 import androidx.compose.ui.zIndex
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MySurfaceRow
-import com.powerly.ui.components.MyIcon
-import com.powerly.ui.components.NetworkImage
-import com.powerly.ui.extensions.thenIf
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MySurfaceRow
+import com.SharaSpot.ui.components.MyIcon
+import com.SharaSpot.ui.components.NetworkImage
+import com.SharaSpot.ui.extensions.thenIf
 import kotlinx.coroutines.launch
 
 

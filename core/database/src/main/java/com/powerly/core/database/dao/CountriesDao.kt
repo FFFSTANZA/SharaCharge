@@ -1,10 +1,10 @@
-package com.powerly.core.database.dao
+package com.SharaSpot.core.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.powerly.core.database.model.CountryEntity
+import com.SharaSpot.core.database.model.CountryEntity
 
 /**
  * DAO for [CountryEntity] access.

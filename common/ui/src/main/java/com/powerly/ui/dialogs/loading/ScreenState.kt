@@ -1,11 +1,11 @@
-package com.powerly.ui.dialogs.loading
+package com.SharaSpot.ui.dialogs.loading
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
-import com.powerly.core.model.util.Message
-import com.powerly.ui.dialogs.message.MessageState
-import com.powerly.ui.dialogs.success.SuccessState
+import com.SharaSpot.core.model.util.Message
+import com.SharaSpot.ui.dialogs.message.MessageState
+import com.SharaSpot.ui.dialogs.success.SuccessState
 
 
 @Composable

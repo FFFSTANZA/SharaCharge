@@ -1,9 +1,9 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
-import com.powerly.core.data.model.MakersStatus
-import com.powerly.core.data.model.ModelsStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Vehicle
+import com.SharaSpot.core.data.model.MakersStatus
+import com.SharaSpot.core.data.model.ModelsStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Vehicle
 
 interface VehiclesRepository {
 
@@ -33,7 +33,7 @@ interface VehiclesRepository {
     /**
      * Retrieves a list of vehicle makes.
      *
-     * @return  [com.powerly.core.data.model.MakersStatus] results containing the list of vehicle makes.
+     * @return  [com.SharaSpot.core.data.model.MakersStatus] results containing the list of vehicle makes.
      */
     suspend fun vehiclesMakes(): MakersStatus
 
@@ -41,7 +41,7 @@ interface VehiclesRepository {
      * Retrieves a list of vehicle models for a given make.
      *
      * @param makeId The ID of the vehicle make.
-     * @return  [com.powerly.core.data.model.ModelsStatus] results containing the list of vehicle models.
+     * @return  [com.SharaSpot.core.data.model.ModelsStatus] results containing the list of vehicle models.
      */
     suspend fun vehiclesModels(makeId: Int): ModelsStatus
 }

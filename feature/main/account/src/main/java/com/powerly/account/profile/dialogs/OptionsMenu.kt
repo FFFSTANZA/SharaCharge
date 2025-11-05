@@ -1,4 +1,4 @@
-package com.powerly.account.profile.dialogs
+package com.SharaSpot.account.profile.dialogs
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,10 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.ItemOptionsMenu
-import com.powerly.ui.dialogs.MyDropdownMenu
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.ItemOptionsMenu
+import com.SharaSpot.ui.dialogs.MyDropdownMenu
+import com.SharaSpot.ui.theme.AppTheme
 
 /**
  * please start interactive mode to show bottom sheet preview

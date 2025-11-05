@@ -1,11 +1,11 @@
-package com.powerly.lib.managers
+package com.SharaSpot.lib.managers
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import com.powerly.lib.MainScreen.setMainScreenHome
-import com.powerly.lib.MainScreen.setMainScreenWelcome
-import com.powerly.resources.R
+import com.SharaSpot.lib.MainScreen.setMainScreenHome
+import com.SharaSpot.lib.MainScreen.setMainScreenWelcome
+import com.SharaSpot.resources.R
 import org.koin.core.annotation.Single
 import java.util.Locale
 

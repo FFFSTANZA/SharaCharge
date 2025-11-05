@@ -1,8 +1,8 @@
-package com.powerly.core.database.model
+package com.SharaSpot.core.database.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.powerly.core.model.location.Country
+import com.SharaSpot.core.model.location.Country
 
 @Entity(tableName = "countries")
 data class CountryEntity(

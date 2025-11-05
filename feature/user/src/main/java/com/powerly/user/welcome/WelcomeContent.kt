@@ -1,4 +1,4 @@
-package com.powerly.user.welcome
+package com.SharaSpot.user.welcome
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -25,14 +25,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.powerly.resources.R
-import com.powerly.ui.containers.MySurfaceColumn
-import com.powerly.ui.dialogs.signIn.SignInButton
-import com.powerly.ui.dialogs.signIn.SignInOptions
-import com.powerly.ui.extensions.onClick
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.myBorder
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MySurfaceColumn
+import com.SharaSpot.ui.dialogs.signIn.SignInButton
+import com.SharaSpot.ui.dialogs.signIn.SignInOptions
+import com.SharaSpot.ui.extensions.onClick
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.myBorder
 
 private const val TAG = "WelcomeScreen"
 

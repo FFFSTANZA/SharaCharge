@@ -1,8 +1,8 @@
-package com.powerly.home.home.slider
+package com.SharaSpot.home.home.slider
 
 import android.content.Context
 import androidx.annotation.DrawableRes
-import com.powerly.resources.R
+import com.SharaSpot.resources.R
 
 internal data class SliderItem(
     val title: String,

@@ -1,4 +1,4 @@
-package com.powerly.vehicles.newVehicle
+package com.SharaSpot.vehicles.newVehicle
 
 internal sealed class VehicleAddEvents {
     data object Close : VehicleAddEvents()

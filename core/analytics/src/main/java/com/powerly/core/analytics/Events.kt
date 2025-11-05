@@ -1,4 +1,4 @@
-package com.powerly.core.analytics
+package com.SharaSpot.core.analytics
 
 object EVENTS {
     /**

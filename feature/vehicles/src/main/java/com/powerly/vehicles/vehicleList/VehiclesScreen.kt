@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleList
+package com.SharaSpot.vehicles.vehicleList
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -10,13 +10,13 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Vehicle
-import com.powerly.vehicles.VehiclesViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.SharaSpot.vehicles.VehiclesViewModel
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.launch
 

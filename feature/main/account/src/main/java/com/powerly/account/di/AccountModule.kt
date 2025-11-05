@@ -1,8 +1,8 @@
-package com.powerly.account.di
+package com.SharaSpot.account.di
 
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 
 @Module
-@ComponentScan("com.powerly.account")
+@ComponentScan("com.SharaSpot.account")
 class AccountModule

@@ -1,4 +1,4 @@
-package com.powerly.home.home
+package com.SharaSpot.home.home
 
 import android.Manifest
 import android.os.Build
@@ -11,17 +11,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import com.powerly.core.data.model.ActivityResultState
-import com.powerly.home.MyMapViewModel
-import com.powerly.home.home.NavigationEvents.Login
-import com.powerly.home.home.NavigationEvents.Map
-import com.powerly.home.home.NavigationEvents.SourceDetails
-import com.powerly.ui.HomeUiState
-import com.powerly.ui.dialogs.loading.LoadingState
-import com.powerly.ui.dialogs.loading.rememberBasicScreenState
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.dialogs.signIn.SignInOptionsDialog
-import com.powerly.ui.util.rememberPermissionsState
+import com.SharaSpot.core.data.model.ActivityResultState
+import com.SharaSpot.home.MyMapViewModel
+import com.SharaSpot.home.home.NavigationEvents.Login
+import com.SharaSpot.home.home.NavigationEvents.Map
+import com.SharaSpot.home.home.NavigationEvents.SourceDetails
+import com.SharaSpot.ui.HomeUiState
+import com.SharaSpot.ui.dialogs.loading.LoadingState
+import com.SharaSpot.ui.dialogs.loading.rememberBasicScreenState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.dialogs.signIn.SignInOptionsDialog
+import com.SharaSpot.ui.util.rememberPermissionsState
 import kotlinx.coroutines.launch
 
 

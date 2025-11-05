@@ -1,4 +1,4 @@
-package com.powerly.charge.util
+package com.SharaSpot.charge.util
 
 import android.util.Log
 import org.koin.core.annotation.Single

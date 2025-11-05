@@ -1,17 +1,17 @@
-package com.powerly.powerSource
+package com.SharaSpot.powerSource
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.powerly.core.data.model.SourceStatus
-import com.powerly.core.data.repositories.PowerSourceRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Media
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.core.model.powerly.Review
-import com.powerly.lib.managers.StorageManager
-import com.powerly.lib.managers.UserLocationManager
+import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.data.repositories.PowerSourceRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Media
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.core.model.SharaSpot.Review
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.lib.managers.UserLocationManager
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

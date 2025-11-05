@@ -1,4 +1,4 @@
-package com.powerly.user.welcome.agreement
+package com.SharaSpot.user.welcome.agreement
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
@@ -10,10 +10,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.MyProgressView
-import com.powerly.ui.dialogs.webview.WebViewPage
-import com.powerly.ui.dialogs.webview.WebViewScreen
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.MyProgressView
+import com.SharaSpot.ui.dialogs.webview.WebViewPage
+import com.SharaSpot.ui.dialogs.webview.WebViewScreen
 import kotlinx.coroutines.launch
 
 private const val TAG = "UserAgreementDialog"

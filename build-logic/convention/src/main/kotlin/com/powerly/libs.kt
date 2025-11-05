@@ -1,4 +1,4 @@
-package com.powerly
+package com.SharaSpot
 
 import org.gradle.api.artifacts.VersionCatalog
 import org.gradle.api.Project

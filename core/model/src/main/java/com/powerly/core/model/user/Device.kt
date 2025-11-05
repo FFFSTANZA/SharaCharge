@@ -1,6 +1,6 @@
-package com.powerly.core.model.user
+package com.SharaSpot.core.model.user
 
-import com.powerly.core.model.api.BaseResponse
+import com.SharaSpot.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
 class UpdateDeviceResponse : BaseResponse<Any?>()

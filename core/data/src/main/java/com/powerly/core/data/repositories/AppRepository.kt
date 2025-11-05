@@ -1,9 +1,9 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
-import com.powerly.core.data.model.CurrenciesStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.user.DeviceBody
-import com.powerly.core.model.location.Country
+import com.SharaSpot.core.data.model.CurrenciesStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.user.DeviceBody
+import com.SharaSpot.core.model.location.Country
 
 interface AppRepository {
 

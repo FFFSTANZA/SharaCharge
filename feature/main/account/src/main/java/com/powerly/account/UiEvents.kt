@@ -1,4 +1,4 @@
-package com.powerly.account
+package com.SharaSpot.account
 
 sealed class AccountEvents {
     data object OpenProfile : AccountEvents()

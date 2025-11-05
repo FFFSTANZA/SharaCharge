@@ -1,4 +1,4 @@
-package com.powerly.powerSource.reviews.create
+package com.SharaSpot.powerSource.reviews.create
 
 import android.widget.Toast
 import androidx.compose.runtime.Composable
@@ -6,12 +6,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.ui.dialogs.MyBasicBottomSheet
-import com.powerly.ui.dialogs.loading.LoadingDialog
-import com.powerly.ui.dialogs.loading.rememberLoadingState
-import com.powerly.ui.dialogs.success.SuccessDialog
-import com.powerly.ui.dialogs.success.rememberSuccessState
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.ui.dialogs.MyBasicBottomSheet
+import com.SharaSpot.ui.dialogs.loading.LoadingDialog
+import com.SharaSpot.ui.dialogs.loading.rememberLoadingState
+import com.SharaSpot.ui.dialogs.success.SuccessDialog
+import com.SharaSpot.ui.dialogs.success.rememberSuccessState
 import kotlinx.coroutines.launch
 
 private const val TAG = "FeedbackScreen"

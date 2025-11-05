@@ -16,11 +16,11 @@
 
 
 import com.android.build.api.dsl.ApplicationExtension
-import com.powerly.configureFlavors
-import com.powerly.configureKotlinAndroid
+import com.SharaSpot.configureFlavors
+import com.SharaSpot.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import com.powerly.MyProject as Proj
+import com.SharaSpot.MyProject as Proj
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 

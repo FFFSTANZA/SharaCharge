@@ -1,9 +1,9 @@
-package com.powerly.payment.balance.add
+package com.SharaSpot.payment.balance.add
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import com.powerly.core.model.payment.StripCard
-import com.powerly.resources.R
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.resources.R
 
 @Composable
 internal fun paymentMethodDetails(

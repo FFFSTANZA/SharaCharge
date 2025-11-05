@@ -1,15 +1,15 @@
-package com.powerly.user.welcome
+package com.SharaSpot.user.welcome
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.user.UserViewModel
-import com.powerly.user.welcome.language.LanguagesDialog
-import com.powerly.user.welcome.language.LanguagesViewModel
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.dialogs.signIn.SignInOptions
-import com.powerly.ui.dialogs.signIn.SignInOptionsDialog
+import com.SharaSpot.user.UserViewModel
+import com.SharaSpot.user.welcome.language.LanguagesDialog
+import com.SharaSpot.user.welcome.language.LanguagesViewModel
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.dialogs.signIn.SignInOptions
+import com.SharaSpot.ui.dialogs.signIn.SignInOptionsDialog
 
 private const val TAG = "WelcomeScreen"
 

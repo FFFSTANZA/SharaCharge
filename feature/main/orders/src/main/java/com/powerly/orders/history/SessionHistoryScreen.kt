@@ -1,9 +1,9 @@
-package com.powerly.orders.history
+package com.SharaSpot.orders.history
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import com.powerly.core.model.powerly.Session
-import com.powerly.orders.SessionViewModel
+import com.SharaSpot.core.model.SharaSpot.Session
+import com.SharaSpot.orders.SessionViewModel
 
 private const val TAG = "SessionHistoryScreen"
 

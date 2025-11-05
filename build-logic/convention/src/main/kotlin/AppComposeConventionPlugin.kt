@@ -15,8 +15,8 @@
  */
 
 import com.android.build.api.dsl.ApplicationExtension
-import com.powerly.configureAndroidCompose
-import com.powerly.libs
+import com.SharaSpot.configureAndroidCompose
+import com.SharaSpot.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply

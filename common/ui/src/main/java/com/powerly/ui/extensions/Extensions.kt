@@ -1,4 +1,4 @@
-package com.powerly.ui.extensions
+package com.SharaSpot.ui.extensions
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.Dp
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.ui.theme.MyColors
 
 @Composable
 fun isArabic(): Boolean = Locale.current.language.contains("ar")

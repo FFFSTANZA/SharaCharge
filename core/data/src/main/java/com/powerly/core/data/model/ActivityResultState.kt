@@ -1,4 +1,4 @@
-package com.powerly.core.data.model
+package com.SharaSpot.core.data.model
 
 import android.content.Intent
 import android.os.Bundle

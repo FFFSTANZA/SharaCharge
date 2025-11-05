@@ -1,4 +1,4 @@
-package com.powerly.core.model.location
+package com.SharaSpot.core.model.location
 
 import com.google.gson.annotations.SerializedName
 

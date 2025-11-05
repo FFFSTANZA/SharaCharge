@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.powerly.library)
+    alias(libs.plugins.SharaSpot.library)
 }
 
 android {

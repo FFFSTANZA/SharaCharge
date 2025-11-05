@@ -1,11 +1,11 @@
-package com.powerly.core.data.repositories
+package com.SharaSpot.core.data.repositories
 
-import com.powerly.core.data.model.BalanceRefillStatus
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.payment.BalanceItem
-import com.powerly.core.model.payment.StripCard
-import com.powerly.core.model.payment.Wallet
-import com.powerly.core.model.util.Message
+import com.SharaSpot.core.data.model.BalanceRefillStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.payment.BalanceItem
+import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.Wallet
+import com.SharaSpot.core.model.util.Message
 
 interface PaymentRepository {
 
@@ -45,7 +45,7 @@ interface PaymentRepository {
      *
      * @param offerId ID of the balance offer selected by the user.
      * @param paymentMethodId method ID used for the transaction.
-     * @return  [com.powerly.core.data.model.BalanceRefillStatus] results indicating the status of the refill.
+     * @return  [com.SharaSpot.core.data.model.BalanceRefillStatus] results indicating the status of the refill.
      */
     suspend fun refillBalance(offerId: Int, paymentMethodId: String): BalanceRefillStatus
 

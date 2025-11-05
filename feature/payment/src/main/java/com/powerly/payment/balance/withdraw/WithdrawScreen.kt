@@ -1,4 +1,4 @@
-package com.powerly.payment.balance.withdraw
+package com.SharaSpot.payment.balance.withdraw
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -10,14 +10,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.AlertDialogProperties
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.alert.rememberAlertDialogState
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.dialogs.webview.WebViewDialog
-import com.powerly.ui.dialogs.webview.WebViewPage
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.AlertDialogProperties
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.dialogs.webview.WebViewDialog
+import com.SharaSpot.ui.dialogs.webview.WebViewPage
 import kotlinx.coroutines.launch
 
 /**

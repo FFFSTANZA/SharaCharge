@@ -1,4 +1,4 @@
-package com.powerly.ui.map
+package com.SharaSpot.ui.map
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -22,13 +22,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.powerly.core.model.location.Target
-import com.powerly.lib.managers.PlacesManager
-import com.powerly.resources.R
-import com.powerly.ui.map.Distance
-import com.powerly.ui.map.MapViewState
-import com.powerly.ui.map.SectionSearchBox
-import com.powerly.ui.map.rememberMapState
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.lib.managers.PlacesManager
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.map.Distance
+import com.SharaSpot.ui.map.MapViewState
+import com.SharaSpot.ui.map.SectionSearchBox
+import com.SharaSpot.ui.map.rememberMapState
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.MapStyleOptions

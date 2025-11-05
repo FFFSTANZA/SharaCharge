@@ -1,4 +1,4 @@
-package com.powerly.powerSource.reviews.list
+package com.SharaSpot.powerSource.reviews.list
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,23 +31,23 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemContentType
 import androidx.paging.compose.itemKey
-import com.powerly.core.model.powerly.Review
-import com.powerly.core.model.powerly.Reviewer
-import com.powerly.resources.R
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.components.NetworkImage
-import com.powerly.ui.components.RatingBar
-import com.powerly.ui.containers.MyCardColum
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.dialogs.ProgressView
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.extensions.asPadding
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.SharaSpot.Review
+import com.SharaSpot.core.model.SharaSpot.Reviewer
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.components.NetworkImage
+import com.SharaSpot.ui.components.RatingBar
+import com.SharaSpot.ui.containers.MyCardColum
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.dialogs.ProgressView
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.extensions.asPadding
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 import kotlinx.coroutines.flow.flow
 
 @Preview

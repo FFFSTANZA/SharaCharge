@@ -1,4 +1,4 @@
-package com.powerly.ui.containers
+package com.SharaSpot.ui.containers
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -28,7 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.powerly.ui.extensions.thenIf
+import com.SharaSpot.ui.extensions.thenIf
 
 
 @Composable

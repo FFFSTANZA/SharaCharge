@@ -1,4 +1,4 @@
-package com.powerly.account.profile.dialogs
+package com.SharaSpot.account.profile.dialogs
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
@@ -8,14 +8,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.powerly.core.data.model.CurrenciesStatus
-import com.powerly.core.model.location.AppCurrency
-import com.powerly.ui.dialogs.ItemOptionsMenu
-import com.powerly.ui.dialogs.MyDialogState
-import com.powerly.ui.dialogs.MyDropdownMenu
-import com.powerly.ui.dialogs.ProgressView
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.core.data.model.CurrenciesStatus
+import com.SharaSpot.core.model.location.AppCurrency
+import com.SharaSpot.ui.dialogs.ItemOptionsMenu
+import com.SharaSpot.ui.dialogs.MyDialogState
+import com.SharaSpot.ui.dialogs.MyDropdownMenu
+import com.SharaSpot.ui.dialogs.ProgressView
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.theme.AppTheme
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

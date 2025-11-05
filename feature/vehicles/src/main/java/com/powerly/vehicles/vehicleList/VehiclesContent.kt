@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleList
+package com.SharaSpot.vehicles.vehicleList
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -30,27 +30,27 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Connector
-import com.powerly.core.model.powerly.Vehicle
-import com.powerly.core.model.powerly.VehicleMaker
-import com.powerly.core.model.powerly.VehicleModel
-import com.powerly.vehicles.vehicleDetails.options.asVehicleColor
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.screen.MyScreen
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.components.FourCellsContainer
-import com.powerly.ui.components.MyTextDynamic
-import com.powerly.ui.dialogs.MyProgressView
-import com.powerly.ui.dialogs.inputDialog.MyInputDialog
-import com.powerly.ui.dialogs.loading.ScreenState
-import com.powerly.ui.dialogs.loading.rememberScreenState
-import com.powerly.ui.dialogs.rememberMyDialogState
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.SharaSpot.core.model.SharaSpot.VehicleMaker
+import com.SharaSpot.core.model.SharaSpot.VehicleModel
+import com.SharaSpot.vehicles.vehicleDetails.options.asVehicleColor
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.screen.MyScreen
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.components.FourCellsContainer
+import com.SharaSpot.ui.components.MyTextDynamic
+import com.SharaSpot.ui.dialogs.MyProgressView
+import com.SharaSpot.ui.dialogs.inputDialog.MyInputDialog
+import com.SharaSpot.ui.dialogs.loading.ScreenState
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.ui.dialogs.rememberMyDialogState
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 @Preview
 @Composable

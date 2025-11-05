@@ -1,8 +1,8 @@
-package com.powerly.core.database.di
+package com.SharaSpot.core.database.di
 
 
-import com.powerly.core.database.AppDatabase
-import com.powerly.core.database.dao.CountriesDao
+import com.SharaSpot.core.database.AppDatabase
+import com.SharaSpot.core.database.dao.CountriesDao
 import org.koin.core.annotation.Single
 
 @Single

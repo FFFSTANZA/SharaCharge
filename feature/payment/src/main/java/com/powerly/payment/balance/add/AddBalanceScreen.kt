@@ -1,4 +1,4 @@
-package com.powerly.payment.balance.add
+package com.SharaSpot.payment.balance.add
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -8,13 +8,13 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.powerly.core.model.util.asErrorMessage
-import com.powerly.payment.balance.BalanceViewModel
-import com.powerly.payment.methods.PaymentViewModel
-import com.powerly.resources.R
-import com.powerly.ui.dialogs.alert.AlertDialogProperties
-import com.powerly.ui.dialogs.alert.MyAlertDialog
-import com.powerly.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.core.model.util.asErrorMessage
+import com.SharaSpot.payment.balance.BalanceViewModel
+import com.SharaSpot.payment.methods.PaymentViewModel
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.dialogs.alert.AlertDialogProperties
+import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import kotlinx.coroutines.launch
 
 private const val TAG = "AddBalanceScreen"

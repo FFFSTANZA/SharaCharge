@@ -1,22 +1,22 @@
-package com.powerly.user.email
+package com.SharaSpot.user.email
 
 import android.util.Log
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.data.repositories.LoginEmailRepository
-import com.powerly.core.model.api.ApiErrorConstants
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.location.Country
-import com.powerly.core.model.user.EmailCheck
-import com.powerly.core.model.user.EmailLoginBody
-import com.powerly.core.model.user.EmailRegisterBody
-import com.powerly.core.model.user.EmailResetBody
-import com.powerly.core.model.user.User
-import com.powerly.core.model.user.VerificationBody
-import com.powerly.lib.managers.StorageManager
-import com.powerly.ui.dialogs.loading.initScreenState
+import com.SharaSpot.core.data.repositories.LoginEmailRepository
+import com.SharaSpot.core.model.api.ApiErrorConstants
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.location.Country
+import com.SharaSpot.core.model.user.EmailCheck
+import com.SharaSpot.core.model.user.EmailLoginBody
+import com.SharaSpot.core.model.user.EmailRegisterBody
+import com.SharaSpot.core.model.user.EmailResetBody
+import com.SharaSpot.core.model.user.User
+import com.SharaSpot.core.model.user.VerificationBody
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.ui.dialogs.loading.initScreenState
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.launch
 

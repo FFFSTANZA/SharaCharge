@@ -1,4 +1,4 @@
-package com.powerly.vehicles.vehicleDetails.options
+package com.SharaSpot.vehicles.vehicleDetails.options
 
 sealed interface OptionsEvents {
     data class Next(val isElectric: Boolean) : OptionsEvents

@@ -1,12 +1,12 @@
-package com.powerly.account.language
+package com.SharaSpot.account.language
 
 import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import org.koin.androidx.compose.koinViewModel
-import com.powerly.ui.dialogs.languages.LanguagesDialogContent
-import com.powerly.ui.dialogs.loading.LoadingDialog
+import com.SharaSpot.ui.dialogs.languages.LanguagesDialogContent
+import com.SharaSpot.ui.dialogs.loading.LoadingDialog
 import kotlinx.coroutines.launch
 
 /**

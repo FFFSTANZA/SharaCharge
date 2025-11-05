@@ -1,4 +1,4 @@
-package com.powerly.ui.dialogs.alert
+package com.SharaSpot.ui.dialogs.alert
 
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -27,15 +27,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.powerly.resources.R
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.containers.MyRow
-import com.powerly.ui.containers.MySurfaceColumn
-import com.powerly.ui.screen.ScreenHeader
-import com.powerly.ui.components.ButtonLarge
-import com.powerly.ui.screen.DialogHeader
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors.borderColor
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.containers.MyRow
+import com.SharaSpot.ui.containers.MySurfaceColumn
+import com.SharaSpot.ui.screen.ScreenHeader
+import com.SharaSpot.ui.components.ButtonLarge
+import com.SharaSpot.ui.screen.DialogHeader
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors.borderColor
 
 @Preview
 @Composable

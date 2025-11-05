@@ -1,4 +1,4 @@
-package com.powerly.powerSource.boarding
+package com.SharaSpot.powerSource.boarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Spacer
@@ -25,9 +25,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
-import com.powerly.ui.components.MyIcon
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.theme.AppTheme
+import com.SharaSpot.ui.components.MyIcon
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.theme.AppTheme
 
 @Preview(locale = "ar")
 @Composable

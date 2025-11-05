@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -15,8 +15,8 @@ import androidx.compose.ui.res.painterResource
 import coil.compose.AsyncImage
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
-import com.powerly.resources.R
-import com.powerly.ui.extensions.thenIf
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.extensions.thenIf
 
 @Composable
 fun MyIconButton(

@@ -1,4 +1,4 @@
-package com.powerly.home.map
+package com.SharaSpot.home.map
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -37,23 +37,23 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import com.powerly.core.model.location.Target
-import com.powerly.core.model.powerly.Amenity
-import com.powerly.core.model.powerly.Connector
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.home.home.MapPlaceHolder
-import com.powerly.resources.R
-import com.powerly.ui.map.MyMapScreen
-import com.powerly.ui.map.PowerSourceMarker
-import com.powerly.ui.components.ButtonSmall
-import com.powerly.ui.components.SectionBalance
-import com.powerly.ui.containers.LayoutDirectionLtr
-import com.powerly.ui.containers.MyColumn
-import com.powerly.ui.map.MapActionButton
-import com.powerly.ui.map.MapViewState
-import com.powerly.ui.map.rememberMapState
-import com.powerly.ui.theme.AppTheme
-import com.powerly.ui.theme.MyColors
+import com.SharaSpot.core.model.location.Target
+import com.SharaSpot.core.model.SharaSpot.Amenity
+import com.SharaSpot.core.model.SharaSpot.Connector
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.home.home.MapPlaceHolder
+import com.SharaSpot.resources.R
+import com.SharaSpot.ui.map.MyMapScreen
+import com.SharaSpot.ui.map.PowerSourceMarker
+import com.SharaSpot.ui.components.ButtonSmall
+import com.SharaSpot.ui.components.SectionBalance
+import com.SharaSpot.ui.containers.LayoutDirectionLtr
+import com.SharaSpot.ui.containers.MyColumn
+import com.SharaSpot.ui.map.MapActionButton
+import com.SharaSpot.ui.map.MapViewState
+import com.SharaSpot.ui.map.rememberMapState
+import com.SharaSpot.ui.theme.AppTheme
+import com.SharaSpot.ui.theme.MyColors
 
 private const val TAG = "MapScreen"
 

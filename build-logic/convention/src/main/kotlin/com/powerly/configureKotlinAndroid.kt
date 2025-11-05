@@ -1,4 +1,4 @@
-package com.powerly
+package com.SharaSpot
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
@@ -9,7 +9,7 @@ import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinTopLevelExtension
-import com.powerly.MyProject as proj
+import com.SharaSpot.MyProject as proj
 
 /**
  * Configure base Kotlin with Android options

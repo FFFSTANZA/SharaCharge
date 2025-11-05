@@ -1,14 +1,14 @@
-package com.powerly.vehicles.newVehicle
+package com.SharaSpot.vehicles.newVehicle
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.powerly.Vehicle
-import com.powerly.vehicles.VehiclesViewModel
-import com.powerly.ui.dialogs.loading.rememberScreenState
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.SharaSpot.vehicles.VehiclesViewModel
+import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

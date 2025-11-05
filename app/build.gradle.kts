@@ -1,17 +1,17 @@
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
-import com.powerly.MyProject
-import com.powerly.appBuildName
-import com.powerly.getLocalProperties
-import com.powerly.getPackageName
-import com.powerly.getPropertiesFileName
-import com.powerly.hasDebugStoreConfig
-import com.powerly.hasReleaseStoreConfig
-import com.powerly.isGoogle
+import com.SharaSpot.MyProject
+import com.SharaSpot.appBuildName
+import com.SharaSpot.getLocalProperties
+import com.SharaSpot.getPackageName
+import com.SharaSpot.getPropertiesFileName
+import com.SharaSpot.hasDebugStoreConfig
+import com.SharaSpot.hasReleaseStoreConfig
+import com.SharaSpot.isGoogle
 
 plugins {
-    alias(libs.plugins.powerly.application)
-    alias(libs.plugins.powerly.koin)
-    alias(libs.plugins.powerly.application.compose)
+    alias(libs.plugins.SharaSpot.application)
+    alias(libs.plugins.SharaSpot.koin)
+    alias(libs.plugins.SharaSpot.application.compose)
     alias(libs.plugins.secrets)
 }
 

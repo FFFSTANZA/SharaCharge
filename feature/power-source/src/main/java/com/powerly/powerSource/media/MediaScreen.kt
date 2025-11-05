@@ -1,8 +1,8 @@
-package com.powerly.powerSource.media
+package com.SharaSpot.powerSource.media
 
 import androidx.compose.runtime.Composable
-import com.powerly.powerSource.PsViewModel
-import com.powerly.ui.dialogs.MyScreenBottomSheet
+import com.SharaSpot.powerSource.PsViewModel
+import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 
 private const val TAG = "MediaScreen"
 

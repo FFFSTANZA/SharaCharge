@@ -1,4 +1,4 @@
-package com.powerly.charging.util
+package com.SharaSpot.charging.util
 
 import kotlinx.coroutines.delay
 

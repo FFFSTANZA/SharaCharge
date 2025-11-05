@@ -1,4 +1,4 @@
-package com.powerly.charging.util
+package com.SharaSpot.charging.util
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

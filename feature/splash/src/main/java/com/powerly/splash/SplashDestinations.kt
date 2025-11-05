@@ -1,13 +1,13 @@
-package com.powerly.splash
+package com.SharaSpot.splash
 
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
-import com.powerly.lib.AppRoutes
-import com.powerly.splash.update.UpdateAppDialog
-import com.powerly.ui.extensions.finish
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.splash.update.UpdateAppDialog
+import com.SharaSpot.ui.extensions.finish
 
 fun NavGraphBuilder.splashDestinations(
     navController: NavHostController,

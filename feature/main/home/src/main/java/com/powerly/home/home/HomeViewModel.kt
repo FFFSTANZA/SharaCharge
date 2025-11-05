@@ -1,14 +1,14 @@
-package com.powerly.home.home
+package com.SharaSpot.home.home
 
 import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.powerly.core.data.model.SourceStatus
-import com.powerly.core.data.repositories.PowerSourceRepository
-import com.powerly.core.model.powerly.PowerSource
-import com.powerly.core.network.DeviceHelper
-import com.powerly.lib.CONSTANTS.POWER_SOURCE_ID
-import com.powerly.lib.managers.StorageManager
+import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.data.repositories.PowerSourceRepository
+import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.SharaSpot.core.network.DeviceHelper
+import com.SharaSpot.lib.CONSTANTS.POWER_SOURCE_ID
+import com.SharaSpot.lib.managers.StorageManager
 import org.koin.android.annotation.KoinViewModel
 
 

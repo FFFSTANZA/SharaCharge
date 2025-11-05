@@ -1,18 +1,18 @@
-package com.powerly.payment
+package com.SharaSpot.payment
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
-import com.powerly.lib.AppRoutes
-import com.powerly.payment.balance.BalanceViewModel
-import com.powerly.payment.balance.add.AddBalanceScreen
-import com.powerly.payment.balance.show.ShowBalanceScreen
-import com.powerly.payment.balance.withdraw.WithdrawBalanceDialog
-import com.powerly.payment.methods.PaymentViewModel
-import com.powerly.payment.methods.add.AddPaymentDialog
-import com.powerly.payment.methods.select.PaymentMethodsDialog
-import com.powerly.payment.wallet.WalletScreen
+import com.SharaSpot.lib.AppRoutes
+import com.SharaSpot.payment.balance.BalanceViewModel
+import com.SharaSpot.payment.balance.add.AddBalanceScreen
+import com.SharaSpot.payment.balance.show.ShowBalanceScreen
+import com.SharaSpot.payment.balance.withdraw.WithdrawBalanceDialog
+import com.SharaSpot.payment.methods.PaymentViewModel
+import com.SharaSpot.payment.methods.add.AddPaymentDialog
+import com.SharaSpot.payment.methods.select.PaymentMethodsDialog
+import com.SharaSpot.payment.wallet.WalletScreen
 
 fun NavGraphBuilder.paymentDestinations(
     navController: NavHostController,

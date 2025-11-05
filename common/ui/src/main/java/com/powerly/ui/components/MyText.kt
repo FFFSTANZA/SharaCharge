@@ -1,4 +1,4 @@
-package com.powerly.ui.components
+package com.SharaSpot.ui.components
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Box

@@ -1,17 +1,17 @@
-package com.powerly.payment.balance.withdraw
+package com.SharaSpot.payment.balance.withdraw
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.data.repositories.AppRepository
-import com.powerly.core.data.repositories.PaymentRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.payment.Wallet
-import com.powerly.lib.managers.CountryManager
-import com.powerly.lib.managers.StorageManager
-import com.powerly.ui.dialogs.loading.LoadingState
-import com.powerly.ui.dialogs.loading.initBasicScreenState
-import com.powerly.ui.dialogs.message.MessageState
+import com.SharaSpot.core.data.repositories.AppRepository
+import com.SharaSpot.core.data.repositories.PaymentRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.payment.Wallet
+import com.SharaSpot.lib.managers.CountryManager
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.ui.dialogs.loading.LoadingState
+import com.SharaSpot.ui.dialogs.loading.initBasicScreenState
+import com.SharaSpot.ui.dialogs.message.MessageState
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch

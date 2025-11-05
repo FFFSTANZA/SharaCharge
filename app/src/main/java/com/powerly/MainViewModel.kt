@@ -1,17 +1,17 @@
-package com.powerly
+package com.SharaSpot
 
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.data.repositories.UserRepository
-import com.powerly.core.model.api.ApiStatus
-import com.powerly.core.model.user.User
-import com.powerly.core.network.DeviceHelper
-import com.powerly.lib.managers.LocaleManager
-import com.powerly.lib.managers.StorageManager
-import com.powerly.payment.PaymentManager
-import com.powerly.ui.HomeUiState
+import com.SharaSpot.core.data.repositories.UserRepository
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.user.User
+import com.SharaSpot.core.network.DeviceHelper
+import com.SharaSpot.lib.managers.LocaleManager
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.payment.PaymentManager
+import com.SharaSpot.ui.HomeUiState
 import kotlinx.coroutines.launch
 import org.koin.android.annotation.KoinViewModel
 

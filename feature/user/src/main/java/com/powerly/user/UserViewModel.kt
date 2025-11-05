@@ -1,17 +1,17 @@
-package com.powerly.user
+package com.SharaSpot.user
 
 import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.powerly.core.data.repositories.AppRepository
-import com.powerly.core.model.location.Country
-import com.powerly.core.model.user.DeviceBody
-import com.powerly.core.network.DeviceHelper
-import com.powerly.lib.managers.CountryManager
-import com.powerly.lib.managers.NotificationsManager
-import com.powerly.lib.managers.StorageManager
-import com.powerly.user.reminder.ReminderManager
+import com.SharaSpot.core.data.repositories.AppRepository
+import com.SharaSpot.core.model.location.Country
+import com.SharaSpot.core.model.user.DeviceBody
+import com.SharaSpot.core.network.DeviceHelper
+import com.SharaSpot.lib.managers.CountryManager
+import com.SharaSpot.lib.managers.NotificationsManager
+import com.SharaSpot.lib.managers.StorageManager
+import com.SharaSpot.user.reminder.ReminderManager
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.launch
 
