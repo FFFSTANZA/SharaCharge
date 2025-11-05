@@ -104,6 +104,10 @@
     <string name="add">Add</string>
     <string name="continue_">Continue</string>
 
+    <!--Currency-->
+    <string name="currency_symbol">₹</string>
+    <string name="currency_code">INR</string>
+
     <!--Payment-->
     <string name="payment_method_add">Add Payment Method</string>
     <string name="payment_card_add">Add Card</string>

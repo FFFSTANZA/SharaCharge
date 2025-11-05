@@ -47,7 +47,7 @@ data class PowerSource(
     @SerializedName("external") val isExternal: Boolean = false,
     @SerializedName("media") var media: List<Media> = listOf(),
     @SerializedName("distance") private var distance: Double? = null,
-    @SerializedName("currency") var currency: String = ""
+    @SerializedName("currency") var currency: String = "INR"
 ) {
     companion object {
         const val UNIT_TIME = "minutes"

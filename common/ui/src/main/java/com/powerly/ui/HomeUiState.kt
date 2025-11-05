@@ -13,6 +13,6 @@ class HomeUiState(deviceHelper: DeviceHelper? = null) {
     val supportMap = mutableStateOf(deviceHelper?.supportMap ?: false)
     val userName = mutableStateOf("")
     val balance = mutableStateOf("0.00")
-    val currency = mutableStateOf("SAR")
+    val currency = mutableStateOf("INR")
 }
 

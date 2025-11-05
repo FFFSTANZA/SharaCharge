@@ -57,7 +57,7 @@ private fun ChargingDialogMinutesNearPreview() {
     val ps = PowerSource(
         id = "0", priceUnit = "minutes", distance = 0.1,
         connectors = connectors, sessionLimit = 180, price = 1.0,
-        currency = "USD"
+        currency = "INR"
     )
     AppTheme {
         ChargingDialog(
@@ -73,7 +73,7 @@ private fun ChargingDialogMinutesFrPreview() {
     val ps = PowerSource(
         id = "0", priceUnit = "minutes", distance = 1000.0,
         connectors = connectors, sessionLimit = 180, price = 1.0,
-    ).apply { currency = "USD" }
+    ).apply { currency = "INR" }
     AppTheme {
         ChargingDialog(
             powerSource = { ps },
@@ -88,7 +88,7 @@ private fun ChargingDialogEnergyPreview() {
     val ps = PowerSource(
         id = "0", priceUnit = "energy", distance = 0.1,
         connectors = connectors, sessionLimit = 180, price = 1.0,
-    ).apply { currency = "USD" }
+    ).apply { currency = "INR" }
     AppTheme {
         ChargingDialog(
             powerSource = { ps },

@@ -46,7 +46,7 @@ private fun SessionHistoryScreenPreview() {
     val list = listOf(
         Session(
             id = "3387",
-            currency = "SR",
+            currency = "INR",
             price = 30.0,
             deliveryAt = "2024-06-06",
             /*onlineStatus = 1,
@@ -62,7 +62,7 @@ private fun SessionHistoryScreenPreview() {
 
     AppTheme {
         SessionHistoryScreenContent(
-            currency = "SAR",
+            currency = "INR",
             sessions = lazyPagingItems,
             refresh =  remember { mutableStateOf<Boolean>(false) },
             onRecharge = {},

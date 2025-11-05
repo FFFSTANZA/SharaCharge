@@ -28,7 +28,7 @@ data class Session(
     @SerializedName("delivery_date") val deliveryAt: String? = null,
     @SerializedName("reserved_at") private val reservedAt: String = "",
     @SerializedName("charge_point") val chargePoint: PowerSource = PowerSource(),
-    @SerializedName("currency") var currency: String = ""
+    @SerializedName("currency") var currency: String = "INR"
 ) {
 
     val isActive: Boolean get() = status == 0

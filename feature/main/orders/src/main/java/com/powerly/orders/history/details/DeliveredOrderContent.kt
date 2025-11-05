@@ -70,7 +70,7 @@ internal fun DeliveredOrderScreenPreview() {
         quantityRequested = "FULL",
         quantity = "75.1",
         status = 2,
-        currency = "SAR"
+        currency = "INR"
     )
     AppTheme {
         DeliveredOrderScreenContent(
