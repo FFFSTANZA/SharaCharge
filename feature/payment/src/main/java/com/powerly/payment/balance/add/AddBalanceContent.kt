@@ -188,12 +188,8 @@ private fun SectionDetail(balanceItem: BalanceItem) {
             currency = balanceItem.currency,
             color = MaterialTheme.colorScheme.primary,
         )
-        ItemBalance(
-            title = R.string.order_vat,
-            value = balanceItem.vat,
-            currency = balanceItem.currency,
-            color = MaterialTheme.colorScheme.secondary,
-        )
+        // No GST/VAT - SharaSpot is not GST registered
+        // All prices are inclusive and transparent
         ItemBalance(
             title = R.string.order_total_price,
             value = balanceItem.totalBalance,
