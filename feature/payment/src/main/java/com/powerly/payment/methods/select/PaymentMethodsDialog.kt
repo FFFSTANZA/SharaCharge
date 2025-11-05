@@ -8,7 +8,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import org.koin.androidx.compose.koinViewModel
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.payment.methods.PaymentViewModel
 import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 import kotlinx.coroutines.launch
@@ -23,9 +23,9 @@ internal fun PaymentMethodsDialog(
     val coroutineScope = rememberCoroutineScope()
     val screenState = remember { viewModel.screenState }
     val paymentMethods = remember { viewModel.paymentMethods }
-    var selectedCard by remember { mutableStateOf<StripCard?>(null) }
+    var selectedCard by remember { mutableStateOf<PaymentCard?>(null) }
 
-    fun saveDefaultMethod(card: StripCard) {
+    fun saveDefaultMethod(card: PaymentCard) {
         selectedCard = card
         coroutineScope.launch {
             screenState.loading = true
@@ -35,7 +35,7 @@ internal fun PaymentMethodsDialog(
         }
     }
 
-    fun onSelectMethod(method: StripCard) {
+    fun onSelectMethod(method: PaymentCard) {
         if (paymentPurpose == PaymentPurpose.SELECT_DEFAULT) {
             saveDefaultMethod(method)
         } else {

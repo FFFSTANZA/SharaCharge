@@ -6,11 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.repositories.PaymentRepository
 import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.core.model.util.asErrorMessage
 import com.SharaSpot.payment.PaymentManager
 import com.SharaSpot.ui.dialogs.loading.initScreenState
-import com.stripe.android.model.PaymentMethodCreateParams
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -25,8 +24,8 @@ class PaymentViewModel (
 ) : ViewModel() {
 
     val screenState = initScreenState()
-    val paymentMethods = mutableStateListOf<StripCard>()
-    val defaultPaymentMethod = mutableStateOf<StripCard?>(null)
+    val paymentMethods = mutableStateListOf<PaymentCard>()
+    val defaultPaymentMethod = mutableStateOf<PaymentCard?>(null)
 
     suspend fun loadPaymentMethods(forceUpdate: Boolean = false) {
         if (paymentMethods.isEmpty() || forceUpdate) {
@@ -45,7 +44,7 @@ class PaymentViewModel (
         }
     }
 
-    suspend fun setDefaultCard(card: StripCard): Boolean {
+    suspend fun setDefaultCard(card: PaymentCard): Boolean {
         if (card.default) return true
         val result = paymentRepository.setDefaultCard(card.id)
         when (result) {
@@ -61,39 +60,15 @@ class PaymentViewModel (
         return false
     }
 
+    // Placeholder method - payment integration removed
     fun addCard(
-        parms: PaymentMethodCreateParams,
+        paymentDetails: Map<String, Any>,
         onDismiss: () -> Unit
     ) {
-        screenState.loading = true
-        paymentManager.createToken(
-            parms = parms,
-            onSuccess = { result ->
-                viewModelScope.launch {
-                    val result = paymentRepository.addCard(result.id)
-                    when (result) {
-                        is ApiStatus.Error -> {
-                            screenState.loading = false
-                            screenState.showMessage(result.msg, onDismiss)
-                        }
-
-                        is ApiStatus.Success -> {
-                            loadPaymentMethods(forceUpdate = true)
-                            screenState.loading = false
-                            screenState.showSuccess(onDismiss)
-                        }
-
-                        else -> {}
-                    }
-                }
-            },
-            onError = {
-                screenState.loading = false
-                screenState.showMessage(it.asErrorMessage) {
-                    onDismiss()
-                }
-            }
-        )
+        screenState.loading = false
+        screenState.showMessage("Payment integration not available") {
+            onDismiss()
+        }
     }
 
     suspend fun deleteCard(cardId: String): Boolean {
@@ -110,6 +85,7 @@ class PaymentViewModel (
         return false
     }
 
+    // Placeholder - card scanning removed
     private val _scannedCard = MutableSharedFlow<String>(replay = 1)
     val scannedCard: Flow<String> = _scannedCard.asSharedFlow()
 
@@ -118,12 +94,7 @@ class PaymentViewModel (
     }
 
     fun scanCard() {
-        paymentManager.showCardScanner { result ->
-            val pan = result.pan
-            if (pan.isNotEmpty()) viewModelScope.launch {
-                _scannedCard.emit(pan)
-            }
-        }
+        // Card scanning functionality removed
     }
 
     companion object {

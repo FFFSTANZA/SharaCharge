@@ -19,7 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.payment.balance.add.paymentMethodDetails
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn
@@ -38,9 +38,9 @@ import com.SharaSpot.ui.theme.MyColors.dividerColor
 @Composable
 private fun PaymentMethodsScreenPreview() {
     val methods = listOf(
-        StripCard("0", "3148", "VISA", true),
-        StripCard("1", "9999", "Master", false),
-        StripCard("3", "1223", "MADA", false)
+        PaymentCard("0", "3148", "VISA", true),
+        PaymentCard("1", "9999", "Master", false),
+        PaymentCard("3", "1223", "MADA", false)
     )
     AppTheme {
         PaymentMethodsScreenContent(
@@ -55,8 +55,8 @@ private fun PaymentMethodsScreenPreview() {
 @Composable
 internal fun PaymentMethodsScreenContent(
     screenState: ScreenState = rememberScreenState(),
-    methods: () -> List<StripCard>,
-    onSelect: (StripCard) -> Unit,
+    methods: () -> List<PaymentCard>,
+    onSelect: (PaymentCard) -> Unit,
     onAdd: () -> Unit,
     onClose: () -> Unit
 ) {
@@ -90,7 +90,7 @@ internal fun PaymentMethodsScreenContent(
 
 @Composable
 private fun ItemPaymentMethod(
-    method: StripCard,
+    method: PaymentCard,
     onSelect: () -> Unit
 ) {
     val (title, icon) = paymentMethodDetails(method)

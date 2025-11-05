@@ -16,7 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
@@ -35,7 +35,7 @@ import com.SharaSpot.ui.theme.MyColors
 @Preview
 @Composable
 private fun WalletScreenPreview() {
-    val card = StripCard(
+    val card = PaymentCard(
         id = "pm_1Pw4vh07uReUg76VRgy6Oi2K",
         cardNumber = "4242",
         paymentOption = "visa",
@@ -54,10 +54,10 @@ private fun WalletScreenPreview() {
 @Composable
 internal fun WalletScreenContent(
     screenState: ScreenState= rememberScreenState(),
-    cards: () -> List<StripCard>,
+    cards: () -> List<PaymentCard>,
     onAddCard: () -> Unit,
     onClose: () -> Unit,
-    onSelectCard: (StripCard) -> Unit
+    onSelectCard: (PaymentCard) -> Unit
 ) {
     MyScreen(
         screenState = screenState,
@@ -91,7 +91,7 @@ internal fun WalletScreenContent(
 
 @Composable
 private fun ItemCard(
-    card: StripCard,
+    card: PaymentCard,
     onClick: () -> Unit
 ) {
     MyColumn(

@@ -46,7 +46,6 @@ retrofit = "3.0.0"
 okhttp = "5.1.0"
 
 lottie = "6.6.9"
-stripeAndroidVersion = "21.27.0"
 zxingCore = "3.5.3"
 zxingAndroidembedded = "4.3.0"
 customQrGeneratorVersion = "1.6.2"
@@ -128,8 +127,6 @@ zxing-android = { module = "com.journeyapps:zxing-android-embedded", version.ref
 zxing-core = { module = "com.google.zxing:core", version.ref = "zxingCore" }
 custom-qr-generator = { module = "com.github.alexzhirkevich:custom-qr-generator", version.ref = "customQrGeneratorVersion" }
 lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
-stripe-android = { module = "com.stripe:stripe-android", version.ref = "stripeAndroidVersion" }
-stripe-card-scan = { module = "com.stripe:stripecardscan", version.ref = "stripeAndroidVersion" }
 
 #koin
 koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }

@@ -9,7 +9,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.payment.methods.PaymentViewModel
 import com.SharaSpot.payment.wallet.options.WalletOptionsDialog
 import com.SharaSpot.resources.R
@@ -32,10 +32,10 @@ internal fun WalletScreen(
     val deleteCardDialog = rememberAlertDialogState()
     var walletOptionsDialog = rememberMyDialogState()
     val paymentMethods = remember { viewModel.paymentMethods }
-    var selectedCard by remember { mutableStateOf<StripCard?>(null) }
+    var selectedCard by remember { mutableStateOf<PaymentCard?>(null) }
 
 
-    fun defaultCard(card: StripCard) {
+    fun defaultCard(card: PaymentCard) {
         coroutineScope.launch {
             screenState.loading = true
             val default = viewModel.setDefaultCard(card)
@@ -44,10 +44,10 @@ internal fun WalletScreen(
         }
     }
 
-    fun deleteCard(stripCard: StripCard) {
+    fun deleteCard(paymentCard: PaymentCard) {
         coroutineScope.launch {
             screenState.loading = true
-            val deleted = viewModel.deleteCard(stripCard.id)
+            val deleted = viewModel.deleteCard(paymentCard.id)
             screenState.loading = false
             if (deleted) screenState.showSuccess()
         }

@@ -3,7 +3,7 @@ package com.SharaSpot.core.data.repositories
 import com.SharaSpot.core.data.model.BalanceRefillStatus
 import com.SharaSpot.core.model.api.ApiStatus
 import com.SharaSpot.core.model.payment.BalanceItem
-import com.SharaSpot.core.model.payment.StripCard
+import com.SharaSpot.core.model.payment.PaymentCard
 import com.SharaSpot.core.model.payment.Wallet
 import com.SharaSpot.core.model.util.Message
 
@@ -14,7 +14,7 @@ interface PaymentRepository {
      *
      * @return  [ApiStatus] results containing the list of cards.
      */
-    suspend fun cardList(): ApiStatus<List<StripCard>>
+    suspend fun cardList(): ApiStatus<List<PaymentCard>>
 
     /**
      * Adds a card.
