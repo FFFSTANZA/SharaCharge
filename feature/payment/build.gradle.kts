@@ -12,4 +12,7 @@ android {
 dependencies {
     implementation(projects.common.lib)
     implementation(projects.common.ui)
+
+    // Razorpay Payment Gateway
+    implementation("com.razorpay:checkout:1.6.40")
 }

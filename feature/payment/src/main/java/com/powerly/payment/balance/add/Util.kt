@@ -12,6 +12,29 @@ internal fun paymentMethodDetails(
 ): Pair<String, Int> {
     val title: String
     val icon: Int
+
+    // Check for Razorpay payment types first
+    if (card != null) {
+        when {
+            card.isUpi -> {
+                title = "UPI"
+                icon = R.drawable.ic_payment_cash_logo // TODO: Replace with UPI icon
+                return Pair(title, icon)
+            }
+            card.isNetBanking -> {
+                title = "Net Banking"
+                icon = R.drawable.icon_card // TODO: Replace with Net Banking icon
+                return Pair(title, icon)
+            }
+            card.isWallet -> {
+                title = card.paymentOption // e.g., "Paytm", "Mobikwik"
+                icon = R.drawable.ic_payment_balance // TODO: Replace with Wallet icon
+                return Pair(title, icon)
+            }
+        }
+    }
+
+    // Legacy payment types
     when (card?.paymentType) {
         PaymentCard.CASH_ON_DELIVERY -> {
             title = stringResource(R.string.payment_cash_on_delivery)

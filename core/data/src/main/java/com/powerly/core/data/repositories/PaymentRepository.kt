@@ -4,6 +4,8 @@ import com.SharaSpot.core.data.model.BalanceRefillStatus
 import com.SharaSpot.core.model.api.ApiStatus
 import com.SharaSpot.core.model.payment.BalanceItem
 import com.SharaSpot.core.model.payment.PaymentCard
+import com.SharaSpot.core.model.payment.PaymentStatus
+import com.SharaSpot.core.model.payment.PaymentTransaction
 import com.SharaSpot.core.model.payment.Wallet
 import com.SharaSpot.core.model.util.Message
 
@@ -68,6 +70,53 @@ interface PaymentRepository {
      * @return  [ApiStatus] results indicating payout status.
      */
     suspend fun walletPayout(): ApiStatus<Message>
+
+    // Razorpay Integration Methods
+
+    /**
+     * Creates a Razorpay order on the backend
+     *
+     * @param amount The amount for the order
+     * @param currency The currency (default: INR)
+     * @return [ApiStatus] results containing the order ID
+     */
+    suspend fun createRazorpayOrder(amount: Double, currency: String = "INR"): ApiStatus<String>
+
+    /**
+     * Verifies the payment signature with backend
+     *
+     * @param orderId The Razorpay order ID
+     * @param paymentId The Razorpay payment ID
+     * @param signature The payment signature
+     * @return [ApiStatus] results indicating verification success
+     */
+    suspend fun verifyPayment(orderId: String, paymentId: String, signature: String): ApiStatus<Boolean>
+
+    /**
+     * Gets the payment status for a transaction
+     *
+     * @param orderId The order ID
+     * @return [ApiStatus] results containing the payment status
+     */
+    suspend fun getPaymentStatus(orderId: String): ApiStatus<PaymentStatus>
+
+    /**
+     * Saves payment transaction reference in Firebase Firestore
+     * ONLY stores: orderId, razorpayPaymentId, amount, status, timestamp
+     * All sensitive payment data is stored by Razorpay
+     *
+     * @param transaction The payment transaction to save
+     * @return [ApiStatus] results indicating success or failure
+     */
+    suspend fun savePaymentTransaction(transaction: PaymentTransaction): ApiStatus<Boolean>
+
+    /**
+     * Gets payment transaction history from Firebase Firestore
+     *
+     * @param userId The user ID
+     * @return [ApiStatus] results containing list of transactions
+     */
+    suspend fun getPaymentTransactions(userId: String): ApiStatus<List<PaymentTransaction>>
 }
 
 
