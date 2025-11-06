@@ -5,8 +5,11 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.data.repositories.ContributionRepository
 import com.SharaSpot.core.data.repositories.PowerSourceRepository
 import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.contribution.Contribution
+import com.SharaSpot.core.model.contribution.ContributionSummary
 import com.SharaSpot.core.model.SharaSpot.Media
 import com.SharaSpot.core.model.SharaSpot.PowerSource
 import com.SharaSpot.core.model.SharaSpot.Review
@@ -29,6 +32,7 @@ import kotlinx.coroutines.launch
 @KoinViewModel
 class PsViewModel (
     private val powerSourceRepository: PowerSourceRepository,
+    private val contributionRepository: ContributionRepository,
     private val locationManager: UserLocationManager,
     private val storageManager: StorageManager
 ) : ViewModel() {
@@ -43,6 +47,18 @@ class PsViewModel (
 
     var powerSource: PowerSource? = null
         private set
+
+    /**
+     * Contribution summary for the current power source
+     */
+    private val _contributionSummary = MutableStateFlow<ApiStatus<ContributionSummary>>(ApiStatus.Loading())
+    val contributionSummary = _contributionSummary.asStateFlow()
+
+    /**
+     * All contributions for the current power source
+     */
+    private val _contributions = MutableStateFlow<List<Contribution>>(emptyList())
+    val contributions = _contributions.asStateFlow()
 
     fun userLocation() = locationManager.getLastLocation()
 
@@ -79,9 +95,38 @@ class PsViewModel (
                 }
                 this@PsViewModel.powerSource = powerSource
                 _powerSourceStatus.emit(SourceStatus.Success(powerSource))
+
+                // Fetch contributions data
+                loadContributionData(id)
             } else {
                 _powerSourceStatus.emit(result)
             }
+        }
+    }
+
+    /**
+     * Loads contribution data for the charger
+     */
+    private fun loadContributionData(chargerId: String) {
+        viewModelScope.launch {
+            // Load contribution summary
+            val summaryResult = contributionRepository.getContributionSummary(chargerId)
+            _contributionSummary.emit(summaryResult)
+
+            // Load all contributions for filtering/display
+            val contributionsResult = contributionRepository.getContributions(chargerId)
+            if (contributionsResult is ApiStatus.Success) {
+                _contributions.emit(contributionsResult.data)
+            }
+        }
+    }
+
+    /**
+     * Refresh contribution data
+     */
+    fun refreshContributions() {
+        powerSource?.id?.let { chargerId ->
+            loadContributionData(chargerId)
         }
     }
 

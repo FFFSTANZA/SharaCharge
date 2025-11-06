@@ -28,6 +28,8 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -42,6 +44,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.contribution.ContributionSummary
 import com.SharaSpot.core.model.location.MyAddress
 import com.SharaSpot.core.model.SharaSpot.Amenity
 import com.SharaSpot.core.model.SharaSpot.Connector
@@ -118,6 +122,8 @@ internal fun PowerSourceContent(
     screenState: ScreenState = rememberScreenState(),
     powerSource: () -> PowerSource?,
     balance: String,
+    contributionSummary: ApiStatus<ContributionSummary> = ApiStatus.Loading(),
+    contributions: List<com.SharaSpot.core.model.contribution.Contribution> = emptyList(),
     uiEvents: (SourceEvents) -> Unit,
 ) {
     val ps = powerSource()
@@ -161,6 +167,36 @@ internal fun PowerSourceContent(
             }
         )
         if (ps.hasConnectors) SectionConnectors(ps.connectors.orEmpty())
+
+        // Community Contributions Section
+        if (contributionSummary is ApiStatus.Success) {
+            val summary = contributionSummary.data
+
+            // Community Stats
+            CommunityStats(summary = summary)
+
+            // Photo Gallery
+            CommunityPhotoGallery(
+                contributions = contributions,
+                onPhotoClick = { photoUrl ->
+                    // TODO: Navigate to full screen photo viewer
+                    uiEvents(SourceEvents.Media)
+                }
+            )
+
+            // Real-Time Insights Cards
+            RealTimeInsightsCards(summary = summary)
+
+            // Reviews Section
+            CommunityReviews(
+                summary = summary,
+                contributions = contributions,
+                onViewAllClick = {
+                    uiEvents(SourceEvents.Reviews)
+                }
+            )
+        }
+
         SectionDetails(powerSource = ps)
     }
 }
