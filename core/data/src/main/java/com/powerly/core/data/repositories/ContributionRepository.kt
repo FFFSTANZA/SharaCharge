@@ -50,12 +50,46 @@ interface ContributionRepository {
     suspend fun uploadPhoto(imageUri: Uri, chargerId: String): ApiStatus<String>
 
     /**
-     * Validates/confirms a contribution
+     * Validates/confirms a contribution (thumbs up or thumbs down)
      *
      * @param contributionId The contribution ID to validate
-     * @return [ApiStatus] results indicating success or failure
+     * @param userId The user performing the validation
+     * @param isValidation True for validation (thumbs up), false for invalidation (thumbs down)
+     * @return [ApiStatus] results containing the updated contribution
      */
-    suspend fun validateContribution(contributionId: String): ApiStatus<Boolean>
+    suspend fun validateContribution(
+        contributionId: String,
+        userId: String,
+        isValidation: Boolean
+    ): ApiStatus<Contribution>
+
+    /**
+     * Check if user has reached daily validation limit
+     *
+     * @param userId The user ID
+     * @return [ApiStatus] results with validation count today
+     */
+    suspend fun getDailyValidationCount(userId: String): ApiStatus<Int>
+
+    /**
+     * Get validation statistics for a user
+     *
+     * @param userId The user ID
+     * @return [ApiStatus] results containing validation stats
+     */
+    suspend fun getValidationStats(userId: String): ApiStatus<ValidationStats>
+
+    /**
+     * Get top validators leaderboard
+     *
+     * @param limit Number of top validators to return
+     * @param period Period for leaderboard (week, month, all-time)
+     * @return [ApiStatus] results containing list of top validators
+     */
+    suspend fun getTopValidators(
+        limit: Int = 10,
+        period: LeaderboardPeriod = LeaderboardPeriod.WEEK
+    ): ApiStatus<List<ValidatorLeaderboardEntry>>
 
     /**
      * Awards EVCoins to user for contribution
@@ -65,4 +99,37 @@ interface ContributionRepository {
      * @return [ApiStatus] results indicating success or failure
      */
     suspend fun awardEVCoins(userId: String, amount: Int): ApiStatus<Boolean>
+}
+
+/**
+ * Validation statistics for a user
+ */
+data class ValidationStats(
+    val userId: String,
+    val totalValidations: Int,
+    val validationsThisMonth: Int,
+    val validationsThisWeek: Int,
+    val validationsToday: Int,
+    val evCoinsEarned: Int,
+    val hasBadge: Boolean // Data Guardian badge (100+ validations)
+)
+
+/**
+ * Leaderboard entry for top validators
+ */
+data class ValidatorLeaderboardEntry(
+    val userId: String,
+    val userName: String,
+    val validationCount: Int,
+    val rank: Int,
+    val evCoinsEarned: Int
+)
+
+/**
+ * Leaderboard period
+ */
+enum class LeaderboardPeriod {
+    WEEK,
+    MONTH,
+    ALL_TIME
 }

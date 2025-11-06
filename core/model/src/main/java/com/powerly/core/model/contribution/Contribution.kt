@@ -24,7 +24,13 @@ data class Contribution(
     val powerOutput: String? = null, // "3.3kW", "7kW", "50kW", etc.
     val vehicleTested: String? = null, // Optional vehicle model
     val chargerStatus: ChargerStatus? = null,
-    val validationCount: Int = 0 // Number of users who validated this contribution
+
+    // Validation fields
+    val validationCount: Int = 0, // Total validations (validated - invalidated)
+    val validatedBy: List<String> = emptyList(), // UserIds who validated (thumbs up)
+    val invalidatedBy: List<String> = emptyList(), // UserIds who invalidated (thumbs down)
+    val confidenceScore: Float = 0.0f, // 0.0 to 1.0 based on validations and time decay
+    val lastValidatedAt: Long = 0L // Most recent validation timestamp
 )
 
 /**
