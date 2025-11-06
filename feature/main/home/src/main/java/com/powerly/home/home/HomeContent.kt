@@ -163,51 +163,65 @@ internal fun HomeScreenContent(
     selectedPowerSource: () -> PowerSource?,
     nearStations: () -> List<PowerSource>,
     uiEvents: (HomeEvents) -> Unit,
+    useEnhancedView: Boolean = true  // Toggle for enhanced view
 ) {
     val isLoggedIn by remember { uiState.isLoggedIn }
     val hasLocation by remember { mapState.locationEnabled }
     val supportMap = remember { uiState.supportMap.value }
 
-    MyScreen(
-        header = {
-            Header(
-                loggedIn = isLoggedIn,
-                balance = { uiState.balance.value },
-                currency = { uiState.currency.value },
-                onLogin = { uiEvents(HomeEvents.OnLogin) },
-                onSupport = { uiEvents(HomeEvents.OnSupport) },
-                onBalance = { uiEvents(HomeEvents.OnBalance) }
-            )
-        },
-        background = MaterialTheme.colorScheme.background,
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(start = 16.dp, end = 16.dp),
-        spacing = 8.dp,
-        screenState = screenState
-    ) {
-        Spacer(modifier = Modifier.height(8.dp))
-        if (supportMap) SectionSlider(
-            cornerRadius = 8.dp,
-            onClick = { uiEvents(HomeEvents.SliderClick) }
+    // Use enhanced view if enabled and user is logged in with location
+    if (useEnhancedView && isLoggedIn && hasLocation && supportMap) {
+        EnhancedHomeScreenContent(
+            screenState = screenState,
+            mapState = mapState,
+            uiState = uiState,
+            selectedPowerSource = selectedPowerSource,
+            nearStations = nearStations,
+            uiEvents = uiEvents
         )
-        if (hasLocation && supportMap) {
-            SectionMap(
-                mapState = mapState,
-                selectedPowerSource = selectedPowerSource,
-                powerSources = nearStations,
-                onMapClick = { uiEvents(HomeEvents.OpenMap()) },
-                onPowerSource = { uiEvents(HomeEvents.OpenMap(it)) },
+    } else {
+        // Original home screen view
+        MyScreen(
+            header = {
+                Header(
+                    loggedIn = isLoggedIn,
+                    balance = { uiState.balance.value },
+                    currency = { uiState.currency.value },
+                    onLogin = { uiEvents(HomeEvents.OnLogin) },
+                    onSupport = { uiEvents(HomeEvents.OnSupport) },
+                    onBalance = { uiEvents(HomeEvents.OnBalance) }
+                )
+            },
+            background = MaterialTheme.colorScheme.background,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(start = 16.dp, end = 16.dp),
+            spacing = 8.dp,
+            screenState = screenState
+        ) {
+            Spacer(modifier = Modifier.height(8.dp))
+            if (supportMap) SectionSlider(
+                cornerRadius = 8.dp,
+                onClick = { uiEvents(HomeEvents.SliderClick) }
             )
-        } else if (supportMap.not()) {
-            OnBoardingScreenContent(
-                modifier = Modifier.padding(vertical = 8.dp),
-                background = MaterialTheme.colorScheme.background,
-                slideCornerRadius = 8.dp
-            )
-        } else {
-            SectionEnableLocation {
-                uiEvents(HomeEvents.RequestLocation)
+            if (hasLocation && supportMap) {
+                SectionMap(
+                    mapState = mapState,
+                    selectedPowerSource = selectedPowerSource,
+                    powerSources = nearStations,
+                    onMapClick = { uiEvents(HomeEvents.OpenMap()) },
+                    onPowerSource = { uiEvents(HomeEvents.OpenMap(it)) },
+                )
+            } else if (supportMap.not()) {
+                OnBoardingScreenContent(
+                    modifier = Modifier.padding(vertical = 8.dp),
+                    background = MaterialTheme.colorScheme.background,
+                    slideCornerRadius = 8.dp
+                )
+            } else {
+                SectionEnableLocation {
+                    uiEvents(HomeEvents.RequestLocation)
+                }
             }
         }
     }
