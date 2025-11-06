@@ -5,6 +5,7 @@ import com.SharaSpot.core.model.api.ApiStatus
 import com.SharaSpot.core.model.contribution.Contribution
 import com.SharaSpot.core.model.contribution.ContributionSummary
 import com.SharaSpot.core.model.contribution.CreateContributionRequest
+import com.powerly.core.model.reliability.ReliabilityScore
 
 interface ContributionRepository {
 
@@ -99,6 +100,33 @@ interface ContributionRepository {
      * @return [ApiStatus] results indicating success or failure
      */
     suspend fun awardEVCoins(userId: String, amount: Int): ApiStatus<Boolean>
+
+    /**
+     * Calculate reliability score for a charger
+     *
+     * This calculates the overall reliability score based on:
+     * - Photo count (max 20 points)
+     * - Review count (max 20 points)
+     * - Average rating (max 20 points)
+     * - Recent contributions (max 20 points)
+     * - Validation confidence (max 20 points)
+     *
+     * @param chargerId The charger ID
+     * @return [ApiStatus] results containing the calculated reliability score
+     */
+    suspend fun calculateReliabilityScore(chargerId: String): ApiStatus<ReliabilityScore>
+
+    /**
+     * Update reliability score in Firebase for a charger
+     *
+     * @param chargerId The charger ID
+     * @param reliabilityScore The calculated reliability score
+     * @return [ApiStatus] results indicating success or failure
+     */
+    suspend fun updateReliabilityScore(
+        chargerId: String,
+        reliabilityScore: ReliabilityScore
+    ): ApiStatus<Boolean>
 }
 
 /**

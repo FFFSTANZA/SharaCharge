@@ -8,6 +8,8 @@ import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
 import com.SharaSpot.core.model.api.ApiStatus
 import com.SharaSpot.core.model.contribution.*
 import com.SharaSpot.core.network.asErrorMessage
+import com.powerly.core.model.reliability.ReliabilityScore
+import com.powerly.core.model.reliability.calculateReliabilityScore
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
@@ -707,6 +709,103 @@ class ContributionRepositoryImpl(
                 ApiStatus.Error(e.asErrorMessage)
             }
         }
+
+    override suspend fun calculateReliabilityScore(chargerId: String): ApiStatus<ReliabilityScore> =
+        withContext(ioDispatcher) {
+            try {
+                // Get all contributions for this charger
+                val chargerContributions = contributions.filter { it.chargerId == chargerId }
+
+                // Count photos
+                val photoCount = chargerContributions.count { it.type == ContributionType.PHOTO }
+
+                // Count reviews and calculate average rating
+                val reviews = chargerContributions.filter { it.type == ContributionType.REVIEW }
+                val reviewCount = reviews.size
+                val avgRating = if (reviews.isNotEmpty()) {
+                    reviews.mapNotNull { it.rating }.average()
+                } else {
+                    0.0
+                }
+
+                // Calculate reliability score
+                val reliabilityScore = calculateReliabilityScore(
+                    photoCount = photoCount,
+                    reviewCount = reviewCount,
+                    avgRating = avgRating,
+                    contributions = chargerContributions
+                )
+
+                /* Production Firebase implementation:
+                // Get charger contributions from Firestore
+                val contributionsSnapshot = firestore.collection("contributions")
+                    .whereEqualTo("chargerId", chargerId)
+                    .get()
+                    .await()
+
+                val chargerContributions = contributionsSnapshot.documents.mapNotNull {
+                    it.toContribution()
+                }
+
+                // Count photos
+                val photoCount = chargerContributions.count { it.type == ContributionType.PHOTO }
+
+                // Count reviews and calculate average rating
+                val reviews = chargerContributions.filter { it.type == ContributionType.REVIEW }
+                val reviewCount = reviews.size
+                val avgRating = if (reviews.isNotEmpty()) {
+                    reviews.mapNotNull { it.rating }.average()
+                } else {
+                    0.0
+                }
+
+                // Calculate reliability score
+                val reliabilityScore = calculateReliabilityScore(
+                    photoCount = photoCount,
+                    reviewCount = reviewCount,
+                    avgRating = avgRating,
+                    contributions = chargerContributions
+                )
+                */
+
+                ApiStatus.Success(reliabilityScore)
+            } catch (e: Exception) {
+                ApiStatus.Error(e.asErrorMessage)
+            }
+        }
+
+    override suspend fun updateReliabilityScore(
+        chargerId: String,
+        reliabilityScore: ReliabilityScore
+    ): ApiStatus<Boolean> = withContext(ioDispatcher) {
+        try {
+            // Mock implementation - always succeed
+            // In production, this should update the charger document in Firebase
+
+            /* Production Firebase implementation:
+            val chargerRef = firestore.collection("power-sources")
+                .document(chargerId)
+
+            val updates = hashMapOf<String, Any>(
+                "reliability_score" to reliabilityScore.totalScore,
+                "reliability_score_breakdown" to hashMapOf(
+                    "photo_score" to reliabilityScore.photoScore,
+                    "review_score" to reliabilityScore.reviewScore,
+                    "rating_score" to reliabilityScore.ratingScore,
+                    "freshness_score" to reliabilityScore.freshnessScore,
+                    "validation_score" to reliabilityScore.validationScore
+                ),
+                "last_score_update" to FieldValue.serverTimestamp()
+            )
+
+            chargerRef.update(updates).await()
+            */
+
+            ApiStatus.Success(true)
+        } catch (e: Exception) {
+            ApiStatus.Error(e.asErrorMessage)
+        }
+    }
 
     /* Helper extension function for Firebase (uncomment when Firebase is available)
     private fun DocumentSnapshot.toContribution(): Contribution? {
