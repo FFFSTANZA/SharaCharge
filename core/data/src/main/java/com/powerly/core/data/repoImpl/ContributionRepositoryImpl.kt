@@ -2,6 +2,9 @@ package com.SharaSpot.core.data.repoImpl
 
 import android.net.Uri
 import com.SharaSpot.core.data.repositories.ContributionRepository
+import com.SharaSpot.core.data.repositories.LeaderboardPeriod
+import com.SharaSpot.core.data.repositories.ValidationStats
+import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
 import com.SharaSpot.core.model.api.ApiStatus
 import com.SharaSpot.core.model.contribution.*
 import com.SharaSpot.core.network.asErrorMessage
@@ -11,6 +14,7 @@ import kotlinx.coroutines.withContext
 import org.koin.core.annotation.Named
 import org.koin.core.annotation.Single
 import java.util.UUID
+import java.util.Calendar
 
 /**
  * Implementation of ContributionRepository using Firebase Firestore and Storage
@@ -29,6 +33,15 @@ class ContributionRepositoryImpl(
 
     // In-memory storage for mock implementation
     private val contributions = mutableListOf<Contribution>()
+
+    // Track validation history for daily limits and statistics
+    private data class ValidationRecord(
+        val userId: String,
+        val contributionId: String,
+        val timestamp: Long,
+        val isValidation: Boolean // true = thumbs up, false = thumbs down
+    )
+    private val validationHistory = mutableListOf<ValidationRecord>()
 
     init {
         // Add sample data for testing
@@ -416,28 +429,259 @@ class ContributionRepositoryImpl(
             }
         }
 
-    override suspend fun validateContribution(contributionId: String): ApiStatus<Boolean> =
+    override suspend fun validateContribution(
+        contributionId: String,
+        userId: String,
+        isValidation: Boolean
+    ): ApiStatus<Contribution> = withContext(ioDispatcher) {
+        try {
+            // Find the contribution
+            val contribution = contributions.find { it.id == contributionId }
+                ?: return@withContext ApiStatus.Error("Contribution not found")
+
+            // Check if user is trying to validate their own contribution
+            if (contribution.userId == userId) {
+                return@withContext ApiStatus.Error("Cannot validate your own contribution")
+            }
+
+            // Check daily limit
+            val dailyCount = getDailyValidationCountSync(userId)
+            if (dailyCount >= ValidationRewards.MAX_VALIDATIONS_PER_DAY) {
+                return@withContext ApiStatus.Error("Daily validation limit reached")
+            }
+
+            // Update contribution with validation
+            val updatedContribution = contribution.withValidation(userId, isValidation)
+            val index = contributions.indexOf(contribution)
+            contributions[index] = updatedContribution
+
+            // Record validation
+            validationHistory.add(
+                ValidationRecord(
+                    userId = userId,
+                    contributionId = contributionId,
+                    timestamp = System.currentTimeMillis(),
+                    isValidation = isValidation
+                )
+            )
+
+            /* Production Firebase implementation:
+            val batch = firestore.batch()
+
+            // Update contribution
+            val contributionRef = firestore.collection("contributions")
+                .document(contributionId)
+
+            val updates = hashMapOf<String, Any>(
+                "validatedBy" to if (isValidation) FieldValue.arrayUnion(userId) else updatedContribution.validatedBy,
+                "invalidatedBy" to if (!isValidation) FieldValue.arrayUnion(userId) else updatedContribution.invalidatedBy,
+                "validationCount" to updatedContribution.validationCount,
+                "confidenceScore" to updatedContribution.confidenceScore,
+                "lastValidatedAt" to FieldValue.serverTimestamp()
+            )
+
+            // Remove from opposite list
+            if (isValidation && userId in contribution.invalidatedBy) {
+                updates["invalidatedBy"] = FieldValue.arrayRemove(userId)
+            } else if (!isValidation && userId in contribution.validatedBy) {
+                updates["validatedBy"] = FieldValue.arrayRemove(userId)
+            }
+
+            batch.update(contributionRef, updates)
+
+            // Record validation in user's validation history
+            val validationRef = firestore.collection("validations")
+                .document()
+            batch.set(validationRef, hashMapOf(
+                "userId" to userId,
+                "contributionId" to contributionId,
+                "timestamp" to FieldValue.serverTimestamp(),
+                "isValidation" to isValidation
+            ))
+
+            // Award EVCoins
+            val userRef = firestore.collection("users")
+                .document(userId)
+            batch.update(userRef, "evCoins", FieldValue.increment(ValidationRewards.VALIDATION_REWARD.toLong()))
+
+            batch.commit().await()
+            */
+
+            ApiStatus.Success(updatedContribution)
+        } catch (e: Exception) {
+            ApiStatus.Error(e.asErrorMessage)
+        }
+    }
+
+    override suspend fun getDailyValidationCount(userId: String): ApiStatus<Int> =
         withContext(ioDispatcher) {
             try {
-                // Mock implementation
-                val contribution = contributions.find { it.id == contributionId }
-                if (contribution != null) {
-                    val index = contributions.indexOf(contribution)
-                    contributions[index] = contribution.copy(validationCount = contribution.validationCount + 1)
-                }
-
-                /* Production Firebase implementation:
-                firestore.collection("contributions")
-                    .document(contributionId)
-                    .update("validationCount", FieldValue.increment(1))
-                    .await()
-                */
-
-                ApiStatus.Success(true)
+                val count = getDailyValidationCountSync(userId)
+                ApiStatus.Success(count)
             } catch (e: Exception) {
                 ApiStatus.Error(e.asErrorMessage)
             }
         }
+
+    private fun getDailyValidationCountSync(userId: String): Int {
+        val todayStart = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }.timeInMillis
+
+        return validationHistory.count {
+            it.userId == userId && it.timestamp >= todayStart
+        }
+    }
+
+    override suspend fun getValidationStats(userId: String): ApiStatus<ValidationStats> =
+        withContext(ioDispatcher) {
+            try {
+                val now = System.currentTimeMillis()
+                val calendar = Calendar.getInstance()
+
+                // Calculate time boundaries
+                val todayStart = calendar.apply {
+                    set(Calendar.HOUR_OF_DAY, 0)
+                    set(Calendar.MINUTE, 0)
+                    set(Calendar.SECOND, 0)
+                    set(Calendar.MILLISECOND, 0)
+                }.timeInMillis
+
+                calendar.add(Calendar.DAY_OF_YEAR, -7)
+                val weekStart = calendar.timeInMillis
+
+                calendar.timeInMillis = now
+                calendar.set(Calendar.DAY_OF_MONTH, 1)
+                calendar.set(Calendar.HOUR_OF_DAY, 0)
+                calendar.set(Calendar.MINUTE, 0)
+                calendar.set(Calendar.SECOND, 0)
+                calendar.set(Calendar.MILLISECOND, 0)
+                val monthStart = calendar.timeInMillis
+
+                val userValidations = validationHistory.filter { it.userId == userId }
+
+                val stats = ValidationStats(
+                    userId = userId,
+                    totalValidations = userValidations.size,
+                    validationsThisMonth = userValidations.count { it.timestamp >= monthStart },
+                    validationsThisWeek = userValidations.count { it.timestamp >= weekStart },
+                    validationsToday = userValidations.count { it.timestamp >= todayStart },
+                    evCoinsEarned = userValidations.size * ValidationRewards.VALIDATION_REWARD,
+                    hasBadge = userValidations.size >= 100
+                )
+
+                /* Production Firebase implementation:
+                val validationsSnapshot = firestore.collection("validations")
+                    .whereEqualTo("userId", userId)
+                    .get()
+                    .await()
+
+                val userValidations = validationsSnapshot.documents.mapNotNull { doc ->
+                    val timestamp = doc.getTimestamp("timestamp")?.toDate()?.time ?: return@mapNotNull null
+                    ValidationRecord(
+                        userId = userId,
+                        contributionId = doc.getString("contributionId") ?: "",
+                        timestamp = timestamp,
+                        isValidation = doc.getBoolean("isValidation") ?: true
+                    )
+                }
+
+                // Calculate stats...
+                */
+
+                ApiStatus.Success(stats)
+            } catch (e: Exception) {
+                ApiStatus.Error(e.asErrorMessage)
+            }
+        }
+
+    override suspend fun getTopValidators(
+        limit: Int,
+        period: LeaderboardPeriod
+    ): ApiStatus<List<ValidatorLeaderboardEntry>> = withContext(ioDispatcher) {
+        try {
+            val now = System.currentTimeMillis()
+            val calendar = Calendar.getInstance()
+
+            // Calculate period start time
+            val periodStart = when (period) {
+                LeaderboardPeriod.WEEK -> {
+                    calendar.add(Calendar.DAY_OF_YEAR, -7)
+                    calendar.timeInMillis
+                }
+                LeaderboardPeriod.MONTH -> {
+                    calendar.set(Calendar.DAY_OF_MONTH, 1)
+                    calendar.set(Calendar.HOUR_OF_DAY, 0)
+                    calendar.set(Calendar.MINUTE, 0)
+                    calendar.set(Calendar.SECOND, 0)
+                    calendar.set(Calendar.MILLISECOND, 0)
+                    calendar.timeInMillis
+                }
+                LeaderboardPeriod.ALL_TIME -> 0L
+            }
+
+            // Filter validations by period
+            val periodValidations = validationHistory.filter { it.timestamp >= periodStart }
+
+            // Group by user and count
+            val userValidationCounts = periodValidations
+                .groupBy { it.userId }
+                .mapValues { it.value.size }
+                .toList()
+                .sortedByDescending { it.second }
+                .take(limit)
+
+            // Create leaderboard entries
+            val leaderboard = userValidationCounts.mapIndexed { index, (userId, count) ->
+                // In mock, just use userId as userName
+                ValidatorLeaderboardEntry(
+                    userId = userId,
+                    userName = "User ${userId.takeLast(4)}",
+                    validationCount = count,
+                    rank = index + 1,
+                    evCoinsEarned = count * ValidationRewards.VALIDATION_REWARD
+                )
+            }
+
+            /* Production Firebase implementation:
+            val validationsSnapshot = firestore.collection("validations")
+                .whereGreaterThanOrEqualTo("timestamp", Timestamp(Date(periodStart)))
+                .get()
+                .await()
+
+            val userValidationCounts = validationsSnapshot.documents
+                .mapNotNull { it.getString("userId") }
+                .groupBy { it }
+                .mapValues { it.value.size }
+                .toList()
+                .sortedByDescending { it.second }
+                .take(limit)
+
+            // Fetch user names
+            val leaderboard = userValidationCounts.mapIndexed { index, (userId, count) ->
+                val userDoc = firestore.collection("users")
+                    .document(userId)
+                    .get()
+                    .await()
+
+                ValidatorLeaderboardEntry(
+                    userId = userId,
+                    userName = userDoc.getString("name") ?: "Anonymous",
+                    validationCount = count,
+                    rank = index + 1,
+                    evCoinsEarned = count * ValidationRewards.VALIDATION_REWARD
+                )
+            }
+            */
+
+            ApiStatus.Success(leaderboard)
+        } catch (e: Exception) {
+            ApiStatus.Error(e.asErrorMessage)
+        }
+    }
 
     override suspend fun awardEVCoins(userId: String, amount: Int): ApiStatus<Boolean> =
         withContext(ioDispatcher) {

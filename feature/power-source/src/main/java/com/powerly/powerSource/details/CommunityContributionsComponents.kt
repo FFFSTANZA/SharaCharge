@@ -192,6 +192,8 @@ private fun PhotoCard(
 fun CommunityReviews(
     summary: ContributionSummary,
     contributions: List<Contribution>,
+    currentUserId: String = "current_user", // TODO: Get from auth
+    onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> },
     onViewAllClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -249,7 +251,11 @@ fun CommunityReviews(
 
         // Recent reviews
         reviewContributions.forEach { review ->
-            ReviewCard(contribution = review)
+            ReviewCard(
+                contribution = review,
+                currentUserId = currentUserId,
+                onValidate = onValidate
+            )
         }
 
         // View all button
@@ -269,25 +275,35 @@ fun CommunityReviews(
 }
 
 @Composable
-private fun ReviewCard(contribution: Contribution) {
+private fun ReviewCard(
+    contribution: Contribution,
+    currentUserId: String = "current_user", // TODO: Get from auth
+    onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> }
+) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        // Reviewer name and timestamp
+        // Reviewer name, timestamp, and confidence badge
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = contribution.userName,
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary
-            )
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = contribution.userName,
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                ConfidenceBadge(contribution = contribution)
+            }
             Text(
                 text = getRelativeTime(contribution.timestamp),
                 style = MaterialTheme.typography.bodySmall,
@@ -314,17 +330,15 @@ private fun ReviewCard(contribution: Contribution) {
             )
         }
 
-        // Helpful button (Phase 3 validation)
-        TextButton(
-            onClick = { /* TODO: Implement validation */ },
-            contentPadding = PaddingValues(0.dp)
-        ) {
-            Text(
-                text = "Helpful (${contribution.validationCount})",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.secondary
-            )
-        }
+        // Validation info
+        ValidationInfo(contribution = contribution)
+
+        // Validation buttons
+        ValidationButtons(
+            contribution = contribution,
+            currentUserId = currentUserId,
+            onValidate = onValidate
+        )
 
         Divider(modifier = Modifier.padding(top = 8.dp))
     }
@@ -336,6 +350,9 @@ private fun ReviewCard(contribution: Contribution) {
 @Composable
 fun RealTimeInsightsCards(
     summary: ContributionSummary,
+    contributions: List<Contribution> = emptyList(),
+    currentUserId: String = "current_user", // TODO: Get from auth
+    onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> },
     modifier: Modifier = Modifier
 ) {
     MySurfaceColumn(
@@ -353,25 +370,42 @@ fun RealTimeInsightsCards(
 
         // Wait Time Card
         summary.latestWaitTime?.let { waitTime ->
+            val waitTimeContribution = contributions.firstOrNull {
+                it.type == ContributionType.WAIT_TIME && it.waitTimeMinutes == waitTime.minutes
+            }
             WaitTimeCard(
                 minutes = waitTime.minutes,
                 queueLength = waitTime.queueLength,
                 timestamp = waitTime.timestamp,
-                isStale = waitTime.isStale
+                isStale = waitTime.isStale,
+                contribution = waitTimeContribution,
+                currentUserId = currentUserId,
+                onValidate = onValidate
             )
         }
 
         // Plug Status Card
         if (summary.plugStatusList.isNotEmpty()) {
-            PlugStatusCard(plugStatusList = summary.plugStatusList)
+            PlugStatusCard(
+                plugStatusList = summary.plugStatusList,
+                contributions = contributions,
+                currentUserId = currentUserId,
+                onValidate = onValidate
+            )
         }
 
         // Availability Card
         summary.currentStatus?.let { status ->
+            val statusContribution = contributions.firstOrNull {
+                it.chargerStatus == status
+            }
             AvailabilityCard(
                 status = status.displayName,
                 timestamp = summary.recentContributions
-                    .firstOrNull { it.chargerStatus != null }?.timestamp ?: 0L
+                    .firstOrNull { it.chargerStatus != null }?.timestamp ?: 0L,
+                contribution = statusContribution,
+                currentUserId = currentUserId,
+                onValidate = onValidate
             )
         }
     }
@@ -382,7 +416,10 @@ private fun WaitTimeCard(
     minutes: Int,
     queueLength: Int?,
     timestamp: Long,
-    isStale: Boolean
+    isStale: Boolean,
+    contribution: Contribution? = null,
+    currentUserId: String = "current_user",
+    onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> }
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -397,7 +434,7 @@ private fun WaitTimeCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -431,12 +468,32 @@ private fun WaitTimeCard(
                 style = MaterialTheme.typography.labelSmall,
                 color = if (isStale) Color(0xFF856404) else MaterialTheme.colorScheme.secondary
             )
+
+            // Validation prompt for stale data
+            if (isStale && contribution != null) {
+                ValidationPrompt(contribution = contribution)
+            }
+
+            // Validation buttons and info
+            contribution?.let {
+                ValidationInfo(contribution = it)
+                ValidationButtons(
+                    contribution = it,
+                    currentUserId = currentUserId,
+                    onValidate = onValidate
+                )
+            }
         }
     }
 }
 
 @Composable
-private fun PlugStatusCard(plugStatusList: List<com.SharaSpot.core.model.contribution.PlugStatusInfo>) {
+private fun PlugStatusCard(
+    plugStatusList: List<com.SharaSpot.core.model.contribution.PlugStatusInfo>,
+    contributions: List<Contribution> = emptyList(),
+    currentUserId: String = "current_user",
+    onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> }
+) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = Color(0xFFE7F3FF)),
@@ -446,7 +503,7 @@ private fun PlugStatusCard(plugStatusList: List<com.SharaSpot.core.model.contrib
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Text(
                 text = "🔌 Plug Status",
@@ -455,36 +512,72 @@ private fun PlugStatusCard(plugStatusList: List<com.SharaSpot.core.model.contrib
             )
 
             plugStatusList.forEach { plugStatus ->
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "${plugStatus.plugType} ${plugStatus.powerOutput ?: ""}",
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Medium
-                        )
-                        Text(
-                            text = "Verified ${getRelativeTime(plugStatus.lastVerified)}",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.secondary
-                        )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "${plugStatus.plugType} ${plugStatus.powerOutput ?: ""}",
+                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Medium
+                            )
+                            Text(
+                                text = "Verified by ${plugStatus.verificationCount} user${if (plugStatus.verificationCount == 1) "" else "s"}",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.secondary
+                            )
+                            Text(
+                                text = "Last ${getRelativeTime(plugStatus.lastVerified)}",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.secondary
+                            )
+                        }
+
+                        Surface(
+                            color = if (plugStatus.isWorking) Color(0xFF28A745) else Color(0xFFDC3545),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text(
+                                text = if (plugStatus.isWorking) "✓ Working" else "✗ Not Working",
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
 
-                    Surface(
-                        color = if (plugStatus.isWorking) Color(0xFF28A745) else Color(0xFFDC3545),
-                        shape = RoundedCornerShape(12.dp)
-                    ) {
-                        Text(
-                            text = if (plugStatus.isWorking) "✓ Working" else "✗ Not Working",
-                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = Color.White,
-                            fontWeight = FontWeight.Bold
+                    // Find contribution for this plug
+                    val plugContribution = contributions.firstOrNull {
+                        it.type == ContributionType.PLUG_CHECK &&
+                        it.plugType == plugStatus.plugType &&
+                        it.lastValidatedAt == plugStatus.lastVerified
+                    }
+
+                    // Validation prompt if data is old (> 7 days)
+                    val isStale = (System.currentTimeMillis() - plugStatus.lastVerified) > (7 * 24 * 60 * 60 * 1000L)
+                    if (isStale && plugContribution != null) {
+                        ValidationPrompt(contribution = plugContribution)
+                    }
+
+                    // Validation buttons
+                    plugContribution?.let {
+                        ValidationButtons(
+                            contribution = it,
+                            currentUserId = currentUserId,
+                            onValidate = onValidate
                         )
                     }
+                }
+
+                // Divider between plugs
+                if (plugStatus != plugStatusList.last()) {
+                    Divider(modifier = Modifier.padding(vertical = 4.dp))
                 }
             }
         }
@@ -494,7 +587,10 @@ private fun PlugStatusCard(plugStatusList: List<com.SharaSpot.core.model.contrib
 @Composable
 private fun AvailabilityCard(
     status: String,
-    timestamp: Long
+    timestamp: Long,
+    contribution: Contribution? = null,
+    currentUserId: String = "current_user",
+    onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> }
 ) {
     val (backgroundColor, statusColor) = when (status.lowercase()) {
         "available" -> Color(0xFFD4EDDA) to Color(0xFF155724)
@@ -502,6 +598,8 @@ private fun AvailabilityCard(
         "not working" -> Color(0xFFF8D7DA) to Color(0xFF721C24)
         else -> Color(0xFFE2E3E5) to Color(0xFF383D41)
     }
+
+    val isStale = (System.currentTimeMillis() - timestamp) > (2 * 60 * 60 * 1000L) // 2 hours
 
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -512,7 +610,7 @@ private fun AvailabilityCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -533,10 +631,26 @@ private fun AvailabilityCard(
             }
 
             Text(
-                text = "Last updated ${getRelativeTime(timestamp)}",
+                text = if (isStale) "⚠️ Data may be outdated (${getRelativeTime(timestamp)})"
+                      else "Last updated ${getRelativeTime(timestamp)}",
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.secondary
+                color = if (isStale) Color(0xFF856404) else MaterialTheme.colorScheme.secondary
             )
+
+            // Validation prompt for stale data
+            if (isStale && contribution != null) {
+                ValidationPrompt(contribution = contribution)
+            }
+
+            // Validation buttons and info
+            contribution?.let {
+                ValidationInfo(contribution = it)
+                ValidationButtons(
+                    contribution = it,
+                    currentUserId = currentUserId,
+                    onValidate = onValidate
+                )
+            }
         }
     }
 }
