@@ -3,12 +3,16 @@ package com.SharaSpot.powerSource.details
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import com.SharaSpot.core.data.model.SourceStatus
+import com.SharaSpot.core.model.api.ApiStatus
+import com.SharaSpot.core.model.contribution.Contribution
+import com.SharaSpot.core.model.contribution.ContributionSummary
 import com.SharaSpot.core.model.SharaSpot.PowerSource
 import com.SharaSpot.powerSource.PsViewModel
 import com.SharaSpot.ui.HomeUiState
@@ -41,6 +45,10 @@ fun PowerSourceScreen(
     val userLocation = remember { viewModel.userLocation() }
     var powerSource by remember { mutableStateOf<PowerSource?>(null) }
     val balance by remember { uiState.balance }
+
+    // Collect contribution data
+    val contributionSummaryState by viewModel.contributionSummary.collectAsState()
+    val contributions by viewModel.contributions.collectAsState()
 
     LaunchedEffect(userLocation) {
         Log.i(TAG, "powerSourceId - $powerSourceId")
@@ -79,6 +87,8 @@ fun PowerSourceScreen(
         screenState = screenState,
         powerSource = { powerSource },
         balance = balance,
+        contributionSummary = contributionSummaryState,
+        contributions = contributions,
         uiEvents = { event ->
             when (event) {
                 is SourceEvents.CAll -> {

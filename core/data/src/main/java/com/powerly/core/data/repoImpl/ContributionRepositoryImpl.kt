@@ -30,6 +30,181 @@ class ContributionRepositoryImpl(
     // In-memory storage for mock implementation
     private val contributions = mutableListOf<Contribution>()
 
+    init {
+        // Add sample data for testing
+        addSampleContributions()
+    }
+
+    private fun addSampleContributions() {
+        val now = System.currentTimeMillis()
+
+        // Sample photos
+        contributions.add(
+            Contribution(
+                id = "photo_1",
+                chargerId = "1", // Match the default charger ID in PowerSourceContent
+                userId = "user_1",
+                userName = "Priya Kumar",
+                type = ContributionType.PHOTO,
+                timestamp = now - 3600_000, // 1 hour ago
+                evCoinsEarned = 20,
+                photoUrl = "https://via.placeholder.com/400x300/4CAF50/FFFFFF?text=Charger+View",
+                photoCategory = "charger"
+            )
+        )
+
+        contributions.add(
+            Contribution(
+                id = "photo_2",
+                chargerId = "1",
+                userId = "user_2",
+                userName = "Raj Patel",
+                type = ContributionType.PHOTO,
+                timestamp = now - 7200_000, // 2 hours ago
+                evCoinsEarned = 20,
+                photoUrl = "https://via.placeholder.com/400x300/2196F3/FFFFFF?text=Parking+Area",
+                photoCategory = "parking"
+            )
+        )
+
+        contributions.add(
+            Contribution(
+                id = "photo_3",
+                chargerId = "1",
+                userId = "user_3",
+                userName = "Anjali Sharma",
+                type = ContributionType.PHOTO,
+                timestamp = now - 86400_000, // 1 day ago
+                evCoinsEarned = 20,
+                photoUrl = "https://via.placeholder.com/400x300/FF9800/FFFFFF?text=Plug+Close-up",
+                photoCategory = "plugs"
+            )
+        )
+
+        // Sample reviews
+        contributions.add(
+            Contribution(
+                id = "review_1",
+                chargerId = "1",
+                userId = "user_4",
+                userName = "Suresh Reddy",
+                type = ContributionType.REVIEW,
+                timestamp = now - 3600_000, // 1 hour ago
+                evCoinsEarned = 30,
+                rating = 4.5f,
+                comment = "Great charging station! Fast charging and well-maintained. The parking area is clean and spacious."
+            )
+        )
+
+        contributions.add(
+            Contribution(
+                id = "review_2",
+                chargerId = "1",
+                userId = "user_5",
+                userName = "Meera Singh",
+                type = ContributionType.REVIEW,
+                timestamp = now - 86400_000, // 1 day ago
+                evCoinsEarned = 30,
+                rating = 5.0f,
+                comment = "Perfect location! Easy to find and the charger worked perfectly with my Tata Nexon EV.",
+                validationCount = 5
+            )
+        )
+
+        contributions.add(
+            Contribution(
+                id = "review_3",
+                chargerId = "1",
+                userId = "user_6",
+                userName = "Vikram Joshi",
+                type = ContributionType.REVIEW,
+                timestamp = now - 172800_000, // 2 days ago
+                evCoinsEarned = 30,
+                rating = 4.0f,
+                comment = "Good charging speed. Could use better shade in parking area.",
+                validationCount = 3
+            )
+        )
+
+        // Sample wait time
+        contributions.add(
+            Contribution(
+                id = "wait_1",
+                chargerId = "1",
+                userId = "user_1",
+                userName = "Priya Kumar",
+                type = ContributionType.WAIT_TIME,
+                timestamp = now - 900_000, // 15 min ago
+                evCoinsEarned = 10,
+                waitTimeMinutes = 5,
+                queueLength = 1
+            )
+        )
+
+        // Sample plug checks
+        contributions.add(
+            Contribution(
+                id = "plug_1",
+                chargerId = "1",
+                userId = "user_2",
+                userName = "Raj Patel",
+                type = ContributionType.PLUG_CHECK,
+                timestamp = now - 3600_000, // 1 hour ago
+                evCoinsEarned = 25,
+                plugType = "CCS",
+                plugWorking = true,
+                powerOutput = "50kW",
+                vehicleTested = "Tata Nexon EV"
+            )
+        )
+
+        contributions.add(
+            Contribution(
+                id = "plug_2",
+                chargerId = "1",
+                userId = "user_3",
+                userName = "Anjali Sharma",
+                type = ContributionType.PLUG_CHECK,
+                timestamp = now - 259200_000, // 3 days ago
+                evCoinsEarned = 25,
+                plugType = "CHAdeMO",
+                plugWorking = false,
+                powerOutput = null,
+                vehicleTested = null
+            )
+        )
+
+        contributions.add(
+            Contribution(
+                id = "plug_3",
+                chargerId = "1",
+                userId = "user_7",
+                userName = "Karthik Nair",
+                type = ContributionType.PLUG_CHECK,
+                timestamp = now - 7200_000, // 2 hours ago
+                evCoinsEarned = 25,
+                plugType = "Type 2",
+                plugWorking = true,
+                powerOutput = "7kW",
+                vehicleTested = "MG ZS EV"
+            )
+        )
+
+        // Sample status update
+        contributions.add(
+            Contribution(
+                id = "status_1",
+                chargerId = "1",
+                userId = "user_1",
+                userName = "Priya Kumar",
+                type = ContributionType.STATUS_UPDATE,
+                timestamp = now - 600_000, // 10 min ago
+                evCoinsEarned = 15,
+                chargerStatus = ChargerStatus.AVAILABLE
+            )
+        )
+    }
+
     override suspend fun createContribution(request: CreateContributionRequest): ApiStatus<Contribution> =
         withContext(ioDispatcher) {
             try {
