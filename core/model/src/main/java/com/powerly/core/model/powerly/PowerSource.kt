@@ -5,6 +5,7 @@ import com.SharaSpot.core.model.api.BaseResponse
 import com.SharaSpot.core.model.api.BaseResponsePaginated
 import com.SharaSpot.core.model.location.MyAddress
 import com.SharaSpot.core.model.location.Target
+import com.powerly.core.model.reliability.ReliabilityScore
 import com.google.gson.annotations.SerializedName
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -47,7 +48,12 @@ data class PowerSource(
     @SerializedName("external") val isExternal: Boolean = false,
     @SerializedName("media") var media: List<Media> = listOf(),
     @SerializedName("distance") private var distance: Double? = null,
-    @SerializedName("currency") var currency: String = "INR"
+    @SerializedName("currency") var currency: String = "INR",
+
+    // Reliability Score Fields
+    @SerializedName("reliability_score") val reliabilityScore: Float = 0f,
+    @SerializedName("reliability_score_breakdown") val reliabilityScoreBreakdown: ReliabilityScoreBreakdown? = null,
+    @SerializedName("last_score_update") val lastScoreUpdate: Long? = null
 ) {
     companion object {
         const val UNIT_TIME = "minutes"
@@ -292,4 +298,15 @@ class PowerSourcesResponse : BaseResponsePaginated<PowerSource>()
 
 data class VisitedSources(
     @SerializedName("data") val data: List<PowerSource> = emptyList()
+)
+
+/**
+ * Reliability Score Breakdown for serialization to Firebase
+ */
+data class ReliabilityScoreBreakdown(
+    @SerializedName("photo_score") val photoScore: Float = 0f,
+    @SerializedName("review_score") val reviewScore: Float = 0f,
+    @SerializedName("rating_score") val ratingScore: Float = 0f,
+    @SerializedName("freshness_score") val freshnessScore: Float = 0f,
+    @SerializedName("validation_score") val validationScore: Float = 0f
 )
