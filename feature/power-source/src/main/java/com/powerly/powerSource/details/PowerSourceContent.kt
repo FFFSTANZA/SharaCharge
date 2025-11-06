@@ -445,6 +445,18 @@ private fun SectionCharging(
             height = 30.dp,
             onClick = { uiEvents(SourceEvents.HowToCharge) }
         )
+
+        // Contribute button
+        ButtonSmall(
+            text = "Contribute & Earn EVCoins",
+            icon = R.drawable.outline_info_24, // TODO: Use a proper contribution icon
+            layoutDirection = LayoutDirection.Rtl,
+            padding = PaddingValues(horizontal = 8.dp),
+            color = MaterialTheme.colorScheme.onPrimaryContainer,
+            background = MaterialTheme.colorScheme.primaryContainer,
+            height = 30.dp,
+            onClick = { uiEvents(SourceEvents.Contribute) }
+        )
     }
 }
 

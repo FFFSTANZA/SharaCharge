@@ -11,6 +11,7 @@ import com.SharaSpot.charge.ChargingScreen
 import com.SharaSpot.lib.AppRoutes
 import com.SharaSpot.lib.showMessage
 import com.SharaSpot.powerSource.boarding.OnBoardingDialog
+import com.SharaSpot.powerSource.contribution.ContributeBottomSheet
 import com.SharaSpot.powerSource.details.PowerSourceScreen
 import com.SharaSpot.powerSource.details.SourceEvents
 import com.SharaSpot.powerSource.media.MediaScreen
@@ -58,6 +59,11 @@ fun NavGraphBuilder.powersourceDestinations(
 
                         is SourceEvents.Media -> {
                             val route = AppRoutes.PowerSource.Media
+                            navController.navigate(route)
+                        }
+
+                        is SourceEvents.Contribute -> {
+                            val route = AppRoutes.PowerSource.Contribute(ps.id)
                             navController.navigate(route)
                         }
 
@@ -131,6 +137,14 @@ fun NavGraphBuilder.powersourceDestinations(
 
         dialog<AppRoutes.PowerSource.Feedback> {
             FeedbackDialog(
+                onDismiss = { navController.popBackStack() }
+            )
+        }
+
+        dialog<AppRoutes.PowerSource.Contribute> { backStackEntry ->
+            val route = backStackEntry.toRoute<AppRoutes.PowerSource.Contribute>()
+            ContributeBottomSheet(
+                chargerId = route.chargerId,
                 onDismiss = { navController.popBackStack() }
             )
         }

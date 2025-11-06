@@ -84,6 +84,9 @@ object AppRoutes {
             val sessionId: String,
             val title: String
         ) : Route()
+
+        @Serializable
+        data class Contribute(val chargerId: String) : Route()
     }
 
     @Serializable
