@@ -15,6 +15,31 @@ import com.SharaSpot.resources.R
 import com.SharaSpot.ui.extensions.isArabic
 
 
+/**
+ * SharaSpot Design System - Material Theme Configuration
+ *
+ * Applies the minimalist SharaSpot design system across the app:
+ * - 3-color palette (Electric Green, White, Dark Gray)
+ * - 4-style typography system
+ * - Consistent spacing via 8dp grid
+ */
+private val LightColorScheme = lightColorScheme(
+    primary = SharaSpotColors.Primary,
+    onPrimary = Color.White,
+    background = SharaSpotColors.Background,
+    onBackground = SharaSpotColors.OnBackground,
+    surface = SharaSpotColors.Surface,
+    onSurface = SharaSpotColors.OnBackground,
+    outline = SharaSpotColors.Outline,
+    error = SharaSpotColors.Error,
+    onError = Color.White,
+    // Secondary colors mapped to maintain compatibility
+    secondary = SharaSpotColors.OnBackground,
+    onSecondary = Color.White,
+    tertiary = SharaSpotColors.Primary,
+    onTertiary = Color.White
+)
+
 @Composable
 fun AppTheme(
     darkTheme: Boolean = false,
@@ -22,21 +47,8 @@ fun AppTheme(
 ) {
     ConfigureSystemBars(darkTheme)
     MaterialTheme(
-        colorScheme = lightColorScheme(
-            primary = colorResource(R.color.colorPrimary),
-            onPrimary = ColorGuide1.onPrimary,
-            secondary = colorResource(R.color.colorSecondary),
-            onSecondary = ColorGuide1.onSecondary,
-            tertiary = colorResource(R.color.colorTertiary),
-            onTertiary = ColorGuide1.onTertiary,
-            background = ColorGuide1.background,
-            onBackground = ColorGuide1.onBackground,
-            surface = ColorGuide1.surface,
-            onSurface = ColorGuide1.onSurface,
-            onError = colorResource(R.color.colorSecondary),
-            error = ColorGuide1.errorColor
-        ),
-        typography = myTypography(isArabic()),
+        colorScheme = LightColorScheme,
+        typography = SharaSpotTypography(isArabic()),
         content = content
     )
 }

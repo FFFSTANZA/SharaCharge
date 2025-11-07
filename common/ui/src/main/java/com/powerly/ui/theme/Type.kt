@@ -14,72 +14,63 @@ import com.SharaSpot.resources.R
 
 val myBorder = BorderStroke(1.dp, color = MyColors.borderColor)
 
-
 /**
- * Body - Regular - 12,14,16
+ * SharaSpot Design System - Typography Scale
+ *
+ * A minimalist 4-style typography system for clear hierarchy and readability.
+ * All text in the app should use these predefined styles via MaterialTheme.typography.
+ *
+ * Hierarchy:
+ * - displayLarge: Hero titles, screen headers (32sp, Bold)
+ * - headlineMedium: Section headers, card titles (24sp, SemiBold)
+ * - bodyLarge: Primary body text, button labels (16sp, Normal)
+ * - bodyMedium: Secondary text, captions, metadata (14sp, Normal)
  */
-private val bodySmall = TextStyle(
-    color = MyColors.grey900,
-    fontSize = 12.sp,
-    fontWeight = FontWeight.Normal
-)
-
-private val bodyMedium = bodySmall.copy(
-    fontSize = 14.sp,
-)
-
-private val bodyLarge = bodySmall.copy(
-    fontSize = 16.sp,
-)
-
-/**
- * Label - Medium - 11,12,14
- */
-
-private val labelSmall = TextStyle(
-    color = MyColors.grey900,
-    fontSize = 11.sp,
-    fontWeight = FontWeight.Medium
-)
-private val labelMedium = labelSmall.copy(
-    fontSize = 12.sp,
-)
-private val labelLarge = labelSmall.copy(
-    fontSize = 14.sp,
-)
-
-/**
- * Label - Medium - 16,18,22
- */
-
-private val titleSmall = TextStyle(
-    color = MyColors.grey900,
-    fontSize = 16.sp,
-    fontWeight = FontWeight.Medium
-)
-private val titleMedium = titleSmall.copy(
-    fontSize = 18.sp,
-)
-private val titleLarge = titleSmall.copy(
-    fontSize = 22.sp,
-)
-
-
-// Set of Material typography styles to start with
-fun myTypography(isArabic: Boolean): Typography {
+fun SharaSpotTypography(isArabic: Boolean): Typography {
     val fontFamily = Fonts.appFont(isArabic)
+
     return Typography(
-        bodySmall = bodySmall.copy(fontFamily = fontFamily),
-        bodyMedium = bodyMedium.copy(fontFamily = fontFamily),
-        bodyLarge = bodyLarge.copy(fontFamily = fontFamily),
-        labelSmall = labelSmall.copy(fontFamily = fontFamily),
-        labelMedium = labelMedium.copy(fontFamily = fontFamily),
-        labelLarge = labelLarge.copy(fontFamily = fontFamily),
-        titleSmall = titleSmall.copy(fontFamily = fontFamily),
-        titleMedium = titleMedium.copy(fontFamily = fontFamily),
-        titleLarge = titleLarge.copy(fontFamily = fontFamily)
+        // Hero titles - 32sp Bold
+        displayLarge = TextStyle(
+            fontFamily = fontFamily,
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold,
+            lineHeight = 40.sp,
+            letterSpacing = (-0.5).sp
+        ),
+
+        // Section headers - 24sp SemiBold
+        headlineMedium = TextStyle(
+            fontFamily = fontFamily,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.SemiBold,
+            lineHeight = 32.sp,
+            letterSpacing = 0.sp
+        ),
+
+        // Primary body text - 16sp Normal
+        bodyLarge = TextStyle(
+            fontFamily = fontFamily,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Normal,
+            lineHeight = 24.sp,
+            letterSpacing = 0.15.sp
+        ),
+
+        // Secondary text - 14sp Normal
+        bodyMedium = TextStyle(
+            fontFamily = fontFamily,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Normal,
+            lineHeight = 20.sp,
+            letterSpacing = 0.25.sp
+        )
     )
 }
+
+// Legacy function for backward compatibility
+@Deprecated("Use SharaSpotTypography instead", ReplaceWith("SharaSpotTypography(isArabic)"))
+fun myTypography(isArabic: Boolean): Typography = SharaSpotTypography(isArabic)
 
 object Fonts {
 

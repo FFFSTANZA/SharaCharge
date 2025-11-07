@@ -35,8 +35,8 @@
     <string name="profile_select_country_please">Please select country</string>
 
     <!-- Welcome Screen-->
-    <string name="welcome">Hello :)</string>
-    <string name="welcome_description">Welcome to the future of EV charging! Let’s get you set up, first your language preference.</string>
+    <string name="welcome">Find EV Chargers in Tamil Nadu</string>
+    <string name="welcome_description">Community-powered charging station discovery</string>
     <string name="welcome_user_agreement">By using %s, you consent to our</string>
     <string name="welcome_privacy_policy">Privacy Policy.</string>
     <string name="welcome_and">and</string>
