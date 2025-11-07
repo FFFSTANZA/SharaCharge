@@ -54,7 +54,7 @@ import com.SharaSpot.ui.map.PowerSourceMarker
 import com.SharaSpot.ui.map.rememberMapState
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.Spacing
 
 private const val TAG = "HomeScreen"
 
@@ -195,11 +195,11 @@ internal fun HomeScreenContent(
             background = MaterialTheme.colorScheme.background,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(start = 16.dp, end = 16.dp),
-            spacing = 8.dp,
+                .padding(start = Spacing.m, end = Spacing.m),
+            spacing = Spacing.s,
             screenState = screenState
         ) {
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(Spacing.s))
             if (supportMap) SectionSlider(
                 cornerRadius = 8.dp,
                 onClick = { uiEvents(HomeEvents.SliderClick) }
@@ -230,17 +230,17 @@ internal fun HomeScreenContent(
 @Composable
 private fun SectionEnableLocation(onRequestLocation: () -> Unit) {
     MyCardColum(
-        background = MyColors.viewColor,
-        padding = 16.dp.asPadding,
+        background = MaterialTheme.colorScheme.surface,
+        padding = Spacing.m.asPadding,
         horizontalAlignment = Alignment.CenterHorizontally,
-        spacing = 32.dp
+        spacing = Spacing.xl
     ) {
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(Spacing.m))
         Icon(
             painter = painterResource(id = R.drawable.location_disabled),
-            contentDescription = "",
+            contentDescription = "Location disabled",
             modifier = Modifier.size(40.dp),
-            tint = MaterialTheme.colorScheme.secondary
+            tint = MaterialTheme.colorScheme.onBackground
         )
 
         ButtonLarge(
@@ -248,9 +248,9 @@ private fun SectionEnableLocation(onRequestLocation: () -> Unit) {
             onClick = onRequestLocation,
             text = stringResource(id = R.string.station_location_allow),
             icon = R.drawable.location_enable,
-            background = MaterialTheme.colorScheme.secondary,
+            background = MaterialTheme.colorScheme.primary,
             layoutDirection = LayoutDirection.Rtl,
-            color = MyColors.white
+            color = Color.White
         )
     }
 }
@@ -317,9 +317,9 @@ fun Header(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(IntrinsicSize.Min)
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            color = Color.White,
-            spacing = 4.dp,
+                .padding(horizontal = Spacing.m, vertical = Spacing.s),
+            color = MaterialTheme.colorScheme.background,
+            spacing = Spacing.xs,
             verticalAlignment = Alignment.CenterVertically
         ) {
             // SharaSpot logo
@@ -328,14 +328,14 @@ fun Header(
                 modifier = Modifier
                     .width(35.dp)
                     .height(35.dp),
-                contentDescription = "",
+                contentDescription = "SharaSpot Logo",
                 contentScale = ContentScale.Crop
             )
             // SharaSpot app name
             Box(Modifier.weight(1f)) {
                 MyTextDynamic(
                     text = stringResource(id = R.string.app_name),
-                    style = MaterialTheme.typography.titleMedium
+                    style = MaterialTheme.typography.headlineMedium
                 )
             }
             //login button
@@ -343,7 +343,7 @@ fun Header(
                 ButtonSmall(
                     text = stringResource(id = R.string.login_option_title),
                     color = Color.White,
-                    cornerRadius = 8.dp,
+                    cornerRadius = 12.dp,
                     height = 30.dp,
                     fontSize = 14.sp,
                     onClick = onLogin
@@ -354,9 +354,9 @@ fun Header(
                 text = stringResource(id = R.string.home_help),
                 icon = R.drawable.ic_baseline_support_agent_24,
                 layoutDirection = LayoutDirection.Rtl,
-                cornerRadius = 8.dp,
-                padding = PaddingValues(horizontal = 8.dp),
-                color = MaterialTheme.colorScheme.secondary,
+                cornerRadius = 12.dp,
+                padding = PaddingValues(horizontal = Spacing.s),
+                color = MaterialTheme.colorScheme.onBackground,
                 background = MaterialTheme.colorScheme.surface,
                 height = 30.dp,
                 iconSize = 25.dp,
