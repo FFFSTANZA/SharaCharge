@@ -1,7 +1,7 @@
 import com.SharaSpot.MyProject
 
 plugins {
-    alias(libs.plugins.SharaSpot.library)
+    alias(libs.plugins.sharaspot.library)
 }
 
 dependencies {

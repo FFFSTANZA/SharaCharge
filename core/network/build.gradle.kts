@@ -2,8 +2,8 @@ import com.SharaSpot.MyProject
 import com.SharaSpot.getPropertiesFileName
 
 plugins {
-    alias(libs.plugins.SharaSpot.library)
-    alias(libs.plugins.SharaSpot.koin)
+    alias(libs.plugins.sharaspot.library)
+    alias(libs.plugins.sharaspot.koin)
     alias(libs.plugins.secrets)
 }
 

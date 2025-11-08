@@ -1,10 +1,10 @@
 [versions]
 # Plugin verisons
-androidGradlePlugin = "8.13.0"
-kotlinAndroid = "2.2.20"
-kotlinKsp = "2.2.20-2.0.3"
-androidTools = "31.13.0"
-kotlinSerialization = "2.2.20"
+androidGradlePlugin = "8.7.2"
+kotlinAndroid = "2.0.21"
+kotlinKsp = "2.0.21-1.0.28"
+androidTools = "31.7.2"
+kotlinSerialization = "2.0.21"
 googleServices = "4.4.3"
 koin = "4.1.0"
 koinAnnotations = "2.1.0"
@@ -29,7 +29,7 @@ kotlinCoroutines = "1.10.2"
 material = "1.13.0"
 
 ## Compose
-composeBom = "2025.09.00"
+composeBom = "2024.12.00"
 foundationVersion = "1.9.1"
 material3Version = "1.3.2"
 mapsComposeVersion = "6.11.0"
@@ -176,11 +176,11 @@ room = { id = "androidx.room", version.ref = "room" }
 android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
 
 # Plugins defined by this project
-SharaSpot-application = { id = "SharaSpot.application" }
-SharaSpot-library = { id = "SharaSpot.library" }
-SharaSpot-koin = { id = "SharaSpot.koin" }
-SharaSpot-compose = { id = "SharaSpot.compose" }
-SharaSpot-application-compose = { id = "SharaSpot.application.compose" }
-SharaSpot-serialization = { id = "SharaSpot.serialization" }
-SharaSpot-room = { id = "SharaSpot.room" }
-SharaSpot-android-test = { id = "SharaSpot.android.test" }
+sharaspot-application = { id = "SharaSpot.application" }
+sharaspot-library = { id = "SharaSpot.library" }
+sharaspot-koin = { id = "SharaSpot.koin" }
+sharaspot-compose = { id = "SharaSpot.compose" }
+sharaspot-application-compose = { id = "SharaSpot.application.compose" }
+sharaspot-serialization = { id = "SharaSpot.serialization" }
+sharaspot-room = { id = "SharaSpot.room" }
+sharaspot-android-test = { id = "SharaSpot.android.test" }

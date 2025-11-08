@@ -1,7 +1,7 @@
 import com.SharaSpot.MyProject
 
 plugins {
-    alias(libs.plugins.SharaSpot.android.test)
+    alias(libs.plugins.sharaspot.android.test)
 }
 
 android {

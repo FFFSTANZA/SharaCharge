@@ -9,9 +9,9 @@ import com.SharaSpot.hasReleaseStoreConfig
 import com.SharaSpot.isGoogle
 
 plugins {
-    alias(libs.plugins.SharaSpot.application)
-    alias(libs.plugins.SharaSpot.koin)
-    alias(libs.plugins.SharaSpot.application.compose)
+    alias(libs.plugins.sharaspot.application)
+    alias(libs.plugins.sharaspot.koin)
+    alias(libs.plugins.sharaspot.application.compose)
     alias(libs.plugins.secrets)
 }
 
