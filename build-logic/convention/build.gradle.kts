@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
     `kotlin-dsl`
 }
@@ -13,9 +11,9 @@ java {
     targetCompatibility = JavaVersion.VERSION_18
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget = JvmTarget.JVM_18
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    kotlinOptions {
+        jvmTarget = "18"
     }
 }
 
