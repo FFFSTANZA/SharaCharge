@@ -11,7 +11,7 @@ import org.koin.androidx.compose.koinViewModel
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.SharaSpot.core.data.model.ChargingStatus
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.dialogs.alert.MyAlertDialog
 import com.SharaSpot.ui.dialogs.alert.rememberAlertDialogState

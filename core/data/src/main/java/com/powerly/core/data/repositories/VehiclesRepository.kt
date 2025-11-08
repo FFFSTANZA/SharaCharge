@@ -2,8 +2,8 @@ package com.SharaSpot.core.data.repositories
 
 import com.SharaSpot.core.data.model.MakersStatus
 import com.SharaSpot.core.data.model.ModelsStatus
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Vehicle
 
 interface VehiclesRepository {
 

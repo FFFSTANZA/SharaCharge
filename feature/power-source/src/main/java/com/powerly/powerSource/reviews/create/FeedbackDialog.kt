@@ -6,7 +6,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import org.koin.androidx.compose.koinViewModel
-import com.SharaSpot.core.model.api.ApiStatus
+import com.powerly.core.model.api.ApiStatus
 import com.SharaSpot.ui.dialogs.MyBasicBottomSheet
 import com.SharaSpot.ui.dialogs.loading.LoadingDialog
 import com.SharaSpot.ui.dialogs.loading.rememberLoadingState

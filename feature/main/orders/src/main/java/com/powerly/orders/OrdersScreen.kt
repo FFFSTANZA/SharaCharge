@@ -6,8 +6,8 @@ import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import com.SharaSpot.core.model.SharaSpot.OrderTab
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.OrderTab
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.orders.active.SessionActiveScreen
 import com.SharaSpot.orders.history.SessionHistoryScreen
 import com.SharaSpot.resources.R

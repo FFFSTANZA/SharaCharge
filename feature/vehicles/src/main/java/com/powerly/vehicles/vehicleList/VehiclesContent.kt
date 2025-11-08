@@ -30,11 +30,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Connector
-import com.SharaSpot.core.model.SharaSpot.Vehicle
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
-import com.SharaSpot.core.model.SharaSpot.VehicleModel
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Connector
+import com.powerly.core.model.powerly.Vehicle
+import com.powerly.core.model.powerly.VehicleMaker
+import com.powerly.core.model.powerly.VehicleModel
 import com.SharaSpot.vehicles.vehicleDetails.options.asVehicleColor
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn

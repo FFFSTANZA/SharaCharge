@@ -9,7 +9,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import com.SharaSpot.core.data.model.ChargingStatus
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.orders.ChargerViewModel
 import com.SharaSpot.orders.SessionViewModel
 import com.SharaSpot.resources.R

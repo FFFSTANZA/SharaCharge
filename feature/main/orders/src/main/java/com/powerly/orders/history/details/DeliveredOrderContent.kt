@@ -33,10 +33,10 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.SharaSpot.Price
-import com.SharaSpot.core.model.SharaSpot.Session
-import com.SharaSpot.core.model.location.MyAddress
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.Price
+import com.powerly.core.model.powerly.Session
+import com.powerly.core.model.location.MyAddress
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonSmall
 import com.SharaSpot.ui.containers.LayoutDirectionAny

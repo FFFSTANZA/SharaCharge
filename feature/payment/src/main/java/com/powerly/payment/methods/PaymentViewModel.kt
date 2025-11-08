@@ -5,9 +5,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.repositories.PaymentRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.PaymentCard
-import com.SharaSpot.core.model.util.asErrorMessage
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.payment.PaymentCard
+import com.powerly.core.model.util.asErrorMessage
 import com.SharaSpot.payment.PaymentManager
 import com.SharaSpot.ui.dialogs.loading.initScreenState
 import org.koin.android.annotation.KoinViewModel

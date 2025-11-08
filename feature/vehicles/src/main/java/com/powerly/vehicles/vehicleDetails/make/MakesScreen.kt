@@ -2,7 +2,7 @@ package com.SharaSpot.vehicles.vehicleDetails.make
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
+import com.powerly.core.model.powerly.VehicleMaker
 import com.SharaSpot.lib.IRoute
 import com.SharaSpot.vehicles.VehiclesViewModel
 

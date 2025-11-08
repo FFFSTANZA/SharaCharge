@@ -23,8 +23,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.core.model.payment.BalanceItem
-import com.SharaSpot.core.model.payment.PaymentCard
+import com.powerly.core.model.payment.BalanceItem
+import com.powerly.core.model.payment.PaymentCard
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow

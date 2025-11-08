@@ -1,6 +1,6 @@
-package com.SharaSpot.core.model.payment
+package com.powerly.core.model.payment
 
-import com.SharaSpot.core.model.api.BaseResponse
+import com.powerly.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
 class CardsResponse : BaseResponse<List<PaymentCard>>()

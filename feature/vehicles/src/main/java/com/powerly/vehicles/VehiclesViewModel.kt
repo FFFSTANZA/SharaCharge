@@ -6,10 +6,10 @@ import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.model.MakersStatus
 import com.SharaSpot.core.data.model.ModelsStatus
 import com.SharaSpot.core.data.repositories.VehiclesRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Vehicle
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
-import com.SharaSpot.core.model.SharaSpot.VehicleModel
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Vehicle
+import com.powerly.core.model.powerly.VehicleMaker
+import com.powerly.core.model.powerly.VehicleModel
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

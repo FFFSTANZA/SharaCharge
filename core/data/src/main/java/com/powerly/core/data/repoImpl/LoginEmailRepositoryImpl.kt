@@ -1,15 +1,15 @@
 package com.SharaSpot.core.data.repoImpl
 
 import com.SharaSpot.core.data.repositories.LoginEmailRepository
-import com.SharaSpot.core.model.api.ApiErrorConstants
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.user.EmailCheckBody
-import com.SharaSpot.core.model.user.EmailForgetBody
-import com.SharaSpot.core.model.user.EmailLoginBody
-import com.SharaSpot.core.model.user.EmailRegisterBody
-import com.SharaSpot.core.model.user.EmailResetBody
-import com.SharaSpot.core.model.user.EmailVerifyResendBody
-import com.SharaSpot.core.model.user.VerificationBody
+import com.powerly.core.model.api.ApiErrorConstants
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.user.EmailCheckBody
+import com.powerly.core.model.user.EmailForgetBody
+import com.powerly.core.model.user.EmailLoginBody
+import com.powerly.core.model.user.EmailRegisterBody
+import com.powerly.core.model.user.EmailResetBody
+import com.powerly.core.model.user.EmailVerifyResendBody
+import com.powerly.core.model.user.VerificationBody
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
 import com.SharaSpot.core.network.asValidationErrorMessage

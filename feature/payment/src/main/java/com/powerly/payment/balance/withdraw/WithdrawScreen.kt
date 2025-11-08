@@ -10,7 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.SharaSpot.core.model.api.ApiStatus
+import com.powerly.core.model.api.ApiStatus
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.dialogs.alert.AlertDialogProperties
 import com.SharaSpot.ui.dialogs.alert.MyAlertDialog

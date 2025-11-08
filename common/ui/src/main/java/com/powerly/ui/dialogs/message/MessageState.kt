@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.util.Message
 
 @Composable
 fun rememberMessageState(

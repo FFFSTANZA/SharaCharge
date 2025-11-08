@@ -1,7 +1,7 @@
 package com.SharaSpot.core.data.model
 
-import com.SharaSpot.core.model.SharaSpot.Session
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.powerly.Session
+import com.powerly.core.model.util.Message
 
 sealed class ChargingStatus {
     data class Error(val msg: Message) : ChargingStatus()

@@ -10,8 +10,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import com.SharaSpot.core.model.location.Target
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.location.Target
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.home.MyMapViewModel
 import com.SharaSpot.ui.HomeUiState
 import com.SharaSpot.ui.dialogs.locationSearch.LocationSearchDialog

@@ -1,8 +1,8 @@
 package com.SharaSpot.core.data.repositories
 
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.user.SocialLoginBody
-import com.SharaSpot.core.model.user.User
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.user.SocialLoginBody
+import com.powerly.core.model.user.User
 
 interface LoginSocialRepository {
 

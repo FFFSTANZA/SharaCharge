@@ -1,7 +1,7 @@
 package com.SharaSpot.core.data.model
 
-import com.SharaSpot.core.model.location.AppCurrency
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.location.AppCurrency
+import com.powerly.core.model.util.Message
 
 sealed class CurrenciesStatus {
     data class Error(val msg: Message) : CurrenciesStatus()

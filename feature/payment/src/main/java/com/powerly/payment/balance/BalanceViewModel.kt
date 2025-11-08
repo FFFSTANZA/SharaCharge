@@ -9,11 +9,11 @@ import com.SharaSpot.core.analytics.EventsManager
 import com.SharaSpot.core.data.model.BalanceRefillStatus
 import com.SharaSpot.core.data.repositories.PaymentRepository
 import com.SharaSpot.core.data.repositories.UserRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.BalanceItem
-import com.SharaSpot.core.model.payment.PaymentRedirect
-import com.SharaSpot.core.model.payment.PaymentCard
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.payment.BalanceItem
+import com.powerly.core.model.payment.PaymentRedirect
+import com.powerly.core.model.payment.PaymentCard
+import com.powerly.core.model.util.Message
 import com.SharaSpot.lib.managers.CountryManager
 import com.SharaSpot.lib.managers.StorageManager
 import com.SharaSpot.payment.PaymentManager

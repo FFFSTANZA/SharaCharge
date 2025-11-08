@@ -1,4 +1,4 @@
-package com.SharaSpot.core.model.user
+package com.powerly.core.model.user
 
 import com.google.gson.annotations.SerializedName
 

@@ -2,7 +2,7 @@ package com.SharaSpot.core.data.repositories
 
 import androidx.paging.PagingData
 import com.SharaSpot.core.data.model.ChargingStatus
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import kotlinx.coroutines.flow.Flow
 
 interface SessionsRepository {

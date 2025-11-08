@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.payment.ChargingTransaction
+import com.powerly.core.model.payment.ChargingTransaction
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.containers.MySurfaceColumn

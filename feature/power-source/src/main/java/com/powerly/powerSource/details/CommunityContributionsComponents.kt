@@ -20,9 +20,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.core.model.contribution.Contribution
-import com.SharaSpot.core.model.contribution.ContributionSummary
-import com.SharaSpot.core.model.contribution.ContributionType
+import com.powerly.core.model.contribution.Contribution
+import com.powerly.core.model.contribution.ContributionSummary
+import com.powerly.core.model.contribution.ContributionType
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.NetworkImage
 import com.SharaSpot.ui.components.RatingBar

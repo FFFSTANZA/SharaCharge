@@ -8,8 +8,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.location.AddressType
-import com.SharaSpot.core.model.location.TamilNaduAddress
+import com.powerly.core.model.location.AddressType
+import com.powerly.core.model.location.TamilNaduAddress
 import com.SharaSpot.lib.data.PinCodeValidator
 import com.SharaSpot.lib.data.TamilNaduCitiesData
 import com.SharaSpot.lib.data.TamilNaduDistrictsData

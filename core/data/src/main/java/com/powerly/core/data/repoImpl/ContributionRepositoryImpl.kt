@@ -5,8 +5,8 @@ import com.SharaSpot.core.data.repositories.ContributionRepository
 import com.SharaSpot.core.data.repositories.LeaderboardPeriod
 import com.SharaSpot.core.data.repositories.ValidationStats
 import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.contribution.*
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.contribution.*
 import com.SharaSpot.core.network.asErrorMessage
 import com.powerly.core.model.reliability.ReliabilityScore
 import com.powerly.core.model.reliability.calculateReliabilityScore

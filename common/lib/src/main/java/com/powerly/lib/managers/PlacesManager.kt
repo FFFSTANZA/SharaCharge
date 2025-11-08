@@ -13,8 +13,8 @@ import com.google.android.libraries.places.api.model.RectangularBounds
 import com.google.android.libraries.places.api.net.FetchPlaceRequest
 import com.google.android.libraries.places.api.net.FindAutocompletePredictionsRequest
 import com.google.android.libraries.places.api.net.PlacesClient
-import com.SharaSpot.core.model.location.MyAddress
-import com.SharaSpot.core.model.location.Target
+import com.powerly.core.model.location.MyAddress
+import com.powerly.core.model.location.Target
 import com.SharaSpot.core.network.DeviceHelper
 import com.powerly.lib.data.TamilNaduConstants
 import com.google.android.gms.maps.model.LatLng

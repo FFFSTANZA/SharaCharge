@@ -4,8 +4,8 @@ import android.app.Activity
 import android.util.Log
 import com.razorpay.PaymentData
 import com.razorpay.PaymentResultWithDataListener
-import com.SharaSpot.core.model.payment.PaymentStatus
-import com.SharaSpot.core.model.payment.PaymentTransaction
+import com.powerly.core.model.payment.PaymentStatus
+import com.powerly.core.model.payment.PaymentTransaction
 import java.util.UUID
 
 /**

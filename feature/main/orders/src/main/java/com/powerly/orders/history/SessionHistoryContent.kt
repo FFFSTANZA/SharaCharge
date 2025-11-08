@@ -22,8 +22,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.paging.PagingData
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.SharaSpot.core.model.SharaSpot.PowerSource
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.PowerSource
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.orders.SessionItemTitle
 import com.SharaSpot.orders.SessionOutlinedButton
 import com.SharaSpot.orders.active.ListSessions

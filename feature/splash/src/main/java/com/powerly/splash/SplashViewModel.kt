@@ -3,8 +3,8 @@ package com.SharaSpot.splash
 import androidx.lifecycle.ViewModel
 import com.SharaSpot.core.data.repositories.AppRepository
 import com.SharaSpot.core.data.repositories.UserRepository
-import com.SharaSpot.core.model.api.ApiErrorConstants
-import com.SharaSpot.core.model.api.ApiStatus
+import com.powerly.core.model.api.ApiErrorConstants
+import com.powerly.core.model.api.ApiStatus
 import com.SharaSpot.core.network.DeviceHelper
 import com.SharaSpot.lib.managers.CountryManager
 import com.SharaSpot.lib.managers.StorageManager

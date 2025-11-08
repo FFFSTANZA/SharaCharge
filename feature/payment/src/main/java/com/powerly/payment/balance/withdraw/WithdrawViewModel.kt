@@ -5,8 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.repositories.AppRepository
 import com.SharaSpot.core.data.repositories.PaymentRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.Wallet
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.payment.Wallet
 import com.SharaSpot.lib.managers.CountryManager
 import com.SharaSpot.lib.managers.StorageManager
 import com.SharaSpot.ui.dialogs.loading.LoadingState

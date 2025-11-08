@@ -34,9 +34,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.SharaSpot.ChargingQuantity
-import com.SharaSpot.core.model.SharaSpot.Connector
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.ChargingQuantity
+import com.powerly.core.model.powerly.Connector
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.containers.MyRow

@@ -10,10 +10,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import com.SharaSpot.core.data.model.SourceStatus
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.contribution.Contribution
-import com.SharaSpot.core.model.contribution.ContributionSummary
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.contribution.Contribution
+import com.powerly.core.model.contribution.ContributionSummary
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.powerSource.PsViewModel
 import com.SharaSpot.ui.HomeUiState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState

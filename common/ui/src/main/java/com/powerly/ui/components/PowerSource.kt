@@ -29,7 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.SharaSpot.Connector
+import com.powerly.core.model.powerly.Connector
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.containers.MySurface

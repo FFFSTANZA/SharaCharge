@@ -4,8 +4,8 @@ import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.repositories.ContributionRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.contribution.*
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.contribution.*
 import com.SharaSpot.lib.ImageCompressionManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

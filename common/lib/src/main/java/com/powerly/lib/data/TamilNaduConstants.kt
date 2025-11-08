@@ -1,6 +1,6 @@
 package com.powerly.lib.data
 
-import com.SharaSpot.core.model.location.Target
+import com.powerly.core.model.location.Target
 
 /**
  * Constants for Tamil Nadu location defaults

@@ -8,7 +8,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.SharaSpot.core.model.util.asErrorMessage
+import com.powerly.core.model.util.asErrorMessage
 import com.SharaSpot.payment.balance.BalanceViewModel
 import com.SharaSpot.payment.methods.PaymentViewModel
 import com.SharaSpot.resources.R

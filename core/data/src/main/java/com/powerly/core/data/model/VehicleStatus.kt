@@ -1,8 +1,8 @@
 package com.SharaSpot.core.data.model
 
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
-import com.SharaSpot.core.model.SharaSpot.VehicleModel
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.powerly.VehicleMaker
+import com.powerly.core.model.powerly.VehicleModel
+import com.powerly.core.model.util.Message
 
 sealed class MakersStatus {
     data class Error(val msg: Message) : MakersStatus()

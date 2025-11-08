@@ -1,8 +1,8 @@
 package com.SharaSpot.core.data.repoImpl
 
 import com.SharaSpot.core.data.repositories.LoginSocialRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.user.SocialLoginBody
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.user.SocialLoginBody
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher

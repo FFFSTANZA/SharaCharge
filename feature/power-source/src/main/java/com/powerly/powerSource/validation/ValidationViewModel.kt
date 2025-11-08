@@ -6,9 +6,9 @@ import com.SharaSpot.core.data.repositories.ContributionRepository
 import com.SharaSpot.core.data.repositories.LeaderboardPeriod
 import com.SharaSpot.core.data.repositories.ValidationStats
 import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.contribution.Contribution
-import com.SharaSpot.core.model.contribution.ValidationRewards
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.contribution.Contribution
+import com.powerly.core.model.contribution.ValidationRewards
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

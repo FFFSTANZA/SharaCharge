@@ -1,7 +1,7 @@
 package com.SharaSpot.core.network
 
-import com.SharaSpot.core.model.api.ValidationErrorResponse
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.api.ValidationErrorResponse
+import com.powerly.core.model.util.Message
 import com.google.gson.Gson
 import okhttp3.Headers
 import org.json.JSONObject

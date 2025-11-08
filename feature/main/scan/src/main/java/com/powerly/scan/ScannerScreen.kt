@@ -12,9 +12,9 @@ import androidx.compose.runtime.setValue
 import androidx.core.net.toUri
 import org.koin.androidx.compose.koinViewModel
 import com.SharaSpot.core.data.model.SourceStatus
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.PowerSource
-import com.SharaSpot.core.model.SharaSpot.SourceCategory
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.PowerSource
+import com.powerly.core.model.powerly.SourceCategory
 import com.SharaSpot.lib.CONSTANTS
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.dialogs.loading.LoadingState

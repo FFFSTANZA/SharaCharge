@@ -3,10 +3,10 @@ package com.SharaSpot.core.data.repoImpl
 import com.SharaSpot.core.data.model.MakersStatus
 import com.SharaSpot.core.data.model.ModelsStatus
 import com.SharaSpot.core.data.repositories.VehiclesRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Vehicle
-import com.SharaSpot.core.model.SharaSpot.VehicleAddBody
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Vehicle
+import com.powerly.core.model.powerly.VehicleAddBody
+import com.powerly.core.model.powerly.VehicleMaker
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher

@@ -13,7 +13,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.google.gson.annotations.SerializedName
 import com.SharaSpot.core.data.repositories.AppRepository
-import com.SharaSpot.core.model.user.DeviceBody
+import com.powerly.core.model.user.DeviceBody
 import com.SharaSpot.lib.MainScreen.setMainScreenHome
 import com.SharaSpot.lib.MyPackages
 import com.SharaSpot.resources.R

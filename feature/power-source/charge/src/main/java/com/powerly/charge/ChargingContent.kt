@@ -47,8 +47,8 @@ import com.SharaSpot.charge.util.ChargingTimerState
 import com.SharaSpot.charge.util.asFormattedTime
 import com.SharaSpot.charge.util.chargingAnimation
 import com.SharaSpot.charge.util.rememberChargingTimerState
-import com.SharaSpot.core.model.SharaSpot.PowerSource
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.PowerSource
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.theme.AppTheme
 import com.SharaSpot.ui.components.ButtonLarge

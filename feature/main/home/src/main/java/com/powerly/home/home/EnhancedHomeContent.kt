@@ -22,8 +22,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.SharaSpot.core.model.SharaSpot.Connector
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.Connector
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.home.home.components.ChargerFilter
 import com.SharaSpot.home.home.components.ChargerInsightCard
 import com.SharaSpot.home.home.components.CommunityStatsBar

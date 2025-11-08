@@ -31,8 +31,8 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import com.SharaSpot.core.model.SharaSpot.Connector
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.Connector
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.home.home.slider.SectionSlider
 import com.SharaSpot.powerSource.boarding.OnBoardingScreenContent
 import com.SharaSpot.resources.R

@@ -10,7 +10,7 @@ import com.SharaSpot.charging.util.ChargingTimerManager
 import com.SharaSpot.charging.util.ChargingTimerState
 import com.SharaSpot.core.data.model.ChargingStatus
 import com.SharaSpot.core.data.repositories.SessionsRepository
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.lib.AppRoutes
 import com.SharaSpot.lib.managers.StorageManager
 import dagger.hilt.android.lifecycle.HiltViewModel

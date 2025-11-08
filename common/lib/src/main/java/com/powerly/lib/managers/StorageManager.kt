@@ -10,7 +10,7 @@ import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
 import com.google.gson.stream.JsonWriter
 import com.SharaSpot.core.database.LocalDataSource
-import com.SharaSpot.core.model.user.User
+import com.powerly.core.model.user.User
 import com.SharaSpot.core.network.RetrofitClient
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext

@@ -10,8 +10,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Vehicle
 import com.SharaSpot.vehicles.VehiclesViewModel
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.dialogs.alert.MyAlertDialog

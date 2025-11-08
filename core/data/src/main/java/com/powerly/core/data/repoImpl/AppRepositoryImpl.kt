@@ -3,8 +3,8 @@ package com.SharaSpot.core.data.repoImpl
 import com.SharaSpot.core.data.model.CurrenciesStatus
 import com.SharaSpot.core.data.repositories.AppRepository
 import com.SharaSpot.core.database.LocalDataSource
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.user.DeviceBody
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.user.DeviceBody
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher

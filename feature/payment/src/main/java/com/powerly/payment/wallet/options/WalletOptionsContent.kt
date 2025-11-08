@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.util.Item
+import com.powerly.core.model.util.Item
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.dialogs.ItemOptionsMenu
 import com.SharaSpot.ui.dialogs.MyBottomSheet

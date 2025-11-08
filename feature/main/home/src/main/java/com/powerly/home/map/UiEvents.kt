@@ -1,7 +1,7 @@
 package com.SharaSpot.home.map
 
-import com.SharaSpot.core.model.location.Target
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.location.Target
+import com.powerly.core.model.powerly.PowerSource
 
 internal sealed class MapEvents() {
     data object OnLocation : MapEvents()

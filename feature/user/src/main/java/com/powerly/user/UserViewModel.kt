@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.repositories.AppRepository
-import com.SharaSpot.core.model.location.Country
-import com.SharaSpot.core.model.user.DeviceBody
+import com.powerly.core.model.location.Country
+import com.powerly.core.model.user.DeviceBody
 import com.SharaSpot.core.network.DeviceHelper
 import com.SharaSpot.lib.managers.CountryManager
 import com.SharaSpot.lib.managers.NotificationsManager

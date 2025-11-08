@@ -1,4 +1,4 @@
-package com.SharaSpot.core.model.api
+package com.powerly.core.model.api
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

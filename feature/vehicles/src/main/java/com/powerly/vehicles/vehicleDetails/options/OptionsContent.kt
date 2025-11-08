@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.core.model.SharaSpot.Connector
+import com.powerly.core.model.powerly.Connector
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyCardColum
 import com.SharaSpot.ui.containers.MyCardRow
