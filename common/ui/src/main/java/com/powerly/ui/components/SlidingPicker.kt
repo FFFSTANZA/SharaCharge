@@ -48,7 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 
@@ -148,7 +148,7 @@ fun MyTimePicker(
                 .fillMaxWidth()
                 .height(indicatorHeight)
                 .background(
-                    MyColors.viewColor2,
+                    SharaSpotColors.SurfaceVariant,
                     shape = RoundedCornerShape(8.dp)
                 )
                 .align(Alignment.Center)
@@ -200,7 +200,7 @@ fun MySlidingPicker(
                 .fillMaxWidth()
                 .height(indicatorHeight)
                 .background(
-                    MyColors.viewColor2,
+                    SharaSpotColors.SurfaceVariant,
                     shape = RoundedCornerShape(8.dp)
                 )
                 .align(Alignment.Center)

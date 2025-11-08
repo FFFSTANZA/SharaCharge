@@ -53,7 +53,7 @@ import com.SharaSpot.charging.util.asFormattedTime
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.theme.AppTheme
 import com.SharaSpot.ui.components.ButtonLarge
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.screen.MyScreen
@@ -125,7 +125,7 @@ internal fun ChargingScreenContent(
             text = stringResource(id = R.string.station_charging_stop),
             icon = R.drawable.charge,
             color = MaterialTheme.colorScheme.secondary,
-            background = MyColors.viewColor2
+            background = SharaSpotColors.SurfaceVariant
         )
     }
 }
@@ -245,7 +245,7 @@ private fun SectionProgress(
                 .shadow(
                     elevation = 40.dp,
                     shape = RoundedCornerShape(50),
-                    spotColor = MyColors.blueLight,
+                    spotColor = SharaSpotColors.InfoLight,
                 )
                 .rotate(90f)
                 .background(Color.White)
@@ -253,7 +253,7 @@ private fun SectionProgress(
             progress = { currentProgress },
             strokeWidth = 10.dp,
             color = MaterialTheme.colorScheme.primary,
-            trackColor = MyColors.blueLight,
+            trackColor = SharaSpotColors.InfoLight,
         )
 
         SectionProgressLabel(
@@ -314,7 +314,7 @@ private fun DetailsItem(
         Text(
             text = stringResource(id = title),
             style = MaterialTheme.typography.bodyLarge,
-            color = MyColors.subColor,
+            color = SharaSpotColors.TextSecondary,
             modifier = Modifier.weight(1f)
         )
 
@@ -353,13 +353,13 @@ private fun DetailsSubItem(
         Text(
             text = stringResource(id = title),
             style = MaterialTheme.typography.bodyMedium,
-            color = MyColors.subColor,
+            color = SharaSpotColors.TextSecondary,
             modifier = Modifier.weight(1f)
         )
         Text(
             text = value,
             style = MaterialTheme.typography.bodyMedium,
-            color = MyColors.subColor,
+            color = SharaSpotColors.TextSecondary,
         )
     }
 }

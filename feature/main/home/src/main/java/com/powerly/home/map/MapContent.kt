@@ -53,7 +53,7 @@ import com.SharaSpot.ui.map.MapActionButton
 import com.SharaSpot.ui.map.MapViewState
 import com.SharaSpot.ui.map.rememberMapState
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 private const val TAG = "MapScreen"
 
@@ -118,7 +118,7 @@ internal fun MapScreenContent(
         Box(
             modifier = Modifier
                 .padding(padding)
-                .background(MyColors.white)
+                .background(Color.White)
         ) {
 
             SectionMap(

@@ -35,7 +35,7 @@ import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.extensions.isPreview
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -133,7 +133,7 @@ private fun SectionButtons(
         modifier = Modifier.fillMaxWidth(),
         cornerRadius = 16.dp,
         icon = R.drawable.ic_copy,
-        border = BorderStroke(2.dp, color = MyColors.borderColor),
+        border = BorderStroke(2.dp, color = SharaSpotColors.Outline),
         background = Color.White,
         onClick = {
             linkCopied = true

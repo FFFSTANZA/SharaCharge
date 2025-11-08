@@ -26,7 +26,7 @@ import com.SharaSpot.ui.dialogs.ProgressView
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -99,7 +99,7 @@ private fun SectionBalanceAvailable(
     )
     MySurfaceRow(
         color = Color.Transparent,
-        border = BorderStroke(2.dp, MyColors.borderColor),
+        border = BorderStroke(2.dp, SharaSpotColors.Outline),
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp),
@@ -169,7 +169,7 @@ private fun ItemBalance(
         )
         Spacer(Modifier.weight(1f))
         if (balance.popular) Surface(
-            color = MyColors.greenLight,
+            color = SharaSpotColors.PrimaryLight,
             shape = RoundedCornerShape(4.dp)
         ) {
             Text(

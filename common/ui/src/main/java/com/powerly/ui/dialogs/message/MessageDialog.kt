@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
 import com.powerly.core.model.util.Message
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.delay
 
 @Preview
@@ -68,8 +68,8 @@ fun MessageDialog(
             offset = IntOffset(x = 0, y = -with(LocalDensity.current) { 36.dp.roundToPx() })
         ) {
             Surface(
-                color = if (message.isError) MyColors.red500
-                else MyColors.greenLight,
+                color = if (message.isError) SharaSpotColors.Error
+                else SharaSpotColors.SuccessLight,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
@@ -118,8 +118,8 @@ fun MessageDialog(
     ) {
         Column(Modifier.fillMaxSize()) {
             Surface(
-                color = if (message.isError) MyColors.red500
-                else MyColors.greenLight,
+                color = if (message.isError) SharaSpotColors.Error
+                else SharaSpotColors.SuccessLight,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(

@@ -38,7 +38,7 @@ import com.SharaSpot.ui.containers.MyRefreshBox
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.dialogs.MyProgressView
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -158,7 +158,7 @@ private fun ItemSessionUser(
             currency = session.currency
         )
 
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
         MyRow {
             Text(
                 text = session.chargePoint.title,

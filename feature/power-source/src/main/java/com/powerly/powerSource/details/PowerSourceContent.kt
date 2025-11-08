@@ -70,7 +70,7 @@ import com.SharaSpot.ui.extensions.asBorder
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import java.util.Locale
 
 private const val TAG = "StationScreen"
@@ -315,12 +315,12 @@ private fun SectionStation(
                             painter = painterResource(id = icon),
                             contentDescription = "",
                             modifier = Modifier.size(18.dp),
-                            tint = MyColors.red500
+                            tint = SharaSpotColors.Error
                         )
                         Text(
                             text = sourceUptime.status,
                             style = MaterialTheme.typography.bodySmall,
-                            color = MyColors.red500,
+                            color = SharaSpotColors.Error,
                         )
                     }
                 }
@@ -466,10 +466,10 @@ private fun SectionCharging(
             layoutDirection = LayoutDirection.Rtl,
             text = stringResource(id = R.string.station_charging_start),
             icon = R.drawable.charge,
-            color = if (powerSource.isNear && powerSource.isAvailable) MyColors.white
+            color = if (powerSource.isNear && powerSource.isAvailable) Color.White
             else MaterialTheme.colorScheme.secondary,
             background = if (powerSource.isNear && powerSource.isAvailable) MaterialTheme.colorScheme.secondary
-            else MyColors.buttonColor
+            else SharaSpotColors.SurfaceVariant
         )
         ButtonSmall(
             text = stringResource(R.string.station_charging_how_to),
@@ -562,7 +562,7 @@ internal fun SectionLocation(
             color = if (powerSource.isNear.not() && powerSource.isAvailable) Color.White
             else MaterialTheme.colorScheme.secondary,
             background = if (powerSource.isNear.not() && powerSource.isAvailable) MaterialTheme.colorScheme.secondary
-            else MyColors.buttonColor
+            else SharaSpotColors.SurfaceVariant
         )
 
         Text(
@@ -716,7 +716,7 @@ private fun ItemDetails(
             Text(
                 text = value,
                 style = MaterialTheme.typography.bodyMedium,
-                color = MyColors.subColor
+                color = SharaSpotColors.TextSecondary
             )
         }
     }

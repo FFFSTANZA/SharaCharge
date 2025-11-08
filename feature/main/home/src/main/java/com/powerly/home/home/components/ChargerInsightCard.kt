@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.resources.R
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.powerly.core.model.reliability.ReliabilityScore
 import com.powerly.core.model.reliability.calculateBasicReliabilityScore
 import kotlin.math.roundToInt
@@ -77,13 +77,13 @@ fun ChargerInsightCard(
                         text = powerSource.title,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = MyColors.grey900
+                        color = SharaSpotColors.OnBackground
                     )
                     if (powerSource.address?.displayName != null) {
                         Text(
                             text = powerSource.address.displayName,
                             style = MaterialTheme.typography.bodySmall,
-                            color = MyColors.grey700,
+                            color = SharaSpotColors.TextSecondary,
                             maxLines = 1
                         )
                     }
@@ -95,7 +95,7 @@ fun ChargerInsightCard(
                 Row(
                     modifier = Modifier
                         .background(
-                            color = MyColors.lightBlue,
+                            color = SharaSpotColors.InfoLight,
                             shape = RoundedCornerShape(8.dp)
                         )
                         .padding(horizontal = 8.dp, vertical = 4.dp),
@@ -127,7 +127,7 @@ fun ChargerInsightCard(
                 Text(
                     text = "Reliability:",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MyColors.grey700
+                    color = SharaSpotColors.TextSecondary
                 )
 
                 // Star rating
@@ -135,14 +135,14 @@ fun ChargerInsightCard(
                     Text(text = "⭐", fontSize = 16.sp)
                 }
                 repeat(5 - reliabilityScore.starRating) {
-                    Text(text = "☆", fontSize = 16.sp, color = MyColors.grey200)
+                    Text(text = "☆", fontSize = 16.sp, color = SharaSpotColors.Outline)
                 }
 
                 Text(
                     text = "(${reliabilityScore.starRating}/5)",
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
-                    color = MyColors.grey900
+                    color = SharaSpotColors.OnBackground
                 )
             }
 
@@ -158,7 +158,7 @@ fun ChargerInsightCard(
                     icon = if (powerSource.isAvailable) R.drawable.ic_baseline_check_circle_24
                           else R.drawable.ic_baseline_error_24,
                     text = if (powerSource.isAvailable) "Available" else "In Use",
-                    color = if (powerSource.isAvailable) MyColors.green else MyColors.red
+                    color = if (powerSource.isAvailable) SharaSpotColors.Primary else SharaSpotColors.Error
                 )
 
                 // Connector type
@@ -166,7 +166,7 @@ fun ChargerInsightCard(
                     StatusIndicator(
                         icon = R.drawable.ic_baseline_power_24,
                         text = "${connector.name ?: "CCS"} ${connector.maxPower.roundToInt()}kW",
-                        color = MyColors.grey700
+                        color = SharaSpotColors.TextSecondary
                     )
                 }
             }
@@ -236,7 +236,7 @@ private fun CommunityDataItem(
             text = "$count$suffix",
             style = MaterialTheme.typography.bodySmall,
             fontWeight = FontWeight.Medium,
-            color = MyColors.grey700
+            color = SharaSpotColors.TextSecondary
         )
     }
 }
@@ -246,9 +246,9 @@ private fun CommunityDataItem(
  */
 fun getReliabilityColor(score: Float): Color {
     return when {
-        score >= 70 -> MyColors.green  // High reliability
+        score >= 70 -> SharaSpotColors.Primary  // High reliability
         score >= 40 -> Color(0xFFF79E1B)  // Medium reliability (yellow/orange)
-        score > 0 -> MyColors.red  // Low reliability
-        else -> MyColors.grey200  // No data
+        score > 0 -> SharaSpotColors.Error  // Low reliability
+        else -> SharaSpotColors.Outline  // No data
     }
 }

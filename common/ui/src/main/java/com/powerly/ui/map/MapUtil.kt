@@ -26,7 +26,7 @@ import com.powerly.core.model.location.Target
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonRound
 import com.SharaSpot.ui.containers.MyCardRow
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.google.android.gms.maps.model.LatLng
 import java.util.Locale
 import kotlin.math.atan2
@@ -47,7 +47,7 @@ fun MapActionButton(
         modifier = Modifier
             .size(55.dp)
             .then(modifier),
-        background = MyColors.white,
+        background = Color.White,
         elevation = ButtonDefaults.buttonElevation(
             defaultElevation = 3.dp
         ),
@@ -77,7 +77,7 @@ fun BoxScope.SectionSearchBox(onClick: () -> Unit) {
         Text(
             text = stringResource(id = R.string.location_search_address),
             style = MaterialTheme.typography.bodyLarge,
-            color = MyColors.subColor
+            color = SharaSpotColors.TextSecondary
         )
     }
 }

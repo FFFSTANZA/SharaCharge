@@ -15,7 +15,7 @@ import com.powerly.core.model.payment.ChargingTransaction
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.containers.MySurfaceColumn
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Composable to display charging transaction pricing breakdown
@@ -44,7 +44,7 @@ fun ChargingTransactionDetails(
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.secondary
             )
-            HorizontalDivider(color = MyColors.dividerColor)
+            HorizontalDivider(color = SharaSpotColors.Outline)
         }
 
         // Energy Consumed
@@ -59,7 +59,7 @@ fun ChargingTransactionDetails(
             value = transaction.getFormattedRate()
         )
 
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
 
         // Charging Cost
         TransactionDetailRow(
@@ -77,7 +77,7 @@ fun ChargingTransactionDetails(
             )
         }
 
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
 
         // Total Amount
         TransactionDetailRow(

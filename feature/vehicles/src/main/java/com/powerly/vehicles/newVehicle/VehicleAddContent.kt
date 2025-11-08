@@ -31,7 +31,7 @@ import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 private const val TAG = "VehicleAddScreen"
 
@@ -99,8 +99,8 @@ internal fun VehicleAddScreenContent(
                 else R.string.update
             ),
             icon = R.drawable.ic_add,
-            background = MyColors.grey250,
-            disabledBackground = MyColors.disabledColor,
+            background = SharaSpotColors.TextDisabled,
+            disabledBackground = SharaSpotColors.TextDisabled,
             color = MaterialTheme.colorScheme.secondary,
             enabled = { vehicle.isInitialized }
         )
@@ -128,7 +128,7 @@ private fun SectionVehicleDetail(
             contentDescription = "",
             modifier = Modifier.size(18.dp),
             tint = if (isChecked) MaterialTheme.colorScheme.primary
-            else MyColors.disabledColor
+            else SharaSpotColors.TextDisabled
         )
         Column(modifier = Modifier.weight(1f)) {
             Text(

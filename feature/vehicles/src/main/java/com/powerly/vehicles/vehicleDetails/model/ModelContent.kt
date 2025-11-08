@@ -20,8 +20,8 @@ import com.SharaSpot.vehicles.vehicleDetails.make.ItemName
 import com.SharaSpot.vehicles.vehicleDetails.make.SectionSearch
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
-import com.SharaSpot.ui.theme.MyColors.dividerColor
+import androidx.compose.ui.graphics.Color
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.SharaSpot.ui.dialogs.MyProgressView
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.IndexedScreenHeader
@@ -71,7 +71,7 @@ internal fun ModelScreenContent(
     onClose: () -> Unit
 ) {
     MyScreen(
-        background = MyColors.white,
+        background = Color.White,
         header = {
             IndexedScreenHeader(
                 index = index,
@@ -106,7 +106,7 @@ internal fun ModelScreenContent(
                     }.forEach {
                         item {
                             ItemName(name = it.name, onClick = { onNext(it) })
-                            HorizontalDivider(thickness = 1.dp, color = dividerColor)
+                            HorizontalDivider(thickness = 1.dp, color = SharaSpotColors.Outline)
                         }
                     }
                 }

@@ -50,7 +50,7 @@ import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.dialogs.rememberMyDialogState
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -128,7 +128,7 @@ internal fun VehiclesScreenContent(
             text = stringResource(id = R.string.add),
             icon = R.drawable.ic_add,
             background = MaterialTheme.colorScheme.secondary,
-            color = MyColors.white
+            color = Color.White
         )
 
     }
@@ -205,7 +205,7 @@ private fun Cell(
         Column(Modifier.weight(0.4f)) {
             Text(
                 text = stringResource(id = title),
-                color = MyColors.subColor,
+                color = SharaSpotColors.TextSecondary,
                 style = MaterialTheme.typography.bodyMedium
             )
             Text(

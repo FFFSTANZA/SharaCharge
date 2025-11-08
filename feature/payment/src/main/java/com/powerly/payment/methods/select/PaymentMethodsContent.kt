@@ -32,7 +32,8 @@ import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors.dividerColor
+import com.SharaSpot.ui.theme.SharaSpotColors
+SharaSpotColors.Outline
 
 @Preview
 @Composable
@@ -133,7 +134,7 @@ private fun ItemPaymentMethod(
                 tint = MaterialTheme.colorScheme.primary
             )
         }
-        HorizontalDivider(color = dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
     }
 }
 

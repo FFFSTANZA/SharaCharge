@@ -33,7 +33,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.resources.R
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.delay
 
 /**
@@ -53,7 +53,7 @@ fun CarouselPreview() {
 
     Box(
         modifier = Modifier
-            .background(MyColors.viewColor)
+            .background(SharaSpotColors.Surface)
             .padding(4.dp)
             .wrapContentHeight(),
     ) {
@@ -130,7 +130,7 @@ fun SlidingCarousel(
     itemsCount: Int,
     dotsSpace: Dp = 0.dp,
     indicatorSelectedColor: Color = MaterialTheme.colorScheme.secondary,
-    indicatorUnSelectedColor: Color = MyColors.grey200,
+    indicatorUnSelectedColor: Color = SharaSpotColors.Outline,
     pagerState: PagerState = rememberPagerState(
         pageCount = { itemsCount }
     ),
