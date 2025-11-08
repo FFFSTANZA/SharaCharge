@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.lib"
+    namespace = "${MyProject.NAMESPACE}.common.lib"
 }
 
 dependencies {

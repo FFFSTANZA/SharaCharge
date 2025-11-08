@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.vehicles"
+    namespace = "${MyProject.NAMESPACE}.feature.vehicles"
 }
 
 dependencies {

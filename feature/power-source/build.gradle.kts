@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.powerSource"
+    namespace = "${MyProject.NAMESPACE}.feature.powerSource"
 }
 
 dependencies {

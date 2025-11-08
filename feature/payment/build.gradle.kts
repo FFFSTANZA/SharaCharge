@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.sharaspot.koin)
 }
 android {
-    namespace = "${MyProject.NAMESPACE}.payment"
+    namespace = "${MyProject.NAMESPACE}.feature.payment"
 }
 
 dependencies {

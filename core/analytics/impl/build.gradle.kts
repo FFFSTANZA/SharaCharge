@@ -7,7 +7,7 @@ plugins {
 
 
 android {
-    namespace = "${MyProject.NAMESPACE}.core.analyticsImpl"
+    namespace = "${MyProject.NAMESPACE}.core.analytics.impl"
 }
 
 
