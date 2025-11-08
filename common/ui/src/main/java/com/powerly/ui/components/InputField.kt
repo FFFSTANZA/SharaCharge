@@ -40,6 +40,8 @@ import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MySurfaceRow
 import com.SharaSpot.ui.theme.AppTheme
 import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.CornerRadius
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.delay
 
 @Preview
@@ -81,13 +83,13 @@ fun MyTextField(
     lines: Int = 1,
     enabled: Boolean = true,
     maxLines: Int = lines,
-    cornerRadius: Dp = 8.dp,
+    cornerRadius: Dp = CornerRadius.medium,
     trailingView: @Composable (() -> Unit)? = null,
     error: @Composable () -> String = { "" },
     isError: () -> Boolean = { false },
     showKeyboard: Boolean = false,
-    focusedBorderColor: Color = MaterialTheme.colorScheme.secondary,
-    unfocusedBorderColor: Color = MyColors.borderColor,
+    focusedBorderColor: Color = MaterialTheme.colorScheme.primary,
+    unfocusedBorderColor: Color = SharaSpotColors.Outline,
     highlightColor: Color = Color.Transparent,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     onValueChange: (String) -> Unit,
@@ -121,7 +123,8 @@ fun MyTextField(
                 placeholder?.let {
                     Text(
                         text = it,
-                        color = MaterialTheme.colorScheme.tertiary
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = SharaSpotColors.TextTertiary
                     )
                 }
             },
@@ -129,6 +132,7 @@ fun MyTextField(
                 if (isError()) Text(
                     modifier = Modifier.fillMaxWidth(),
                     text = error(),
+                    style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.error
                 )
             },
@@ -136,14 +140,24 @@ fun MyTextField(
                 label?.let {
                     Text(
                         text = it,
-                        color = MaterialTheme.colorScheme.tertiary
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = SharaSpotColors.TextSecondary
                     )
                 }
             },
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = focusedBorderColor,
                 unfocusedBorderColor = unfocusedBorderColor,
+                focusedTextColor = MaterialTheme.colorScheme.onBackground,
+                unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+                disabledBorderColor = SharaSpotColors.OutlineVariant,
+                disabledTextColor = SharaSpotColors.TextDisabled,
+                errorBorderColor = MaterialTheme.colorScheme.error,
+                cursorColor = MaterialTheme.colorScheme.primary,
+                focusedContainerColor = Color.White,
+                unfocusedContainerColor = Color.White
             ),
+            textStyle = MaterialTheme.typography.bodyLarge
         )
     }
 }
@@ -157,8 +171,8 @@ fun MyPasswordTextField(
     error: @Composable () -> String = { "" },
     isError: () -> Boolean = { false },
     showKeyboard: Boolean = false,
-    focusedBorderColor: Color = MaterialTheme.colorScheme.secondary,
-    unfocusedBorderColor: Color = MyColors.borderColor,
+    focusedBorderColor: Color = MaterialTheme.colorScheme.primary,
+    unfocusedBorderColor: Color = SharaSpotColors.Outline,
     highlightColor: Color = Color.Transparent,
     onValueChange: (String) -> Unit,
 ) {
@@ -180,7 +194,7 @@ fun MyPasswordTextField(
             value = value,
             onValueChange = onValueChange,
             modifier = modifier.focusRequester(focusRequester),
-            shape = RoundedCornerShape(8.dp),
+            shape = RoundedCornerShape(CornerRadius.medium),
             singleLine = true,
             isError = isError(),
             keyboardOptions = keyboardOptions,
@@ -199,7 +213,8 @@ fun MyPasswordTextField(
                 placeholder?.let {
                     Text(
                         text = it,
-                        color = MaterialTheme.colorScheme.tertiary
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = SharaSpotColors.TextTertiary
                     )
                 }
             },
@@ -208,21 +223,31 @@ fun MyPasswordTextField(
                     modifier = Modifier.fillMaxWidth(),
                     text = error(),
                     color = MaterialTheme.colorScheme.error,
-                    style = MaterialTheme.typography.labelMedium
+                    style = MaterialTheme.typography.bodySmall
                 )
             },
             label = {
                 label?.let {
                     Text(
                         text = it,
-                        color = MaterialTheme.colorScheme.tertiary
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = SharaSpotColors.TextSecondary
                     )
                 }
             },
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = focusedBorderColor,
                 unfocusedBorderColor = unfocusedBorderColor,
+                focusedTextColor = MaterialTheme.colorScheme.onBackground,
+                unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+                disabledBorderColor = SharaSpotColors.OutlineVariant,
+                disabledTextColor = SharaSpotColors.TextDisabled,
+                errorBorderColor = MaterialTheme.colorScheme.error,
+                cursorColor = MaterialTheme.colorScheme.primary,
+                focusedContainerColor = Color.White,
+                unfocusedContainerColor = Color.White
             ),
+            textStyle = MaterialTheme.typography.bodyLarge
         )
     }
 }
@@ -240,9 +265,9 @@ fun MySearchBox(
     @StringRes hint: Int,
     showKeyboard: Boolean = false,
     showDivider: Boolean = false,
-    cornerRadius: Dp = 8.dp,
+    cornerRadius: Dp = CornerRadius.medium,
     background: Color = MaterialTheme.colorScheme.surface,
-    iconColor: Color = MaterialTheme.colorScheme.secondary,
+    iconColor: Color = SharaSpotColors.TextSecondary,
     onQueryChanges: ((String) -> Unit)? = null,
     afterQueryChanges: ((String) -> Unit)? = null
 ) {

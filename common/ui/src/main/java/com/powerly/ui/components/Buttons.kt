@@ -49,23 +49,26 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.CornerRadius
+import com.SharaSpot.ui.theme.Elevation
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 
 @Composable
 fun ButtonLarge(
     text: String,
     modifier: Modifier = Modifier,
-    background: Color = MaterialTheme.colorScheme.secondary,
-    disabledBackground: Color = MyColors.disabledColor,
+    background: Color = MaterialTheme.colorScheme.primary,
+    disabledBackground: Color = SharaSpotColors.TextDisabled,
     color: Color = Color.White,
-    disabledColor: Color = color,
-    cornerRadius: Dp = 8.dp,
+    disabledColor: Color = SharaSpotColors.TextSecondary,
+    cornerRadius: Dp = CornerRadius.medium,
     @DrawableRes icon: Int? = null,
     iconSize: Dp = ButtonDefaults.IconSize,
     enabled: () -> Boolean = { true },
     padding: PaddingValues = PaddingValues(horizontal = 16.dp),
-    textStyle: TextStyle = MaterialTheme.typography.bodyLarge,
-    elevation: Dp = 0.dp,
+    textStyle: TextStyle = MaterialTheme.typography.labelLarge,
+    elevation: Dp = Elevation.small,
     layoutDirection: LayoutDirection = LayoutDirection.Ltr,
     border: BorderStroke? = null,
     onClick: (() -> Unit)? = null
@@ -74,7 +77,7 @@ fun ButtonLarge(
         Button(
             onClick = { onClick?.invoke() },
             modifier = Modifier
-                .height(55.dp)
+                .height(56.dp)
                 .then(modifier),
             colors = ButtonDefaults.buttonColors(
                 containerColor = background,
@@ -83,7 +86,11 @@ fun ButtonLarge(
             enabled = enabled(),
             contentPadding = padding,
             shape = RoundedCornerShape(cornerRadius),
-            elevation = ButtonDefaults.buttonElevation(elevation),
+            elevation = ButtonDefaults.buttonElevation(
+                defaultElevation = elevation,
+                pressedElevation = Elevation.medium,
+                disabledElevation = Elevation.none
+            ),
             border = border,
         ) {
             Text(
@@ -109,12 +116,12 @@ fun ButtonLarge(
 @Composable
 fun ButtonAction(
     text: String,
-    background: Color = MyColors.viewColor3,
-    color: Color = MaterialTheme.colorScheme.secondary,
-    height: Dp = 30.dp,
-    width: Dp = 60.dp,
-    border: BorderStroke? = null,
-    cornerRadius: Dp = 4.dp,
+    background: Color = SharaSpotColors.Surface,
+    color: Color = MaterialTheme.colorScheme.onBackground,
+    height: Dp = 36.dp,
+    width: Dp = 80.dp,
+    border: BorderStroke? = BorderStroke(1.dp, SharaSpotColors.Outline),
+    cornerRadius: Dp = CornerRadius.small,
     onClick: () -> Unit
 ) {
     Button(
@@ -124,14 +131,18 @@ fun ButtonAction(
             .wrapContentWidth()
             .defaultMinSize(minWidth = width),
         colors = ButtonDefaults.buttonColors(containerColor = background),
-        contentPadding = PaddingValues(0.dp),
+        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
         border = border,
         shape = RoundedCornerShape(cornerRadius),
+        elevation = ButtonDefaults.buttonElevation(
+            defaultElevation = Elevation.none,
+            pressedElevation = Elevation.small
+        )
     ) {
         Text(
             text,
             maxLines = 1,
-            style = MaterialTheme.typography.bodySmall.copy(
+            style = MaterialTheme.typography.labelMedium.copy(
                 color = color,
             )
         )
@@ -177,18 +188,18 @@ fun ButtonSmall(
     text: String,
     modifier: Modifier = Modifier,
     background: Color = MaterialTheme.colorScheme.primary,
-    disabledBackground: Color = background,
-    height: Dp = 25.dp,
+    disabledBackground: Color = SharaSpotColors.TextDisabled,
+    height: Dp = 32.dp,
     color: Color = Color.White,
-    disabledColor: Color = color,
+    disabledColor: Color = SharaSpotColors.TextSecondary,
     enabled: () -> Boolean = { true },
-    padding: PaddingValues = PaddingValues(0.dp),
+    padding: PaddingValues = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
     fontSize: TextUnit = 12.sp,
-    cornerRadius: Dp = 4.dp,
+    cornerRadius: Dp = CornerRadius.small,
     border: BorderStroke? = null,
     layoutDirection: LayoutDirection = LayoutDirection.Ltr,
     @DrawableRes icon: Int? = null,
-    iconSize: Dp = ButtonDefaults.IconSize,
+    iconSize: Dp = 16.dp,
     iconTint: Color = color,
     onClick: (() -> Unit)? = null
 ) {
@@ -206,18 +217,21 @@ fun ButtonSmall(
             contentPadding = padding,
             enabled = enabled(),
             shape = RoundedCornerShape(cornerRadius),
-            border = border
+            border = border,
+            elevation = ButtonDefaults.buttonElevation(
+                defaultElevation = Elevation.extraSmall,
+                pressedElevation = Elevation.small
+            )
         ) {
             Text(
                 text,
-                style = MaterialTheme.typography.bodySmall,
+                style = MaterialTheme.typography.labelMedium,
                 fontSize = fontSize,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(horizontal = 4.dp),
                 color = if (enabled()) color else disabledColor
             )
             icon?.let {
-                Spacer(Modifier.width(4.dp))
+                Spacer(Modifier.width(6.dp))
                 Icon(
                     painterResource(icon),
                     contentDescription = "",
