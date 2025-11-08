@@ -6,6 +6,12 @@ plugins {
 
 android {
     namespace = "${MyProject.NAMESPACE}.core.model"
+
+    sourceSets {
+        getByName("main") {
+            java.srcDirs("src/main/java")
+        }
+    }
 }
 
 dependencies {
