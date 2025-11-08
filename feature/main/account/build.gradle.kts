@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.account"
+    namespace = "${MyProject.NAMESPACE}.feature.main.account"
 }
 
 dependencies {

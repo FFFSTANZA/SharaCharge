@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.orders"
+    namespace = "${MyProject.NAMESPACE}.feature.main.orders"
 }
 
 dependencies {

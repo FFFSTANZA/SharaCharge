@@ -42,6 +42,7 @@ include(":feature:main:account")
 include(":feature:power-source")
 include(":feature:power-source:charge")
 include(":feature:vehicles")
+include(":feature:charging")
 
 include(":feature:splash")
 include(":feature:user")
@@ -55,6 +56,7 @@ include(":common:resources")
 
 // core
 include(":core:data")
+include(":core:domain")
 include(":core:model")
 include(":core:network")
 include(":core:database")

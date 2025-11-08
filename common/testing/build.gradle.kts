@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.testing"
+    namespace = "${MyProject.NAMESPACE}.common.testing"
 }
 
 

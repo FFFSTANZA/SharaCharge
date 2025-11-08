@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.scan"
+    namespace = "${MyProject.NAMESPACE}.feature.main.scan"
 }
 
 dependencies {

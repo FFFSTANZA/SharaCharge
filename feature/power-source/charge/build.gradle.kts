@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.charge"
+    namespace = "${MyProject.NAMESPACE}.feature.powerSource.charge"
 }
 
 dependencies {

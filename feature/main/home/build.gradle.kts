@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.map"
+    namespace = "${MyProject.NAMESPACE}.feature.main.home"
 }
 
 dependencies {

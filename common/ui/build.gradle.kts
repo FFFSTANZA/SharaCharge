@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.ui"
+    namespace = "${MyProject.NAMESPACE}.common.ui"
 }
 
 dependencies {

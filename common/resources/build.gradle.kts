@@ -9,5 +9,5 @@ dependencies {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.resources"
+    namespace = "${MyProject.NAMESPACE}.common.resources"
 }

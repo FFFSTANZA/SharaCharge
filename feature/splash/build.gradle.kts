@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${MyProject.NAMESPACE}.splash"
+    namespace = "${MyProject.NAMESPACE}.feature.splash"
 }
 
 dependencies {

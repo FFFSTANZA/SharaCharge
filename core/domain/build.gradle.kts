@@ -1,3 +1,5 @@
+import com.SharaSpot.MyProject
+
 plugins {
     alias(libs.plugins.sharaspot.library)
 }
@@ -7,5 +9,5 @@ android {
 }
 
 dependencies {
- 
+
 }
