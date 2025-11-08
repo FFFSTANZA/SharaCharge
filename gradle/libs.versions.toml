@@ -13,8 +13,8 @@ room = "2.8.0"
 secretsPlugin = "2.0.1"
 # Dependency versions
 ## Android Core
-coreKtx = "1.17.0"
-activityKtx = "1.11.0"
+coreKtx = "1.13.1"
+activityKtx = "1.9.2"
 annotation = "1.9.1"
 coreSplashscreen = "1.0.1"
 lifecycleVersion = "2.9.4"
