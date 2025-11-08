@@ -14,8 +14,8 @@ object MyProject {
     const val TARGET_SDK = 35
     const val MIN_SDK = 24
 
-    val javaVersion = JavaVersion.VERSION_18
-    val jvmTarget = JvmTarget.JVM_18
+    val javaVersion = JavaVersion.VERSION_17
+    val jvmTarget = JvmTarget.JVM_17
 }
 
 
