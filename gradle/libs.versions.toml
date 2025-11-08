@@ -2,7 +2,7 @@
 # Plugin verisons
 androidGradlePlugin = "8.9.1"
 kotlinAndroid = "2.2.0"
-kotlinKsp = "2.2.0-1.0.29"
+kotlinKsp = "2.2.0-2.0.2"
 androidTools = "31.7.2"
 kotlinSerialization = "2.2.0"
 googleServices = "4.4.3"
