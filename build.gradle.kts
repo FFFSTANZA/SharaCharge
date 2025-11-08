@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization) apply false
     alias(libs.plugins.google.services) apply false
     alias(libs.plugins.firebase.crashlytics) apply false
-    id("com.google.devtools.ksp") version "2.0.21-1.0.28" apply false
+    id("com.google.devtools.ksp") version "2.2.0-1.0.29" apply false
     alias(libs.plugins.room) apply false
     alias(libs.plugins.secrets) apply false
 }
