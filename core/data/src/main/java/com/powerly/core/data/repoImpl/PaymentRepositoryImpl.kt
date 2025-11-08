@@ -2,11 +2,11 @@ package com.SharaSpot.core.data.repoImpl
 
 import com.SharaSpot.core.data.model.BalanceRefillStatus
 import com.SharaSpot.core.data.repositories.PaymentRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.AddCardBody
-import com.SharaSpot.core.model.payment.BalanceRefillBody
-import com.SharaSpot.core.model.payment.PaymentStatus
-import com.SharaSpot.core.model.payment.PaymentTransaction
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.payment.AddCardBody
+import com.powerly.core.model.payment.BalanceRefillBody
+import com.powerly.core.model.payment.PaymentStatus
+import com.powerly.core.model.payment.PaymentTransaction
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher

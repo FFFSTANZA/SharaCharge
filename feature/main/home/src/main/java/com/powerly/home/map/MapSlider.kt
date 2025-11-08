@@ -34,11 +34,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.SharaSpot.Amenity
-import com.SharaSpot.core.model.SharaSpot.Connector
-import com.SharaSpot.core.model.SharaSpot.PowerSource
-import com.SharaSpot.core.model.location.Target
-import com.SharaSpot.core.model.SharaSpot.SourceType
+import com.powerly.core.model.powerly.Amenity
+import com.powerly.core.model.powerly.Connector
+import com.powerly.core.model.powerly.PowerSource
+import com.powerly.core.model.location.Target
+import com.powerly.core.model.powerly.SourceType
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyCardColum
 import com.SharaSpot.ui.containers.MyColumn

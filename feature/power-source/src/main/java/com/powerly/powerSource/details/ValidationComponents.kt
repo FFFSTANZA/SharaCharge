@@ -16,13 +16,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.core.model.contribution.Contribution
-import com.SharaSpot.core.model.contribution.ContributionType
-import com.SharaSpot.core.model.contribution.ConfidenceLevel
-import com.SharaSpot.core.model.contribution.getConfidenceLevel
-import com.SharaSpot.core.model.contribution.getValidationPrompt
-import com.SharaSpot.core.model.contribution.formatRelativeTime
-import com.SharaSpot.core.model.contribution.needsValidation
+import com.powerly.core.model.contribution.Contribution
+import com.powerly.core.model.contribution.ContributionType
+import com.powerly.core.model.contribution.ConfidenceLevel
+import com.powerly.core.model.contribution.getConfidenceLevel
+import com.powerly.core.model.contribution.getValidationPrompt
+import com.powerly.core.model.contribution.formatRelativeTime
+import com.powerly.core.model.contribution.needsValidation
 import com.SharaSpot.ui.containers.MyRow
 
 /**

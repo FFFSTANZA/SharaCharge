@@ -3,7 +3,7 @@ package com.SharaSpot.vehicles.vehicleList
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.SharaSpot.Vehicle
+import com.powerly.core.model.powerly.Vehicle
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.dialogs.ItemOptionsMenu
 import com.SharaSpot.ui.dialogs.MyDropdownMenu

@@ -4,8 +4,8 @@ import android.app.Activity
 import androidx.lifecycle.ViewModel
 import com.SharaSpot.core.data.repositories.AppRepository
 import com.SharaSpot.core.data.repositories.UserRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.user.DeviceBody
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.user.DeviceBody
 import com.SharaSpot.core.network.DeviceHelper
 import com.SharaSpot.lib.managers.LocaleManager
 import com.SharaSpot.lib.managers.StorageManager

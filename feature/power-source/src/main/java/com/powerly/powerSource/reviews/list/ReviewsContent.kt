@@ -31,8 +31,8 @@ import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemContentType
 import androidx.paging.compose.itemKey
-import com.SharaSpot.core.model.SharaSpot.Review
-import com.SharaSpot.core.model.SharaSpot.Reviewer
+import com.powerly.core.model.powerly.Review
+import com.powerly.core.model.powerly.Reviewer
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonSmall
 import com.SharaSpot.ui.components.NetworkImage

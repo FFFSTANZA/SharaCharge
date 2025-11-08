@@ -5,9 +5,9 @@ import androidx.paging.PagingConfig
 import com.SharaSpot.core.data.model.SourceStatus
 import com.SharaSpot.core.data.model.SourcesStatus
 import com.SharaSpot.core.data.repositories.PowerSourceRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.api.BasePagingSource
-import com.SharaSpot.core.model.SharaSpot.Media
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.api.BasePagingSource
+import com.powerly.core.model.powerly.Media
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
 import kotlinx.coroutines.CoroutineDispatcher

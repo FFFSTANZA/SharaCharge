@@ -4,7 +4,7 @@ import com.SharaSpot.core.database.dao.CountriesDao
 import com.SharaSpot.core.database.model.CountryEntity
 import com.SharaSpot.core.database.model.asCountry
 import com.SharaSpot.core.database.model.asEntity
-import com.SharaSpot.core.model.location.Country
+import com.powerly.core.model.location.Country
 import org.koin.core.annotation.Single
 
 @Single

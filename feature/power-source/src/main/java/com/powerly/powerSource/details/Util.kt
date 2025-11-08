@@ -2,7 +2,7 @@ package com.SharaSpot.powerSource.details
 
 import android.content.Context
 import androidx.annotation.DrawableRes
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.resources.R
 
 /**

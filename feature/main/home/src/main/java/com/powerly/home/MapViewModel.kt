@@ -9,8 +9,8 @@ import com.SharaSpot.core.data.model.ActivityResultState
 import com.SharaSpot.core.data.model.PermissionsState
 import com.SharaSpot.core.data.model.SourcesStatus
 import com.SharaSpot.core.data.repositories.PowerSourceRepository
-import com.SharaSpot.core.model.location.Target
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.location.Target
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.lib.managers.UserLocationManager
 import com.SharaSpot.lib.usecases.LocationServicesUseCase
 import com.SharaSpot.ui.map.initMapViewState

@@ -1,6 +1,6 @@
-package com.SharaSpot.core.model.location
+package com.powerly.core.model.location
 
-import com.SharaSpot.core.model.api.BaseResponse
+import com.powerly.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
 

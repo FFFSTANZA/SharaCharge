@@ -1,6 +1,6 @@
-package com.SharaSpot.core.model.api
+package com.powerly.core.model.api
 
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.util.Message
 
 sealed class ApiStatus<out T> {
     data class Error(val msg: Message) : ApiStatus<Nothing>()

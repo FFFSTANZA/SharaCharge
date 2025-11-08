@@ -2,7 +2,7 @@ package com.SharaSpot.payment.balance.add
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import com.SharaSpot.core.model.payment.PaymentCard
+import com.powerly.core.model.payment.PaymentCard
 import com.SharaSpot.resources.R
 
 @Composable

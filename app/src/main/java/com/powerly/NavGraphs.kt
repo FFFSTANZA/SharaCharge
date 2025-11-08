@@ -12,8 +12,8 @@ import androidx.navigation.compose.dialog
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.SharaSpot.account.accountDestinations
-import com.SharaSpot.core.model.SharaSpot.OrderTab
-import com.SharaSpot.core.model.util.Message
+import com.powerly.core.model.powerly.OrderTab
+import com.powerly.core.model.util.Message
 import com.SharaSpot.main.NavigationScreen
 import com.SharaSpot.lib.AppRoutes
 import com.SharaSpot.lib.Route

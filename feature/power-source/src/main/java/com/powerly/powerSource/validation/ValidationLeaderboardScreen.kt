@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.SharaSpot.core.data.repositories.LeaderboardPeriod
 import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
-import com.SharaSpot.core.model.api.ApiStatus
+import com.powerly.core.model.api.ApiStatus
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
 import org.koin.androidx.compose.koinViewModel

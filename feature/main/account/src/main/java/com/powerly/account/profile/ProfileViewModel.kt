@@ -7,10 +7,10 @@ import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.model.CurrenciesStatus
 import com.SharaSpot.core.data.repositories.AppRepository
 import com.SharaSpot.core.data.repositories.UserRepository
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.location.Country
-import com.SharaSpot.core.model.user.User
-import com.SharaSpot.core.model.user.UserUpdateBody
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.location.Country
+import com.powerly.core.model.user.User
+import com.powerly.core.model.user.UserUpdateBody
 import com.SharaSpot.core.network.DeviceHelper
 import com.SharaSpot.lib.managers.CountryManager
 import com.SharaSpot.lib.managers.NotificationsManager

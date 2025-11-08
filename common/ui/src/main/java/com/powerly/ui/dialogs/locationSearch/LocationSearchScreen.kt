@@ -3,7 +3,7 @@ package com.SharaSpot.ui.dialogs.locationSearch
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
-import com.SharaSpot.core.model.location.Target
+import com.powerly.core.model.location.Target
 import com.SharaSpot.lib.managers.PlaceItem
 import com.SharaSpot.lib.managers.PlacesManager
 

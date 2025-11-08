@@ -29,8 +29,8 @@ import androidx.navigation.compose.dialog
 import androidx.navigation.toRoute
 import com.SharaSpot.account.AccountEvents
 import com.SharaSpot.account.AccountScreen
-import com.SharaSpot.core.model.SharaSpot.OrderTab
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.OrderTab
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.home.MyMapViewModel
 import com.SharaSpot.home.home.HomeScreen
 import com.SharaSpot.home.home.HomeViewModel

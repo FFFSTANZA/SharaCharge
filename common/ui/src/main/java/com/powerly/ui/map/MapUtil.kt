@@ -22,7 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.SharaSpot.core.model.location.Target
+import com.powerly.core.model.location.Target
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonRound
 import com.SharaSpot.ui.containers.MyCardRow

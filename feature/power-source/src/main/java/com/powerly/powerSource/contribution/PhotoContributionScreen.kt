@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.core.model.contribution.PhotoCategory
+import com.powerly.core.model.contribution.PhotoCategory
 import com.SharaSpot.ui.dialogs.MyBasicBottomSheet
 
 /**

@@ -36,7 +36,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.api.ApiStatus
+import com.powerly.core.model.api.ApiStatus
 import com.SharaSpot.core.data.model.ReviewOptionsStatus
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonLarge

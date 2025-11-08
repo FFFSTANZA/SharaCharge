@@ -1,6 +1,6 @@
-package com.SharaSpot.core.model.user
+package com.powerly.core.model.user
 
-import com.SharaSpot.core.model.api.BaseResponse
+import com.powerly.core.model.api.BaseResponse
 import com.google.gson.annotations.SerializedName
 
 /**

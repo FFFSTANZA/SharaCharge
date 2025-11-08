@@ -1,6 +1,6 @@
 package com.SharaSpot.home.home
 
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.ui.dialogs.signIn.SignInOptions
 
 internal sealed class HomeEvents {

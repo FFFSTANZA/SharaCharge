@@ -36,7 +36,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.SharaSpot.core.data.model.MakersStatus
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
+import com.powerly.core.model.powerly.VehicleMaker
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyCardRow
 import com.SharaSpot.ui.containers.MyColumn

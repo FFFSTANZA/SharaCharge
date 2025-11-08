@@ -3,8 +3,8 @@ package com.SharaSpot.vehicles.vehicleDetails.options.connectors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import org.koin.androidx.compose.koinViewModel
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Connector
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Connector
 import com.SharaSpot.ui.dialogs.MyDialogState
 import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 

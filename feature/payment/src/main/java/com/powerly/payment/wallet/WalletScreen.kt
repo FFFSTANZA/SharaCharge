@@ -9,7 +9,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import org.koin.androidx.compose.koinViewModel
-import com.SharaSpot.core.model.payment.PaymentCard
+import com.powerly.core.model.payment.PaymentCard
 import com.SharaSpot.payment.methods.PaymentViewModel
 import com.SharaSpot.payment.wallet.options.WalletOptionsDialog
 import com.SharaSpot.resources.R

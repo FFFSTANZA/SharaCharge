@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.core.data.model.CurrenciesStatus
-import com.SharaSpot.core.model.location.AppCurrency
+import com.powerly.core.model.location.AppCurrency
 import com.SharaSpot.ui.dialogs.ItemOptionsMenu
 import com.SharaSpot.ui.dialogs.MyDialogState
 import com.SharaSpot.ui.dialogs.MyDropdownMenu

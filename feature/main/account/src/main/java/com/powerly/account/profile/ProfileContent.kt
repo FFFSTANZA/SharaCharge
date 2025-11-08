@@ -37,8 +37,8 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.SharaSpot.core.data.model.CurrenciesStatus
-import com.SharaSpot.core.model.location.AppCurrency
-import com.SharaSpot.core.model.user.User
+import com.powerly.core.model.location.AppCurrency
+import com.powerly.core.model.user.User
 import com.SharaSpot.account.profile.dialogs.CurrencyDropMenu
 import com.SharaSpot.account.profile.dialogs.ProfileDropMenu
 import com.SharaSpot.resources.R

@@ -7,7 +7,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.SharaSpot.core.data.repositories.FeedbackRepository
 import com.SharaSpot.core.data.repositories.SessionsRepository
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.lib.managers.StorageManager
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.SharingStarted

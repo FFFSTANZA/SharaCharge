@@ -3,7 +3,7 @@ package com.SharaSpot.orders
 import androidx.lifecycle.ViewModel
 import com.SharaSpot.core.data.model.ChargingStatus
 import com.SharaSpot.core.data.repositories.SessionsRepository
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import org.koin.android.annotation.KoinViewModel
 
 

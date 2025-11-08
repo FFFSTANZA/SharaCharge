@@ -1,13 +1,13 @@
 package com.SharaSpot.core.data.repositories
 
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.user.EmailCheck
-import com.SharaSpot.core.model.user.EmailLoginBody
-import com.SharaSpot.core.model.user.EmailRegisterBody
-import com.SharaSpot.core.model.user.EmailResetBody
-import com.SharaSpot.core.model.user.User
-import com.SharaSpot.core.model.user.UserVerification
-import com.SharaSpot.core.model.user.VerificationBody
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.user.EmailCheck
+import com.powerly.core.model.user.EmailLoginBody
+import com.powerly.core.model.user.EmailRegisterBody
+import com.powerly.core.model.user.EmailResetBody
+import com.powerly.core.model.user.User
+import com.powerly.core.model.user.UserVerification
+import com.powerly.core.model.user.VerificationBody
 
 interface LoginEmailRepository {
 

@@ -1,10 +1,10 @@
 package com.SharaSpot.core.data.repositories
 
 import android.net.Uri
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.contribution.Contribution
-import com.SharaSpot.core.model.contribution.ContributionSummary
-import com.SharaSpot.core.model.contribution.CreateContributionRequest
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.contribution.Contribution
+import com.powerly.core.model.contribution.ContributionSummary
+import com.powerly.core.model.contribution.CreateContributionRequest
 import com.powerly.core.model.reliability.ReliabilityScore
 
 interface ContributionRepository {

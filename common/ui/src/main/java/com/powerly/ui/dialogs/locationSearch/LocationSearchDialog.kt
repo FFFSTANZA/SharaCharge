@@ -1,7 +1,7 @@
 package com.SharaSpot.ui.dialogs.locationSearch
 
 import androidx.compose.runtime.Composable
-import com.SharaSpot.core.model.location.Target
+import com.powerly.core.model.location.Target
 import com.SharaSpot.ui.dialogs.MyDialogState
 import com.SharaSpot.ui.dialogs.MyScreenBottomSheet
 

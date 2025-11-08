@@ -18,8 +18,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.BalanceItem
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.payment.BalanceItem
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MySurfaceRow
 import com.SharaSpot.ui.dialogs.ProgressView

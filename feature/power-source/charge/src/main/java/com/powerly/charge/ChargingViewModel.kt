@@ -10,7 +10,7 @@ import com.SharaSpot.charge.util.ChargingTimerManager
 import com.SharaSpot.charge.util.ChargingTimerState
 import com.SharaSpot.core.data.model.ChargingStatus
 import com.SharaSpot.core.data.repositories.SessionsRepository
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.lib.AppRoutes
 import com.SharaSpot.lib.managers.StorageManager
 import org.koin.android.annotation.KoinViewModel

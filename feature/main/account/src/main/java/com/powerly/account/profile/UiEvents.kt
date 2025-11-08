@@ -1,7 +1,7 @@
 package com.SharaSpot.account.profile
 
-import com.SharaSpot.core.model.location.AppCurrency
-import com.SharaSpot.core.model.user.User
+import com.powerly.core.model.location.AppCurrency
+import com.powerly.core.model.user.User
 
 internal sealed class ProfileEvents {
     data object Close : ProfileEvents()

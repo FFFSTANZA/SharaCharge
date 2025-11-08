@@ -2,7 +2,7 @@ package com.SharaSpot.orders.history
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import com.SharaSpot.core.model.SharaSpot.Session
+import com.powerly.core.model.powerly.Session
 import com.SharaSpot.orders.SessionViewModel
 
 private const val TAG = "SessionHistoryScreen"

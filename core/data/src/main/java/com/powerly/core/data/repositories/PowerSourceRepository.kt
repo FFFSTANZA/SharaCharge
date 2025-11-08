@@ -3,10 +3,10 @@ package com.SharaSpot.core.data.repositories
 import androidx.paging.PagingData
 import com.SharaSpot.core.data.model.SourceStatus
 import com.SharaSpot.core.data.model.SourcesStatus
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.SharaSpot.Connector
-import com.SharaSpot.core.model.SharaSpot.Media
-import com.SharaSpot.core.model.SharaSpot.Review
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.powerly.Connector
+import com.powerly.core.model.powerly.Media
+import com.powerly.core.model.powerly.Review
 import kotlinx.coroutines.flow.Flow
 
 

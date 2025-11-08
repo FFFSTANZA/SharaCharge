@@ -1,4 +1,4 @@
-package com.SharaSpot.core.model.util
+package com.powerly.core.model.util
 
 import java.text.NumberFormat
 import java.util.Locale

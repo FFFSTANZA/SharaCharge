@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.SharaSpot.core.data.model.SourceStatus
 import com.SharaSpot.core.data.repositories.PowerSourceRepository
-import com.SharaSpot.core.model.SharaSpot.PowerSource
+import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.core.network.DeviceHelper
 import com.SharaSpot.lib.CONSTANTS.POWER_SOURCE_ID
 import com.SharaSpot.lib.managers.StorageManager

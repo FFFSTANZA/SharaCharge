@@ -21,8 +21,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.SharaSpot.Vehicle
-import com.SharaSpot.core.model.SharaSpot.VehicleMaker
+import com.powerly.core.model.powerly.Vehicle
+import com.powerly.core.model.powerly.VehicleMaker
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyCardRow
 import com.SharaSpot.ui.screen.MyScreen

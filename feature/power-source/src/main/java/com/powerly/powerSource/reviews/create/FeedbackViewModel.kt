@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import com.SharaSpot.core.data.model.ReviewOptionsStatus
 import com.SharaSpot.core.data.repositories.FeedbackRepository
-import com.SharaSpot.core.model.api.ApiStatus
+import com.powerly.core.model.api.ApiStatus
 import com.SharaSpot.lib.AppRoutes
 import org.koin.android.annotation.KoinViewModel
 import kotlinx.coroutines.flow.SharingStarted

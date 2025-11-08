@@ -4,8 +4,8 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
-import com.SharaSpot.core.model.api.ApiStatus
-import com.SharaSpot.core.model.payment.BalanceItem
+import com.powerly.core.model.api.ApiStatus
+import com.powerly.core.model.payment.BalanceItem
 import com.SharaSpot.payment.balance.BalanceViewModel
 
 private const val TAG = "ShowBalanceScreen"

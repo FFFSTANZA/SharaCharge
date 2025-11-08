@@ -19,7 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.core.model.payment.PaymentCard
+import com.powerly.core.model.payment.PaymentCard
 import com.SharaSpot.payment.balance.add.paymentMethodDetails
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn

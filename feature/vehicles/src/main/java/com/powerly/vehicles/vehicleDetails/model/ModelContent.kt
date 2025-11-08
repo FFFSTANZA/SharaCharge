@@ -15,7 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.core.data.model.ModelsStatus
-import com.SharaSpot.core.model.SharaSpot.VehicleModel
+import com.powerly.core.model.powerly.VehicleModel
 import com.SharaSpot.vehicles.vehicleDetails.make.ItemName
 import com.SharaSpot.vehicles.vehicleDetails.make.SectionSearch
 import com.SharaSpot.resources.R
