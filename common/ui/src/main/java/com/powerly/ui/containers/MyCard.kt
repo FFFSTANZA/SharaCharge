@@ -29,18 +29,25 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.ui.extensions.thenIf
+import com.SharaSpot.ui.theme.CornerRadius
+import com.SharaSpot.ui.theme.Elevation
 
 
 @Composable
 fun MyCardRow(
     modifier: Modifier = Modifier,
-    cornerRadius: Dp = 8.dp,
+    cornerRadius: Dp = CornerRadius.medium,
     background: Color = Color.White,
     padding: PaddingValues = PaddingValues(0.dp),
     margin: PaddingValues = PaddingValues(0.dp),
     spacing: Dp = 0.dp,
     borderStroke: BorderStroke? = null,
-    elevation: CardElevation = CardDefaults.cardElevation(),
+    elevation: CardElevation = CardDefaults.cardElevation(
+        defaultElevation = Elevation.small,
+        pressedElevation = Elevation.medium,
+        focusedElevation = Elevation.medium,
+        hoveredElevation = Elevation.medium
+    ),
     fillMaxWidth: Boolean = true,
     fillMaxHeight: Boolean = false,
     horizontalScroll: Boolean = false,
@@ -91,11 +98,17 @@ fun MyCardRow(
 @Composable
 fun MyCardColum(
     modifier: Modifier = Modifier,
-    cornerRadius: Dp = 8.dp,
+    cornerRadius: Dp = CornerRadius.medium,
     background: Color = Color.White,
     padding: PaddingValues = PaddingValues(0.dp),
     spacing: Dp = 0.dp,
     borderStroke: BorderStroke? = null,
+    elevation: CardElevation = CardDefaults.cardElevation(
+        defaultElevation = Elevation.small,
+        pressedElevation = Elevation.medium,
+        focusedElevation = Elevation.medium,
+        hoveredElevation = Elevation.medium
+    ),
     fillMaxWidth: Boolean = true,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     verticalScroll: Boolean = false,
@@ -130,6 +143,7 @@ fun MyCardColum(
     Card(
         shape = RoundedCornerShape(cornerRadius),
         border = borderStroke,
+        elevation = elevation,
         modifier = cardModifier,
     ) {
         Column(
