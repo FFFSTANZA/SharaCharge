@@ -32,7 +32,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.resources.R
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Quick actions enum
@@ -115,7 +115,7 @@ private fun QuickActionButton(
             text = action.displayName,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.SemiBold,
-            color = MyColors.grey900,
+            color = SharaSpotColors.OnBackground,
             modifier = Modifier
                 .padding(vertical = 8.dp, horizontal = 12.dp)
         )

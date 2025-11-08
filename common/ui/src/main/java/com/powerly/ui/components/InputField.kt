@@ -39,7 +39,6 @@ import androidx.compose.ui.unit.dp
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MySurfaceRow
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
 import com.SharaSpot.ui.theme.CornerRadius
 import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.delay
@@ -322,12 +321,12 @@ fun MySearchBox(
                     Text(
                         text = stringResource(id = hint),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = MyColors.subColor
+                        color = SharaSpotColors.TextSecondary
                     )
                 },
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedTextColor = MaterialTheme.colorScheme.secondary,
-                    focusedPlaceholderColor = MyColors.subColor,
+                    focusedPlaceholderColor = SharaSpotColors.TextSecondary,
                     focusedContainerColor = Color.Transparent,
                     unfocusedContainerColor = Color.Transparent,
                     focusedBorderColor = Color.Transparent,
@@ -338,7 +337,7 @@ fun MySearchBox(
         }
         if (showDivider) HorizontalDivider(
             thickness = 1.dp,
-            color = MyColors.dividerColor
+            color = SharaSpotColors.Outline
         )
     }
 }

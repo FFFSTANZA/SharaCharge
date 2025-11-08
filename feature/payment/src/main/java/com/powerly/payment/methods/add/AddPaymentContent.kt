@@ -32,7 +32,7 @@ import com.SharaSpot.ui.extensions.isPreview
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.SharaSpot.ui.theme.myBorder
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

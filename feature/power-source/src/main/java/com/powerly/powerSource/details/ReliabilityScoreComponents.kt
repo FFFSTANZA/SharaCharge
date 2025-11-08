@@ -22,7 +22,7 @@ import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.containers.MySurfaceColumn
 import com.SharaSpot.ui.extensions.asBorder
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Main reliability score card displayed prominently on the charger detail page

@@ -17,7 +17,7 @@ import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.components.NetworkImage
 import com.SharaSpot.ui.components.SlidingCarousel
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -53,7 +53,7 @@ internal fun MediaScreenContent(
             val images = media()
             SlidingCarousel(
                 indicatorSelectedColor = MaterialTheme.colorScheme.secondary,
-                indicatorUnSelectedColor = MyColors.grey250,
+                indicatorUnSelectedColor = SharaSpotColors.TextDisabled,
                 autoSlideDuration = 8000,
                 itemsCount = images.size,
                 itemContent = { index ->

@@ -45,7 +45,7 @@ import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.extensions.isArabic
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 private const val TAG = "DeliveredOrderScreen"
 
@@ -88,7 +88,7 @@ internal fun DeliveredOrderScreenContent(
 ) {
     MyScreen(
         header = { SectionHeader(session, onClose) },
-        background = MyColors.white,
+        background = Color.White,
         modifier = Modifier.padding(16.dp)
     ) {
         SectionAddress(session.chargePointAddress)
@@ -125,7 +125,7 @@ private fun SectionHeader(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(MyColors.viewColor)
+            .background(SharaSpotColors.Surface)
             .padding(16.dp)
             .statusBarsPadding(),
         verticalAlignment = Alignment.CenterVertically
@@ -151,7 +151,7 @@ private fun SectionHeader(
                 Text(
                     text = session.id,
                     style = MaterialTheme.typography.titleSmall,
-                    color = MyColors.subColor
+                    color = SharaSpotColors.TextSecondary
                 )
             }
 
@@ -165,9 +165,9 @@ private fun SectionHeader(
 
                 ButtonSmall(
                     text = sessionDate,
-                    color = MyColors.subColor,
+                    color = SharaSpotColors.TextSecondary,
                     background = Color.White,
-                    border = BorderStroke(width = 1.dp, color = MyColors.borderColor),
+                    border = BorderStroke(width = 1.dp, color = SharaSpotColors.Outline),
                     height = 24.dp,
                     modifier = Modifier.wrapContentWidth()
                 )
@@ -175,8 +175,8 @@ private fun SectionHeader(
                 ButtonSmall(
                     text = sessionTime,
                     background = Color.White,
-                    color = MyColors.subColor,
-                    border = BorderStroke(width = 1.dp, color = MyColors.borderColor),
+                    color = SharaSpotColors.TextSecondary,
+                    border = BorderStroke(width = 1.dp, color = SharaSpotColors.Outline),
                     height = 24.dp,
                     modifier = Modifier.wrapContentWidth()
                 )
@@ -270,7 +270,7 @@ private fun ItemSessionDetails(
                 Text(text = value.toString(), style = style)
             }
         }
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
     }
 }
 
@@ -300,7 +300,7 @@ private fun ItemSessionDetails(
                 }
             }
         }
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
     }
 }
 

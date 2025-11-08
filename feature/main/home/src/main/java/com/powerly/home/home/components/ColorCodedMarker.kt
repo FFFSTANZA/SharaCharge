@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.powerly.core.model.powerly.PowerSource
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.MyColumn
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Get marker color based on reliability score
@@ -34,10 +34,10 @@ import com.SharaSpot.ui.theme.MyColors
  */
 fun getMarkerColorFromReliability(reliabilityScore: Float): Color {
     return when {
-        reliabilityScore >= 70 -> MyColors.green  // High reliability
+        reliabilityScore >= 70 -> SharaSpotColors.Primary  // High reliability
         reliabilityScore >= 40 -> Color(0xFFF79E1B)  // Medium reliability (yellow/orange)
-        reliabilityScore > 0 -> MyColors.red  // Low reliability
-        else -> MyColors.grey200  // No data
+        reliabilityScore > 0 -> SharaSpotColors.Error  // Low reliability
+        else -> SharaSpotColors.Outline  // No data
     }
 }
 

@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.resources.R
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Filter types for charger display
@@ -71,14 +71,14 @@ fun QuickFiltersBar(
                     selectedContainerColor = MaterialTheme.colorScheme.secondary,
                     selectedLabelColor = Color.White,
                     selectedLeadingIconColor = Color.White,
-                    containerColor = MyColors.grey50,
-                    labelColor = MyColors.grey900
+                    containerColor = SharaSpotColors.Surface,
+                    labelColor = SharaSpotColors.OnBackground
                 ),
                 shape = RoundedCornerShape(20.dp),
                 border = if (filter == selectedFilter) null else FilterChipDefaults.filterChipBorder(
                     enabled = true,
                     selected = false,
-                    borderColor = MyColors.grey200
+                    borderColor = SharaSpotColors.Outline
                 )
             )
         }

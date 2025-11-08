@@ -45,7 +45,7 @@ import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.components.MyTextDynamic
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import java.util.Locale
 
 private const val TAG = "MapSlider"
@@ -161,7 +161,7 @@ private fun ItemMapPowerSource(
                 ),
                 contentDescription = "",
                 tint = if (powerSource.isAvailable) MaterialTheme.colorScheme.primary
-                else MyColors.red500,
+                else SharaSpotColors.Error,
                 modifier = Modifier.size(24.dp)
             )
             Text(
@@ -193,7 +193,7 @@ private fun ItemMapPowerSource(
                                 R.string.station_status_booked
                         ),
                         icon = R.drawable.station_busy,
-                        iconTint = MyColors.red500
+                        iconTint = SharaSpotColors.Error
                     ) else if (powerSource.isInUse) MapChip(
                         text = stringResource(
                             if (powerSource.isInUseByYou)
@@ -202,7 +202,7 @@ private fun ItemMapPowerSource(
                                 R.string.station_status_busy
                         ),
                         icon = R.drawable.station_busy,
-                        iconTint = MyColors.red500
+                        iconTint = SharaSpotColors.Error
                     )
                 }
 

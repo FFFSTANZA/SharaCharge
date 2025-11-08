@@ -22,7 +22,7 @@ import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.components.SlidingCarousel
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.launch
 
 private const val TAG = "OnBoardingScreen"
@@ -87,7 +87,7 @@ fun OnBoardingScreenContent(
     ) {
         SlidingCarousel(
             indicatorSelectedColor = MaterialTheme.colorScheme.secondary,
-            indicatorUnSelectedColor = MyColors.grey250,
+            indicatorUnSelectedColor = SharaSpotColors.TextDisabled,
             autoSlideDuration = 8000,
             dotsSpace = 16.dp,
             itemsCount = items.size,

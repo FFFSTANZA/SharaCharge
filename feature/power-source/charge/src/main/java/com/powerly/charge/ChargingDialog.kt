@@ -40,7 +40,7 @@ import com.SharaSpot.ui.containers.MySurfaceRow
 import com.SharaSpot.ui.dialogs.MyDialog
 import com.SharaSpot.ui.screen.DialogHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.SharaSpot.ui.theme.myBorder
 import java.util.Locale
 
@@ -183,7 +183,7 @@ fun ChargingDialog(
 
         ButtonLarge(
             text = stringResource(id = R.string.station_charging_start),
-            color = MyColors.white,
+            color = Color.White,
             background = MaterialTheme.colorScheme.secondary,
             icon = R.drawable.charge,
             layoutDirection = LayoutDirection.Rtl,
@@ -258,8 +258,8 @@ private fun ItemTime(
     onClick: () -> Unit
 ) {
     Surface(
-        color = if (selected) MyColors.blueLight
-        else MyColors.white,
+        color = if (selected) SharaSpotColors.InfoLight
+        else Color.White,
         shape = RoundedCornerShape(8.dp),
         modifier = Modifier.height(IntrinsicSize.Min),
         onClick = onClick

@@ -34,7 +34,7 @@ import com.SharaSpot.ui.dialogs.MyBasicBottomSheet
 import com.SharaSpot.ui.dialogs.MyDialogState
 import com.SharaSpot.ui.extensions.thenIf
 import com.SharaSpot.ui.screen.DialogHeader
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -93,7 +93,7 @@ private fun ColorPicker(
             Card(
                 shape = RoundedCornerShape(8.dp),
                 colors = CardDefaults.cardColors(
-                    containerColor = MyColors.viewColor
+                    containerColor = SharaSpotColors.Surface
                 )
             ) {
                 LazyVerticalGrid(

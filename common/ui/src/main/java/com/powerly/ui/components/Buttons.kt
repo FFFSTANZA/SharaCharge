@@ -48,7 +48,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.SharaSpot.resources.R
-import com.SharaSpot.ui.theme.MyColors
 import com.SharaSpot.ui.theme.CornerRadius
 import com.SharaSpot.ui.theme.Elevation
 import com.SharaSpot.ui.theme.SharaSpotColors
@@ -67,7 +66,7 @@ fun ButtonLarge(
     iconSize: Dp = ButtonDefaults.IconSize,
     enabled: () -> Boolean = { true },
     padding: PaddingValues = PaddingValues(horizontal = 16.dp),
-    textStyle: TextStyle = MaterialTheme.typography.labelLarge,
+    textStyle: TextStyle = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.SemiBold),
     elevation: Dp = Elevation.small,
     layoutDirection: LayoutDirection = LayoutDirection.Ltr,
     border: BorderStroke? = null,
@@ -89,7 +88,9 @@ fun ButtonLarge(
             elevation = ButtonDefaults.buttonElevation(
                 defaultElevation = elevation,
                 pressedElevation = Elevation.medium,
-                disabledElevation = Elevation.none
+                disabledElevation = Elevation.none,
+                hoveredElevation = Elevation.small,
+                focusedElevation = Elevation.medium
             ),
             border = border,
         ) {
@@ -310,15 +311,15 @@ fun RoundBadge(
 fun MySwitch(
     checked: () -> Boolean,
     onCheckedChange: (Boolean) -> Unit,
-    checkedColor: Color = MyColors.green,
-    uncheckedColor: Color = MyColors.grey250
+    checkedColor: Color = SharaSpotColors.Primary,
+    uncheckedColor: Color = SharaSpotColors.TextDisabled
 ) {
     Switch(
         checked = checked(),
         onCheckedChange = onCheckedChange,
         colors = SwitchDefaults.colors(
-            uncheckedThumbColor = MyColors.white,
-            checkedThumbColor = MyColors.white,
+            uncheckedThumbColor = Color.White,
+            checkedThumbColor = Color.White,
             uncheckedTrackColor = uncheckedColor,
             checkedTrackColor = checkedColor,
             checkedBorderColor = Color.Transparent,

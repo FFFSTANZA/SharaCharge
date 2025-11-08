@@ -25,7 +25,7 @@ import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.LayoutDirectionAny
 import com.SharaSpot.ui.containers.LayoutDirectionLtr
 import com.SharaSpot.ui.components.MyTextDynamic
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Composable
 fun IndexedScreenHeader(
@@ -74,7 +74,7 @@ fun IndexedScreenHeader(
                     modifier = Modifier
                         .wrapContentSize()
                         .background(
-                            color = MyColors.viewColor2,
+                            color = SharaSpotColors.SurfaceVariant,
                             shape = RoundedCornerShape(16.dp)
                         )
                         .padding(horizontal = 12.dp, vertical = 4.dp)
@@ -87,7 +87,7 @@ fun IndexedScreenHeader(
                     )
                 }
             }
-            if (showDivider) HorizontalDivider(color = MyColors.dividerColor)
+            if (showDivider) HorizontalDivider(color = SharaSpotColors.Outline)
         }
     }
 }

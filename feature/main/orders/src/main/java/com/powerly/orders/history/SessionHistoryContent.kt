@@ -33,7 +33,7 @@ import com.SharaSpot.ui.containers.MyCardColum
 import com.SharaSpot.ui.containers.MyRefreshBox
 import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -127,7 +127,7 @@ private fun ItemSessionUser(
             checked = true,
             currency = session.currency
         )
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
         MyRow {
             Text(
                 text = session.chargePoint.title,
@@ -149,7 +149,7 @@ private fun ItemSessionUser(
                 title = R.string.station_recharge,
                 icon = R.drawable.charge,
                 border = null,
-                background = MyColors.viewColor,
+                background = SharaSpotColors.Surface,
                 color = MaterialTheme.colorScheme.secondary,
                 onClick = onRecharge
             )

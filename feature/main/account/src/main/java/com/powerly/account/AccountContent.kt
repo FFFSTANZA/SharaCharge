@@ -33,7 +33,7 @@ import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.components.SectionBalance
 import com.SharaSpot.ui.extensions.isArabic
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 
 @Preview(locale = "en")
@@ -75,7 +75,7 @@ internal fun AccountScreenContent(
         background = Color.White,
         spacing = 0.dp
     ) {
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
         if (isLoggedIn) SectionTab(
             icon = R.drawable.ic_sd_wallet,
             title = R.string.wallet,
@@ -191,5 +191,5 @@ private fun SectionAppVersion(version: String) {
         color = MaterialTheme.colorScheme.tertiary
     )
     Spacer(modifier = Modifier.height(8.dp))
-    HorizontalDivider(color = MyColors.dividerColor)
+    HorizontalDivider(color = SharaSpotColors.Outline)
 }

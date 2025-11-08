@@ -35,7 +35,7 @@ import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.containers.MySurface
 import com.SharaSpot.ui.containers.MySurfaceColumn
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlin.let
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -133,7 +133,7 @@ fun ItemConnector(
             .wrapContentHeight()
             .padding(vertical = 8.dp, horizontal = 8.dp),
         color = when {
-            isSelected() -> MyColors.blueLight2.copy(alpha = 0.5f)
+            isSelected() -> SharaSpotColors.InfoLight.copy(alpha = 0.5f)
             else -> Color.Transparent
         },
         cornerRadius = 8.dp,
@@ -214,7 +214,7 @@ fun StationIcon(
     Card(
         shape = RoundedCornerShape(4.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MyColors.viewColor
+            containerColor = SharaSpotColors.Surface
         )
     ) {
         Box(

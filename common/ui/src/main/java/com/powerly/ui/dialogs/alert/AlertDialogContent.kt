@@ -35,7 +35,7 @@ import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.screen.DialogHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors.borderColor
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -242,7 +242,7 @@ private fun SectionButtons(
                 color = MaterialTheme.colorScheme.secondary,
                 background = Color.White,
                 cornerRadius = 16.dp,
-                border = BorderStroke(1.dp, borderColor),
+                border = BorderStroke(1.dp, SharaSpotColors.Outline),
                 modifier = Modifier.weight(buttonWeight),
                 onClick = negativeButtonCallback
             )

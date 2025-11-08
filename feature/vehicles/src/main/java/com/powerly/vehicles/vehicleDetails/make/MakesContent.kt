@@ -45,8 +45,7 @@ import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.IndexedScreenHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
-import com.SharaSpot.ui.theme.MyColors.dividerColor
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -98,7 +97,7 @@ internal fun MakesScreenContent(
     onClose: () -> Unit
 ) {
     MyScreen(
-        background = MyColors.white,
+        background = Color.White,
         header = {
             IndexedScreenHeader (
                 index = index,
@@ -181,10 +180,10 @@ private fun SectionMakers(
             ),
             color = MaterialTheme.colorScheme.primary
         )
-        HorizontalDivider(thickness = 1.dp, color = dividerColor)
+        HorizontalDivider(thickness = 1.dp, color = SharaSpotColors.Outline)
         makers.forEach {
             ItemName(name = it.name, onClick = { onClick(it) })
-            HorizontalDivider(thickness = 1.dp, color = dividerColor)
+            HorizontalDivider(thickness = 1.dp, color = SharaSpotColors.Outline)
         }
     }
 }
@@ -273,12 +272,12 @@ internal fun SectionSearch(
                 Text(
                     text = stringResource(id = hint),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = MyColors.subColor
+                    color = SharaSpotColors.TextSecondary
                 )
             },
             colors = OutlinedTextFieldDefaults.colors(
                 focusedTextColor = MaterialTheme.colorScheme.secondary,
-                focusedPlaceholderColor = MyColors.subColor,
+                focusedPlaceholderColor = SharaSpotColors.TextSecondary,
                 focusedContainerColor = Color.Transparent,
                 unfocusedContainerColor = Color.Transparent,
                 focusedBorderColor = Color.Transparent,

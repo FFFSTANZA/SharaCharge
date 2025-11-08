@@ -32,7 +32,7 @@ import com.SharaSpot.ui.components.MySlidingPicker
 import com.SharaSpot.ui.components.PickerState
 import com.SharaSpot.ui.components.rememberPickerState
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -90,7 +90,7 @@ internal fun OptionsScreenContent(
                     text = stringResource(id = R.string.station_save_next),
                     icon = R.drawable.arrow_right,
                     background = MaterialTheme.colorScheme.secondary,
-                    color = MyColors.white,
+                    color = Color.White,
                 )
             }
         },
@@ -146,7 +146,7 @@ private fun SectionChargingType(
                     vertical = 16.dp
                 ),
                 spacing = 8.dp,
-                background = MyColors.viewColor
+                background = SharaSpotColors.Surface
             ) {
                 val select = stringResource(id = R.string.select)
                 Text(
@@ -248,7 +248,7 @@ private fun SectionColor(
                 vertical = 4.dp
             ),
             spacing = 8.dp,
-            background = MyColors.viewColor
+            background = SharaSpotColors.Surface
         ) {
 
             color?.let { color ->

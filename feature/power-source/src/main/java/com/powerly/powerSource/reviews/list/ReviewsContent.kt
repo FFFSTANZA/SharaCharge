@@ -47,7 +47,7 @@ import com.SharaSpot.ui.extensions.asPadding
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.flow.flow
 
 @Preview
@@ -167,7 +167,7 @@ private fun ItemReview(
             )
             var isHelpful by remember { mutableStateOf(false) }
             ButtonSmall(
-                background = MyColors.viewColor,
+                background = SharaSpotColors.Surface,
                 text = stringResource(id = R.string.station_reviews_helpful),
                 color = MaterialTheme.colorScheme.secondary,
                 padding = PaddingValues(horizontal = 4.dp),

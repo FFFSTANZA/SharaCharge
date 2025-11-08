@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Community stat data
@@ -39,7 +39,7 @@ fun CommunityStatsBar(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .background(MyColors.lightBlue)
+            .background(SharaSpotColors.InfoLight)
             .horizontalScroll(rememberScrollState())
             .padding(horizontal = 16.dp, vertical = 12.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
@@ -71,7 +71,7 @@ private fun StatCard(stat: CommunityStat) {
                 text = stat.text,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = MyColors.grey900
+                color = SharaSpotColors.OnBackground
             )
         }
     }

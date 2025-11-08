@@ -32,7 +32,7 @@ import com.SharaSpot.ui.dialogs.MyDialogState
 import com.SharaSpot.ui.dialogs.rememberMyDialogState
 import com.SharaSpot.ui.screen.DialogHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.SharaSpot.ui.theme.myBorder
 
 /**
@@ -62,7 +62,7 @@ fun SignInOptionsDialog(
         state=state,
         spacing = 16.dp,
         modifier = Modifier.padding(16.dp),
-        background = MyColors.grey100,
+        background = SharaSpotColors.SurfaceVariant,
         header = {
             DialogHeader(
                 title = "",

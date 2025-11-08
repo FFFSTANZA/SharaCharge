@@ -1,4 +1,5 @@
 package com.SharaSpot.charging
+import androidx.compose.ui.graphics.Color
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.horizontalScroll
@@ -43,7 +44,7 @@ import com.SharaSpot.ui.containers.MyRow
 import com.SharaSpot.ui.dialogs.MyDialog
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import java.util.Locale
 
 private val connectors = listOf(
@@ -142,7 +143,7 @@ fun ChargingDialog(
 
         ButtonLarge(
             text = stringResource(id = R.string.station_charging_start),
-            color = MyColors.white,
+            color = Color.White,
             background = MaterialTheme.colorScheme.secondary,
             icon = R.drawable.charge,
             layoutDirection = LayoutDirection.Rtl,
@@ -220,8 +221,8 @@ private fun ItemTime(
     onClick: () -> Unit
 ) {
     Surface(
-        color = if (selected) MyColors.blueLight
-        else MyColors.white,
+        color = if (selected) SharaSpotColors.InfoLight
+        else Color.White,
         shape = RoundedCornerShape(8.dp),
         modifier = Modifier.height(IntrinsicSize.Min),
         onClick = onClick
@@ -303,7 +304,7 @@ fun StationIcon(
     Card(
         shape = RoundedCornerShape(4.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MyColors.viewColor
+            containerColor = SharaSpotColors.Surface
         )
     ) {
         Box(

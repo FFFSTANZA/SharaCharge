@@ -41,7 +41,7 @@ import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.extensions.isPreview
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
 import com.journeyapps.barcodescanner.DefaultDecoderFactory
@@ -193,7 +193,7 @@ private fun SectionCameraPermission(
         ButtonText(
             text = stringResource(id = R.string.camera_permission_message),
             background = MaterialTheme.colorScheme.secondary,
-            color = MyColors.white,
+            color = Color.White,
             onClick = onRequestCamera
         )
     }

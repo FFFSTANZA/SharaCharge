@@ -27,7 +27,7 @@ import com.SharaSpot.ui.components.SlidingCarousel
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.containers.MySurfaceColumn
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 
 @Preview(locale = "ar")
@@ -62,7 +62,7 @@ internal fun SectionSlider(
     Box(Modifier.fillMaxWidth()) {
         SlidingCarousel(
             indicatorSelectedColor = MaterialTheme.colorScheme.secondary,
-            indicatorUnSelectedColor = MyColors.grey250,
+            indicatorUnSelectedColor = SharaSpotColors.TextDisabled,
             itemsCount = slides.size,
             itemContent = { index ->
                 val slide = slides.getOrNull(index) ?: slides[0]

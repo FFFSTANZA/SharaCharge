@@ -178,4 +178,80 @@ object SharaSpotColors {
      * Used for: Light elevation, subtle depth
      */
     val ShadowLight = Color(0x0D000000)
+
+    // ========== Premium Enhancement Colors ==========
+
+    /**
+     * Gradient Start - Primary gradient start
+     * Used for: Premium gradient backgrounds, CTAs
+     */
+    val GradientStart = Color(0xFF00D563)
+
+    /**
+     * Gradient End - Primary gradient end
+     * Used for: Premium gradient backgrounds
+     */
+    val GradientEnd = Color(0xFF00A844)
+
+    /**
+     * Shimmer Base - Shimmer effect base color
+     * Used for: Loading states, skeleton screens
+     */
+    val ShimmerBase = Color(0xFFE0E0E0)
+
+    /**
+     * Shimmer Highlight - Shimmer effect highlight
+     * Used for: Loading state highlights
+     */
+    val ShimmerHighlight = Color(0xFFF5F5F5)
+
+    /**
+     * Glass Background - Frosted glass effect
+     * Used for: Modal overlays, floating panels
+     */
+    val GlassBackground = Color(0xF0FFFFFF)
+
+    /**
+     * Scrim - Modal overlay scrim
+     * Used for: Dialog backgrounds, bottom sheet overlays
+     */
+    val Scrim = Color(0x99000000)
+
+    /**
+     * Premium Accent - Gold/Premium accent color
+     * Used for: Premium features, highlights
+     */
+    val PremiumAccent = Color(0xFFFFD700)
+
+    // ========== Legacy Color Mappings (for migration) ==========
+
+    /**
+     * @Deprecated Use SharaSpotColors.Background instead
+     */
+    @Deprecated("Use SharaSpotColors.Background", ReplaceWith("SharaSpotColors.Background"))
+    val White = Color.White
+
+    /**
+     * @Deprecated Use SharaSpotColors.TextSecondary instead
+     */
+    @Deprecated("Use SharaSpotColors.TextSecondary", ReplaceWith("SharaSpotColors.TextSecondary"))
+    val SubColor = Color(0xFF757575)
+
+    /**
+     * @Deprecated Use SharaSpotColors.Surface instead
+     */
+    @Deprecated("Use SharaSpotColors.Surface", ReplaceWith("SharaSpotColors.Surface"))
+    val ViewColor = Color(0xFFFAFAFA)
+
+    /**
+     * @Deprecated Use SharaSpotColors.Outline instead
+     */
+    @Deprecated("Use SharaSpotColors.Outline", ReplaceWith("SharaSpotColors.Outline"))
+    val BorderColor = Color(0xFFE0E0E0)
+
+    /**
+     * @Deprecated Use SharaSpotColors.Outline instead
+     */
+    @Deprecated("Use SharaSpotColors.Outline", ReplaceWith("SharaSpotColors.Outline"))
+    val DividerColor = Color(0xFFE0E0E0)
 }

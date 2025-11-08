@@ -40,7 +40,7 @@ import com.SharaSpot.ui.components.MyIcon
 import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -152,7 +152,7 @@ private fun SectionBalance(balanceItem: BalanceItem) {
                 enabled = { false }
             )
         }
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
         ItemBalance(
             title = R.string.balance_add,
             value = balanceItem.price,

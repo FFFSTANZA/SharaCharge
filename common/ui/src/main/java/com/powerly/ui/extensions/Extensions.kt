@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.Dp
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Composable
 fun isArabic(): Boolean = Locale.current.language.contains("ar")
@@ -29,6 +29,6 @@ fun Modifier.thenIf(
 ): Modifier = if (condition) this.then(case1) else this.then(case2)
 
 val Dp.asPadding: PaddingValues get() = PaddingValues(this)
-val Dp.asBorder: BorderStroke get() = BorderStroke(this, MyColors.borderColor)
+val Dp.asBorder: BorderStroke get() = BorderStroke(this, SharaSpotColors.Outline)
 
 

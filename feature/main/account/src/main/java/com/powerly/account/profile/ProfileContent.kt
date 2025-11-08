@@ -56,7 +56,7 @@ import com.SharaSpot.ui.dialogs.rememberMyDialogState
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -289,7 +289,7 @@ private fun SectionTop(
                     ButtonText(
                         text = stringResource(id = R.string.logout_title),
                         background = Color.Transparent,
-                        color = MyColors.red500,
+                        color = SharaSpotColors.Error,
                         fontSize = 16.sp,
                         onClick = onSignOut,
                         modifier = Modifier.width(IntrinsicSize.Max)

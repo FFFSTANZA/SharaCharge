@@ -39,7 +39,7 @@ import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 
@@ -155,9 +155,9 @@ private fun SectionPinCode(
             textFontSize = 16.sp,
             fontColor = MaterialTheme.colorScheme.secondary,
             focusedCellBorderColor = MaterialTheme.colorScheme.primary,
-            cellBackgroundColor = MyColors.grey200,
-            cellColorOnSelect = MyColors.grey200,
-            cellBorderColor = MyColors.grey200,
+            cellBackgroundColor = SharaSpotColors.Outline,
+            cellColorOnSelect = SharaSpotColors.Outline,
+            cellBorderColor = SharaSpotColors.Outline,
             cellShape = RoundedCornerShape(8.dp),
             onPinEntered = onEnter,
             style = ComposePinInputStyle.BOX
@@ -224,7 +224,7 @@ internal fun SectionCounter(
             Spacer(Modifier.height(16.dp))
             ButtonSmall(
                 text = stringResource(id = R.string.login_need_help),
-                background = MyColors.grey200,
+                background = SharaSpotColors.Outline,
                 color = MaterialTheme.colorScheme.secondary,
                 height = 36.dp,
                 fontSize = 14.sp,

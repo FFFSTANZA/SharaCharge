@@ -20,7 +20,7 @@ import com.SharaSpot.ui.screen.MyScreen
 import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.extensions.asPadding
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -61,7 +61,7 @@ internal fun UpdateAppScreenContent(
         MyIcon(
             icon = R.drawable.ic_alert,
             modifier = Modifier.size(150.dp),
-            tint = MyColors.red
+            tint = SharaSpotColors.Error
         )
         Text(
             text = appVersion,

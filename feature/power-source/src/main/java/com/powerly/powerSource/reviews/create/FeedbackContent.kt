@@ -41,7 +41,7 @@ import com.SharaSpot.core.data.model.ReviewOptionsStatus
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.containers.LayoutDirectionLtr
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import com.SharaSpot.ui.containers.MyColumn
 import com.SharaSpot.ui.components.MyTextField
 import com.SharaSpot.ui.dialogs.ProgressView
@@ -132,7 +132,7 @@ internal fun FeedbackScreenContent(
             Text(
                 text = stringResource(id = R.string.feedback_msg),
                 style = MaterialTheme.typography.bodyLarge,
-                color = MyColors.subColor
+                color = SharaSpotColors.TextSecondary
             )
 
             SectionEmojis(
@@ -184,7 +184,7 @@ internal fun FeedbackScreenContent(
                 onClick = { onDone(feedback!!.id, reason) },
                 text = stringResource(id = R.string.done),
                 background = MaterialTheme.colorScheme.secondary,
-                color = MyColors.white
+                color = Color.White
             )
         }
     }
@@ -210,7 +210,7 @@ private fun SectionEmojis(
                     .size(50.dp)
                     .background(
                         shape = CircleShape,
-                        color = if (emoji?.id == it.id) MyColors.blueLight
+                        color = if (emoji?.id == it.id) SharaSpotColors.InfoLight
                         else Color.Transparent
                     )
 
@@ -278,7 +278,7 @@ private fun ChipItem(
         border = BorderStroke(
             width = 2.dp,
             color = if (isSelected) MaterialTheme.colorScheme.primary
-            else MyColors.borderColor
+            else SharaSpotColors.Outline
         ),
         modifier = Modifier.clickable(onClick = onClick)
     ) {

@@ -33,7 +33,8 @@ import com.SharaSpot.ui.screen.ScreenHeader
 import com.SharaSpot.ui.components.ButtonLarge
 import com.SharaSpot.ui.components.NetworkImage
 import com.SharaSpot.ui.dialogs.MyProgressView
-import com.SharaSpot.ui.theme.MyColors
+import androidx.compose.ui.graphics.Color
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 private const val TAG = "ConnectorsDialog"
 
@@ -65,7 +66,7 @@ internal fun ConnectorsScreenContent(
     onClose: () -> Unit
 ) {
     MyScreen(
-        background = MyColors.white,
+        background = Color.White,
         header = {
             ScreenHeader(
                 title = stringResource(id = R.string.station_plugs),
@@ -143,7 +144,7 @@ private fun ItemConnector(
             else R.drawable.ic_add,
             enabled = { isSelected.not() },
             background = MaterialTheme.colorScheme.secondary,
-            color = MyColors.white,
+            color = Color.White,
         )
     }
 }

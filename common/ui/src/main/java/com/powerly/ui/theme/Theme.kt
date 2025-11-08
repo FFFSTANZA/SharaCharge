@@ -87,7 +87,7 @@ private fun ConfigureSystemBars(darkTheme: Boolean) {
     val window = LocalActivity.current?.window
     if (view.isInEditMode.not() && window != null) {
         SideEffect {
-            val systemBarsColor = if (darkTheme) MyColors.background.toArgb()
+            val systemBarsColor = if (darkTheme) SharaSpotColors.Background.toArgb()
             else Color.White.toArgb()
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.VANILLA_ICE_CREAM) {
                 window.statusBarColor = systemBarsColor

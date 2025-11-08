@@ -30,7 +30,7 @@ import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -148,6 +148,6 @@ private fun ItemCard(
                 onClick = onClick
             )
         }
-        HorizontalDivider(color = MyColors.dividerColor)
+        HorizontalDivider(color = SharaSpotColors.Outline)
     }
 }

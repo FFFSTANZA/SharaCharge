@@ -38,7 +38,7 @@ import com.SharaSpot.ui.dialogs.loading.ScreenState
 import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.extensions.onClick
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 private const val TAG = "WithdrawScreenContent"
 
@@ -137,7 +137,7 @@ private fun Footer(
             enabled = withdrawEnabled,
             color = Color.White,
             modifier = Modifier.fillMaxWidth(),
-            disabledBackground = MyColors.grey500,
+            disabledBackground = SharaSpotColors.TextSecondary,
             background = MaterialTheme.colorScheme.secondary,
             onClick = { uiEvents(WithdrawEvents.Withdraw) }
         )

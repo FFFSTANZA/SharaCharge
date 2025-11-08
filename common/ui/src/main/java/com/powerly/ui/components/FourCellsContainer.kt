@@ -20,7 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.SharaSpot.ui.theme.MyColors
+import androidx.compose.ui.graphics.Color
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /***
  *  [ cell1 ][ cell2 ]
@@ -39,7 +40,7 @@ fun FourCellsContainer(
             .fillMaxWidth()
             .wrapContentHeight(),
         colors = CardDefaults.cardColors(
-            containerColor = MyColors.white
+            containerColor = Color.White
         ),
         shape = RoundedCornerShape(8.dp)
     ) {
@@ -54,7 +55,7 @@ fun FourCellsContainer(
             ) {
                 ItemRow(cell1, cell2)
                 HorizontalDivider(
-                    color = MyColors.dividerColor,
+                    color = SharaSpotColors.Outline,
                     modifier = Modifier.fillMaxWidth(),
                     thickness = 1.dp
                 )
@@ -83,7 +84,7 @@ private fun ColumnScope.ItemRow(
             content = cell1,
         )
         VerticalDivider(
-            color = MyColors.dividerColor,
+            color = SharaSpotColors.Outline,
             modifier = Modifier.fillMaxHeight(),
             thickness = 1.dp
         )

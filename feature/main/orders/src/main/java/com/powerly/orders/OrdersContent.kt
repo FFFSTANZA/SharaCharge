@@ -52,7 +52,7 @@ import com.SharaSpot.ui.dialogs.loading.rememberScreenState
 import com.SharaSpot.ui.dialogs.message.MessageDialog
 import com.SharaSpot.ui.dialogs.success.SuccessDialog
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 import kotlinx.coroutines.launch
 
 @Preview
@@ -215,8 +215,8 @@ internal fun SessionItemTitle(
 @Composable
 fun SessionButton(
     @StringRes title: Int,
-    background: Color = MyColors.OrderStatus.Cancelled,
-    color: Color = MyColors.white,
+    background: Color = SharaSpotColors.Error,
+    color: Color = Color.White,
     onClick: () -> Unit
 ) {
     ButtonSmall(

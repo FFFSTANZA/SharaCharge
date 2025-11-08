@@ -34,7 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.SharaSpot.resources.R
 import com.SharaSpot.ui.containers.LayoutDirectionAny
 import com.SharaSpot.ui.theme.AppTheme
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 @Preview
 @Composable
@@ -102,8 +102,8 @@ fun ScreenHeader(
                             text = title,
                             textAlign = textAlign,
                             modifier = Modifier.fillMaxWidth(),
-                            style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.secondary,
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.onBackground,
                             overflow = if (singleLine) TextOverflow.Ellipsis
                             else TextOverflow.Clip,
                             maxLines = if (singleLine) 1 else Int.MAX_VALUE
@@ -140,7 +140,7 @@ fun ScreenHeader(
                     }
                 }
             )
-            if (showDivider) HorizontalDivider(color = MyColors.dividerColor)
+            if (showDivider) HorizontalDivider(color = SharaSpotColors.Outline)
         }
     }
 }
@@ -188,8 +188,8 @@ fun DialogHeader(
                         text = title,
                         textAlign = textAlign,
                         modifier = Modifier.weight(1f),
-                        style = MaterialTheme.typography.titleMedium,
-                        color = MaterialTheme.colorScheme.secondary,
+                        style = MaterialTheme.typography.titleLarge,
+                        color = MaterialTheme.colorScheme.onBackground,
                         overflow = if (singleLine) TextOverflow.Ellipsis
                         else TextOverflow.Clip,
                         maxLines = if (singleLine) 1 else Int.MAX_VALUE
@@ -204,7 +204,7 @@ fun DialogHeader(
                     )
                 }
             }
-            if (showDivider) HorizontalDivider(color = MyColors.dividerColor)
+            if (showDivider) HorizontalDivider(color = SharaSpotColors.Outline)
         }
     }
 }

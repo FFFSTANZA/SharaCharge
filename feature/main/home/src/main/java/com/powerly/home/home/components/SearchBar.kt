@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.SharaSpot.resources.R
-import com.SharaSpot.ui.theme.MyColors
+import com.SharaSpot.ui.theme.SharaSpotColors
 
 /**
  * Compact search bar for home screen
@@ -34,7 +34,7 @@ fun CompactSearchBar(
         modifier = modifier
             .fillMaxWidth()
             .background(
-                color = MyColors.grey50,
+                color = SharaSpotColors.Surface,
                 shape = RoundedCornerShape(12.dp)
             )
             .clickable(onClick = onClick)
@@ -45,7 +45,7 @@ fun CompactSearchBar(
             painter = painterResource(id = R.drawable.ic_search),
             contentDescription = "Search",
             modifier = Modifier.size(20.dp),
-            tint = MyColors.grey700
+            tint = SharaSpotColors.TextSecondary
         )
 
         Spacer(modifier = Modifier.width(12.dp))
@@ -53,7 +53,7 @@ fun CompactSearchBar(
         Text(
             text = "Search chargers, locations...",
             style = MaterialTheme.typography.bodyMedium,
-            color = MyColors.grey700
+            color = SharaSpotColors.TextSecondary
         )
 
         Spacer(modifier = Modifier.weight(1f))
