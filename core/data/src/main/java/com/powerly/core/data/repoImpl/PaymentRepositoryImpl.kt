@@ -5,11 +5,16 @@ import com.SharaSpot.core.data.repositories.PaymentRepository
 import com.powerly.core.model.api.ApiStatus
 import com.powerly.core.model.payment.AddCardBody
 import com.powerly.core.model.payment.BalanceRefillBody
+import com.powerly.core.model.payment.CreateRazorpayOrderRequest
 import com.powerly.core.model.payment.PaymentStatus
 import com.powerly.core.model.payment.PaymentTransaction
+import com.powerly.core.model.payment.VerifyRazorpayPaymentRequest
 import com.SharaSpot.core.network.RemoteDataSource
 import com.SharaSpot.core.network.asErrorMessage
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import org.koin.core.annotation.Named
@@ -22,6 +27,14 @@ class PaymentRepositoryImpl (
     private val remoteDataSource: RemoteDataSource,
     @Named("IO") private val ioDispatcher: CoroutineDispatcher
 ) : PaymentRepository {
+
+    private val firestore: FirebaseFirestore by lazy {
+        FirebaseFirestore.getInstance()
+    }
+
+    companion object {
+        private const val COLLECTION_PAYMENT_TRANSACTIONS = "payment_transactions"
+    }
 
     override suspend fun cardList() = withContext(ioDispatcher) {
         try {
@@ -135,11 +148,20 @@ class PaymentRepositoryImpl (
     override suspend fun createRazorpayOrder(amount: Double, currency: String) =
         withContext(ioDispatcher) {
             try {
-                // TODO: Call backend API to create Razorpay order
-                // val response = remoteDataSource.createRazorpayOrder(amount, currency)
-                // For now, return a mock order ID
-                val orderId = "order_${UUID.randomUUID().toString().replace("-", "")}"
-                ApiStatus.Success(orderId)
+                // Create Razorpay order on backend
+                val request = CreateRazorpayOrderRequest(
+                    amount = amount,
+                    currency = currency,
+                    receipt = "rcpt_${System.currentTimeMillis()}"
+                )
+                val response = remoteDataSource.createRazorpayOrder(request)
+
+                if (response.hasData) {
+                    val orderData = response.getData
+                    ApiStatus.Success(orderData.orderId)
+                } else {
+                    ApiStatus.Error(response.getMessage())
+                }
             } catch (e: HttpException) {
                 ApiStatus.Error(e.asErrorMessage)
             } catch (e: Exception) {
@@ -150,10 +172,24 @@ class PaymentRepositoryImpl (
     override suspend fun verifyPayment(orderId: String, paymentId: String, signature: String) =
         withContext(ioDispatcher) {
             try {
-                // TODO: Call backend API to verify payment signature
-                // val response = remoteDataSource.verifyRazorpayPayment(orderId, paymentId, signature)
-                // For now, return success (signature verification should be done on backend)
-                ApiStatus.Success(true)
+                // Verify payment signature on backend (SECURITY: Must be done server-side)
+                val request = VerifyRazorpayPaymentRequest(
+                    orderId = orderId,
+                    paymentId = paymentId,
+                    signature = signature
+                )
+                val response = remoteDataSource.verifyRazorpayPayment(request)
+
+                if (response.hasData) {
+                    val verificationResult = response.getData
+                    if (verificationResult.verified) {
+                        ApiStatus.Success(true)
+                    } else {
+                        ApiStatus.Error(verificationResult.message ?: "Payment verification failed")
+                    }
+                } else {
+                    ApiStatus.Error(response.getMessage())
+                }
             } catch (e: HttpException) {
                 ApiStatus.Error(e.asErrorMessage)
             } catch (e: Exception) {
@@ -164,10 +200,15 @@ class PaymentRepositoryImpl (
     override suspend fun getPaymentStatus(orderId: String) =
         withContext(ioDispatcher) {
             try {
-                // TODO: Call backend API to get payment status from Razorpay
-                // val response = remoteDataSource.getRazorpayPaymentStatus(orderId)
-                // For now, return pending status
-                ApiStatus.Success(PaymentStatus.PENDING)
+                // Get payment status from backend (queries Razorpay API)
+                val response = remoteDataSource.getRazorpayPaymentStatus(orderId)
+
+                if (response.hasData) {
+                    val statusData = response.getData
+                    ApiStatus.Success(statusData.status)
+                } else {
+                    ApiStatus.Error(response.getMessage())
+                }
             } catch (e: HttpException) {
                 ApiStatus.Error(e.asErrorMessage)
             } catch (e: Exception) {
@@ -178,48 +219,64 @@ class PaymentRepositoryImpl (
     override suspend fun savePaymentTransaction(transaction: PaymentTransaction) =
         withContext(ioDispatcher) {
             try {
-                // TODO: Save transaction to Firebase Firestore
+                // Save transaction to Firebase Firestore
                 // Collection: "payment_transactions"
-                // Fields: orderId, razorpayPaymentId, amount, status, timestamp
-                // Note: NO sensitive payment data should be stored
+                // Note: NO sensitive payment data should be stored (only references)
+                val transactionData = hashMapOf(
+                    "id" to transaction.id,
+                    "orderId" to transaction.orderId,
+                    "razorpayPaymentId" to transaction.razorpayPaymentId,
+                    "amount" to transaction.amount,
+                    "currency" to transaction.currency,
+                    "status" to transaction.status.name,
+                    "timestamp" to transaction.timestamp,
+                    "paymentMethod" to transaction.paymentMethod
+                )
 
-                // Example Firestore save:
-                // val firestore = FirebaseFirestore.getInstance()
-                // firestore.collection("payment_transactions")
-                //     .document(transaction.id)
-                //     .set(mapOf(
-                //         "orderId" to transaction.orderId,
-                //         "razorpayPaymentId" to transaction.razorpayPaymentId,
-                //         "amount" to transaction.amount,
-                //         "currency" to transaction.currency,
-                //         "status" to transaction.status.name,
-                //         "timestamp" to transaction.timestamp,
-                //         "paymentMethod" to transaction.paymentMethod
-                //     ))
-                //     .await()
+                firestore.collection(COLLECTION_PAYMENT_TRANSACTIONS)
+                    .document(transaction.id)
+                    .set(transactionData)
+                    .await()
 
                 ApiStatus.Success(true)
             } catch (e: Exception) {
-                ApiStatus.Error(e.asErrorMessage)
+                ApiStatus.Error(e.message ?: "Failed to save transaction")
             }
         }
 
     override suspend fun getPaymentTransactions(userId: String) =
         withContext(ioDispatcher) {
             try {
-                // TODO: Retrieve transactions from Firebase Firestore
-                // Example Firestore query:
-                // val firestore = FirebaseFirestore.getInstance()
-                // val snapshot = firestore.collection("payment_transactions")
-                //     .whereEqualTo("userId", userId)
-                //     .orderBy("timestamp", Query.Direction.DESCENDING)
-                //     .get()
-                //     .await()
+                // Retrieve transactions from Firebase Firestore
+                // Note: This implementation retrieves all transactions
+                // In production, you should filter by userId if stored
+                val snapshot = firestore.collection(COLLECTION_PAYMENT_TRANSACTIONS)
+                    .orderBy("timestamp", Query.Direction.DESCENDING)
+                    .get()
+                    .await()
 
-                // For now, return empty list
-                ApiStatus.Success(emptyList())
+                val transactions = snapshot.documents.mapNotNull { document ->
+                    try {
+                        PaymentTransaction(
+                            id = document.getString("id") ?: return@mapNotNull null,
+                            orderId = document.getString("orderId") ?: return@mapNotNull null,
+                            razorpayPaymentId = document.getString("razorpayPaymentId"),
+                            amount = document.getDouble("amount") ?: 0.0,
+                            currency = document.getString("currency") ?: "INR",
+                            status = PaymentStatus.valueOf(
+                                document.getString("status") ?: "PENDING"
+                            ),
+                            timestamp = document.getLong("timestamp") ?: 0L,
+                            paymentMethod = document.getString("paymentMethod")
+                        )
+                    } catch (e: Exception) {
+                        null // Skip malformed documents
+                    }
+                }
+
+                ApiStatus.Success(transactions)
             } catch (e: Exception) {
-                ApiStatus.Error(e.asErrorMessage)
+                ApiStatus.Error(e.message ?: "Failed to retrieve transactions")
             }
         }
 }

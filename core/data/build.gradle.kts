@@ -18,4 +18,8 @@ dependencies {
     implementation(libs.paging.runtime.ktx)
     implementation(libs.squareup.retrofit)
     api(libs.squareup.converter.gson)
+
+    // Firebase Firestore for transaction storage
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.firestore)
 }

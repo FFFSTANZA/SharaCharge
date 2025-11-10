@@ -1,5 +1,6 @@
 package com.SharaSpot.core.data.repoImpl
 
+import android.util.Log
 import com.SharaSpot.core.data.model.CurrenciesStatus
 import com.SharaSpot.core.data.repositories.AppRepository
 import com.SharaSpot.core.database.LocalDataSource
@@ -20,6 +21,10 @@ class AppRepositoryImpl(
     @Named("IO") private val ioDispatcher: CoroutineDispatcher
 ) : AppRepository {
 
+    companion object {
+        private const val TAG = "AppRepositoryImpl"
+    }
+
     override suspend fun getCountries() = withContext(ioDispatcher) {
         try {
             val localCounties = localDataSource.getCountries()
@@ -34,10 +39,10 @@ class AppRepositoryImpl(
                 } else ApiStatus.Error(response.getMessage())
             }
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "HttpException in getCountries: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Exception in getCountries: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }
@@ -72,10 +77,10 @@ class AppRepositoryImpl(
             if (response.isSuccess) ApiStatus.Success(true)
             else ApiStatus.Error(response.getMessage())
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "HttpException in getCountries: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Exception in getCountries: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }
