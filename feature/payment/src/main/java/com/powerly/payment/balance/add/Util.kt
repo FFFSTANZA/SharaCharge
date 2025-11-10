@@ -18,17 +18,20 @@ internal fun paymentMethodDetails(
         when {
             card.isUpi -> {
                 title = "UPI"
-                icon = R.drawable.ic_payment_cash_logo // TODO: Replace with UPI icon
+                // Note: Using generic cash icon. Add specific UPI icon to resources for branding
+                icon = R.drawable.ic_payment_cash_logo
                 return Pair(title, icon)
             }
             card.isNetBanking -> {
                 title = "Net Banking"
-                icon = R.drawable.icon_card // TODO: Replace with Net Banking icon
+                // Note: Using card icon as placeholder. Add specific net banking icon if needed
+                icon = R.drawable.icon_card
                 return Pair(title, icon)
             }
             card.isWallet -> {
                 title = card.paymentOption // e.g., "Paytm", "Mobikwik"
-                icon = R.drawable.ic_payment_balance // TODO: Replace with Wallet icon
+                // Note: Using balance icon. Add wallet-specific icons for different providers
+                icon = R.drawable.ic_payment_balance
                 return Pair(title, icon)
             }
         }

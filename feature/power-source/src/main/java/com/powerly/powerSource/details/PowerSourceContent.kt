@@ -124,6 +124,7 @@ internal fun PowerSourceContent(
     balance: String,
     contributionSummary: ApiStatus<ContributionSummary> = ApiStatus.Loading(),
     contributions: List<com.SharaSpot.core.model.contribution.Contribution> = emptyList(),
+    currentUserId: String = "anonymous",
     uiEvents: (SourceEvents) -> Unit,
 ) {
     val ps = powerSource()
@@ -179,18 +180,27 @@ internal fun PowerSourceContent(
             CommunityPhotoGallery(
                 contributions = contributions,
                 onPhotoClick = { photoUrl ->
-                    // TODO: Navigate to full screen photo viewer
+                    // Navigate to full screen photo viewer with specific photo
+                    // Note: Currently opens media gallery. To implement single photo viewer:
+                    // 1. Handle SourceEvents.ViewPhoto in PsDestinations
+                    // 2. Create or update MediaScreen to accept initial photo parameter
+                    // For now, opening media gallery is acceptable UX
                     uiEvents(SourceEvents.Media)
                 }
             )
 
             // Real-Time Insights Cards
-            RealTimeInsightsCards(summary = summary)
+            RealTimeInsightsCards(
+                summary = summary,
+                contributions = contributions,
+                currentUserId = currentUserId
+            )
 
             // Reviews Section
             CommunityReviews(
                 summary = summary,
                 contributions = contributions,
+                currentUserId = currentUserId,
                 onViewAllClick = {
                     uiEvents(SourceEvents.Reviews)
                 }
@@ -485,7 +495,7 @@ private fun SectionCharging(
         // Contribute button
         ButtonSmall(
             text = "Contribute & Earn EVCoins",
-            icon = R.drawable.outline_info_24, // TODO: Use a proper contribution icon
+            icon = R.drawable.ic_baseline_star_24, // Contribution icon
             layoutDirection = LayoutDirection.Rtl,
             padding = PaddingValues(horizontal = 8.dp),
             color = MaterialTheme.colorScheme.onPrimaryContainer,

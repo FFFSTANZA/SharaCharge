@@ -13,4 +13,9 @@ sealed class SourceEvents() {
     data class CAll(val contact: String?) : SourceEvents()
     data class DriveToStation(val target: Target) : SourceEvents()
 
+    /**
+     * View a specific photo in full screen
+     * @param photoUrl URL of the photo to display
+     */
+    data class ViewPhoto(val photoUrl: String) : SourceEvents()
 }

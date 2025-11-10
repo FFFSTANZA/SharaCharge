@@ -185,15 +185,20 @@ private fun UpiAppItem(
 
 /**
  * Get UPI app icon based on package name
- * TODO: Replace with actual app icons
+ *
+ * Note: Currently using placeholder icons. To add actual app icons:
+ * 1. Download official app icons from respective UPI providers
+ * 2. Add them to common/resources/src/main/res/drawable/
+ * 3. Update the mappings below with actual resource IDs
+ * 4. Ensure icons are properly licensed for use
  */
 private fun getUpiAppIcon(packageName: String): Int {
     return when (packageName) {
-        "com.phonepe.app" -> R.drawable.ic_payment_cash_logo // TODO: PhonePe icon
-        "com.google.android.apps.nbu.paisa.user" -> R.drawable.ic_payment_cash_logo // TODO: Google Pay icon
-        "net.one97.paytm" -> R.drawable.ic_payment_balance // TODO: Paytm icon
-        "in.org.npci.upiapp" -> R.drawable.ic_payment_cash_logo // TODO: BHIM icon
-        "in.amazon.mShop.android.shopping" -> R.drawable.ic_payment_cash_logo // TODO: Amazon Pay icon
+        "com.phonepe.app" -> R.drawable.ic_payment_cash_logo // Placeholder for PhonePe
+        "com.google.android.apps.nbu.paisa.user" -> R.drawable.ic_payment_cash_logo // Placeholder for Google Pay
+        "net.one97.paytm" -> R.drawable.ic_payment_balance // Placeholder for Paytm
+        "in.org.npci.upiapp" -> R.drawable.ic_payment_cash_logo // Placeholder for BHIM
+        "in.amazon.mShop.android.shopping" -> R.drawable.ic_payment_cash_logo // Placeholder for Amazon Pay
         else -> R.drawable.ic_payment_cash_logo
     }
 }

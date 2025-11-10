@@ -60,6 +60,12 @@ class PsViewModel (
     private val _contributions = MutableStateFlow<List<Contribution>>(emptyList())
     val contributions = _contributions.asStateFlow()
 
+    /**
+     * Current logged-in user ID from StorageManager
+     */
+    val currentUserId: String
+        get() = storageManager.userId?.toString() ?: "anonymous"
+
     fun userLocation() = locationManager.getLastLocation()
 
     /**

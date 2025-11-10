@@ -27,6 +27,7 @@ import java.util.Calendar
 @Single
 class ContributionRepositoryImpl(
     @Named("IO") private val ioDispatcher: CoroutineDispatcher,
+    private val storageManager: com.powerly.lib.managers.StorageManager,
     // Uncomment when Firebase is available:
     // private val firestore: FirebaseFirestore,
     // private val storage: FirebaseStorage,
@@ -223,9 +224,9 @@ class ContributionRepositoryImpl(
     override suspend fun createContribution(request: CreateContributionRequest): ApiStatus<Contribution> =
         withContext(ioDispatcher) {
             try {
-                // TODO: Replace with actual Firebase user data
-                val userId = "mock_user_id"
-                val userName = "Mock User"
+                // Get actual user data from StorageManager
+                val userId = storageManager.userId?.toString() ?: "unknown_user"
+                val userName = storageManager.userDetails?.fullName ?: "Anonymous User"
 
                 val contribution = Contribution(
                     id = UUID.randomUUID().toString(),
