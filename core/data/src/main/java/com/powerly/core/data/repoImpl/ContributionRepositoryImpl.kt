@@ -11,7 +11,7 @@ import com.SharaSpot.core.network.asErrorMessage
 import com.powerly.core.model.reliability.ReliabilityScore
 import com.powerly.core.model.reliability.calculateReliabilityScore
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.tasks.await
+// import kotlinx.coroutines.tasks.await // Commented out - not used without Firebase
 import kotlinx.coroutines.withContext
 import org.koin.core.annotation.Named
 import org.koin.core.annotation.Single
@@ -439,17 +439,17 @@ class ContributionRepositoryImpl(
         try {
             // Find the contribution
             val contribution = contributions.find { it.id == contributionId }
-                ?: return@withContext ApiStatus.Error("Contribution not found")
+                ?: return@withContext ApiStatus.Error("Contribution not found".asErrorMessage)
 
             // Check if user is trying to validate their own contribution
             if (contribution.userId == userId) {
-                return@withContext ApiStatus.Error("Cannot validate your own contribution")
+                return@withContext ApiStatus.Error("Cannot validate your own contribution".asErrorMessage)
             }
 
             // Check daily limit
             val dailyCount = getDailyValidationCountSync(userId)
             if (dailyCount >= ValidationRewards.MAX_VALIDATIONS_PER_DAY) {
-                return@withContext ApiStatus.Error("Daily validation limit reached")
+                return@withContext ApiStatus.Error("Daily validation limit reached".asErrorMessage)
             }
 
             // Update contribution with validation
