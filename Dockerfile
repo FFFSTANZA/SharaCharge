@@ -55,12 +55,15 @@ RUN echo "sdk.dir=${ANDROID_SDK_ROOT}" > /workspace/local.properties && \
 # Make gradlew executable
 RUN chmod +x ./gradlew
 
-# Configure Gradle daemon with sufficient memory to prevent crashes
+# Configure Gradle daemon with optimized memory settings for Docker
+# Using 2GB max heap to prevent OOM in resource-constrained environments
 RUN mkdir -p ${GRADLE_USER_HOME} && \
-    echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g -XX:+HeapDumpOnOutOfMemoryError -XX:+UseParallelGC" >> ${GRADLE_USER_HOME}/gradle.properties && \
+    echo "org.gradle.jvmargs=-Xmx2g -Xms512m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -XX:+UseParallelGC -XX:+UseStringDeduplication -XX:ReservedCodeCacheSize=256m" >> ${GRADLE_USER_HOME}/gradle.properties && \
     echo "org.gradle.daemon=true" >> ${GRADLE_USER_HOME}/gradle.properties && \
     echo "org.gradle.parallel=true" >> ${GRADLE_USER_HOME}/gradle.properties && \
-    echo "org.gradle.caching=true" >> ${GRADLE_USER_HOME}/gradle.properties
+    echo "org.gradle.caching=true" >> ${GRADLE_USER_HOME}/gradle.properties && \
+    echo "org.gradle.configuration-cache=false" >> ${GRADLE_USER_HOME}/gradle.properties && \
+    echo "org.gradle.worker.max=2" >> ${GRADLE_USER_HOME}/gradle.properties
 
 # Pre-download Gradle wrapper and dependencies (optional, speeds up builds)
 RUN ./gradlew --version || true
@@ -80,7 +83,9 @@ RUN echo '#!/bin/bash' > /entrypoint.sh && \
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Default command: build the project
-CMD ["./gradlew", "clean", "build"]
+# Using --no-daemon for Docker builds to avoid daemon issues
+# Using --no-configuration-cache to prevent cache directory errors
+CMD ["./gradlew", "clean", "build", "--no-daemon", "--no-configuration-cache", "--stacktrace"]
 
 # Usage:
 # Build image: docker build -t sharacharge-build .
