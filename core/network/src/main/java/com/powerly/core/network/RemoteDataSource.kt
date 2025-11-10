@@ -10,6 +10,11 @@ import com.powerly.core.model.payment.BalanceRefillResponse
 import com.powerly.core.model.payment.BalancesResponse
 import com.powerly.core.model.payment.CardUpdateResponse
 import com.powerly.core.model.payment.CardsResponse
+import com.powerly.core.model.payment.CreateRazorpayOrderApiResponse
+import com.powerly.core.model.payment.CreateRazorpayOrderRequest
+import com.powerly.core.model.payment.RazorpayPaymentStatusApiResponse
+import com.powerly.core.model.payment.VerifyRazorpayPaymentApiResponse
+import com.powerly.core.model.payment.VerifyRazorpayPaymentRequest
 import com.powerly.core.model.payment.WalletsResponse
 import com.powerly.core.model.payment.WithdrawResponse
 import com.powerly.core.model.powerly.ChargingResponse
@@ -78,6 +83,12 @@ private object ApiEndPoints {
 
     const val PAYOUTS = "payouts"
     const val PAYOUTS_REQUEST = "payouts/request-payout"
+
+    // Razorpay Integration Endpoints
+    const val RAZORPAY_CREATE_ORDER = "payments/razorpay/order"
+    const val RAZORPAY_VERIFY_PAYMENT = "payments/razorpay/verify"
+    const val RAZORPAY_PAYMENT_STATUS = "payments/razorpay/status/{order_id}"
+    const val RAZORPAY_WEBHOOK = "webhooks/razorpay"
 
     /**
      * Authentication & User
@@ -423,4 +434,56 @@ interface RemoteDataSource {
 
     @POST(ApiEndPoints.PAYOUTS_REQUEST)
     suspend fun walletPayout(): WithdrawResponse
+
+    /**
+     * Razorpay Integration
+     * Reference: feature/payment/RAZORPAY_INTEGRATION.md
+     */
+
+    /**
+     * Create a Razorpay order on the backend
+     *
+     * This endpoint creates a Razorpay order with the specified amount and returns
+     * the order ID that will be used to initialize the Razorpay checkout.
+     *
+     * @param request Contains amount (in rupees), currency, receipt, and optional notes
+     * @return Order ID, amount in paise, currency, and status
+     */
+    @Headers("Content-Type: application/json")
+    @POST(ApiEndPoints.RAZORPAY_CREATE_ORDER)
+    suspend fun createRazorpayOrder(
+        @Body request: CreateRazorpayOrderRequest
+    ): CreateRazorpayOrderApiResponse
+
+    /**
+     * Verify Razorpay payment signature
+     *
+     * SECURITY: Signature verification MUST be done on the backend for security.
+     * The signature is generated using HMAC SHA256 with the Razorpay key secret.
+     * This prevents client-side tampering and ensures payment authenticity.
+     *
+     * @param request Contains order_id, payment_id, and signature from Razorpay callback
+     * @return Verification result, payment status, transaction ID, and updated balance
+     */
+    @Headers("Content-Type: application/json")
+    @POST(ApiEndPoints.RAZORPAY_VERIFY_PAYMENT)
+    suspend fun verifyRazorpayPayment(
+        @Body request: VerifyRazorpayPaymentRequest
+    ): VerifyRazorpayPaymentApiResponse
+
+    /**
+     * Get payment status from Razorpay
+     *
+     * Retrieves the current status of a payment by querying the Razorpay API
+     * on the backend. Used for polling payment status or recovering from
+     * interrupted payment flows.
+     *
+     * @param orderId The Razorpay order ID
+     * @return Payment status, payment ID, amount, and error details if failed
+     */
+    @Headers("Content-Type: application/json")
+    @GET(ApiEndPoints.RAZORPAY_PAYMENT_STATUS)
+    suspend fun getRazorpayPaymentStatus(
+        @Path("order_id") orderId: String
+    ): RazorpayPaymentStatusApiResponse
 }

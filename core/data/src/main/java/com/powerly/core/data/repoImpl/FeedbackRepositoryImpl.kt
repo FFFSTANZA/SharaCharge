@@ -1,5 +1,6 @@
 package com.SharaSpot.core.data.repoImpl
 
+import android.util.Log
 import com.SharaSpot.core.data.model.ReviewOptionsStatus
 import com.SharaSpot.core.data.repositories.FeedbackRepository
 import com.powerly.core.model.api.ApiStatus
@@ -19,6 +20,10 @@ class FeedbackRepositoryImpl(
     @Named("IO") private val ioDispatcher: CoroutineDispatcher
 ) : FeedbackRepository {
 
+    companion object {
+        private const val TAG = "FeedbackRepositoryImpl"
+    }
+
     override val reviewOptions = flow {
         try {
             val response = remoteDataSource.reviewOptions()
@@ -29,7 +34,7 @@ class FeedbackRepositoryImpl(
         } catch (e: HttpException) {
             emit(ReviewOptionsStatus.Error(e.asErrorMessage))
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             emit(ReviewOptionsStatus.Error(e.asErrorMessage))
         }
     }
@@ -50,7 +55,7 @@ class FeedbackRepositoryImpl(
         } catch (e: HttpException) {
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }
@@ -63,7 +68,7 @@ class FeedbackRepositoryImpl(
         } catch (e: HttpException) {
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }

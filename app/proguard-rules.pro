@@ -28,3 +28,34 @@
 -assumenosideeffects class android.util.Log {
     public static *** *(...);
 }
+
+# Razorpay SDK ProGuard Rules
+# Keep all Razorpay classes
+-keep class com.razorpay.** { *; }
+
+# Keep annotations
+-keepattributes *Annotation*
+
+# Keep Razorpay SDK resources
+-keep class com.razorpay.RzpTokenReceiver { *; }
+-keep class com.razorpay.Checkout { *; }
+-keep class com.razorpay.PaymentResultListener { *; }
+-keep class com.razorpay.PaymentResultWithDataListener { *; }
+-keep class com.razorpay.PaymentData { *; }
+
+# Keep native methods
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# OkHttp platform used by Razorpay
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+
+# Gson rules for Razorpay (if not already covered)
+-keep class com.google.gson.stream.** { *; }
+
+# Keep payment models used with Razorpay
+-keep class com.powerly.core.model.payment.** { *; }

@@ -1,5 +1,6 @@
 package com.SharaSpot.core.data.repoImpl
 
+import android.util.Log
 import com.SharaSpot.core.data.model.MakersStatus
 import com.SharaSpot.core.data.model.ModelsStatus
 import com.SharaSpot.core.data.repositories.VehiclesRepository
@@ -21,16 +22,20 @@ class VehiclesRepositoryImpl (
     @Named("IO") private val ioDispatcher: CoroutineDispatcher
 ) : VehiclesRepository {
 
+    companion object {
+        private const val TAG = "VehiclesRepositoryImpl"
+    }
+
     override suspend fun vehiclesList() = withContext(ioDispatcher) {
         try {
             val response = remoteDataSource.vehiclesList()
             if (response.hasData) ApiStatus.Success(response.getData.orEmpty())
             else ApiStatus.Error(response.getMessage())
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }
@@ -59,10 +64,10 @@ class VehiclesRepositoryImpl (
             if (response.hasData) ApiStatus.Success(true)
             else ApiStatus.Error(response.getMessage())
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }
@@ -73,10 +78,10 @@ class VehiclesRepositoryImpl (
             if (response.isSuccess) ApiStatus.Success(true)
             else ApiStatus.Error(response.getMessage())
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ApiStatus.Error(e.asErrorMessage)
         }
     }
@@ -92,10 +97,10 @@ class VehiclesRepositoryImpl (
             if (response.hasData) MakersStatus.Success(makersMap)
             else MakersStatus.Error(response.getMessage())
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             MakersStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             MakersStatus.Error(e.asErrorMessage)
         }
     }
@@ -107,10 +112,10 @@ class VehiclesRepositoryImpl (
                 ModelsStatus.Success(response.getData.orEmpty().sortedBy { it.name })
             else ModelsStatus.Error(response.getMessage())
         } catch (e: HttpException) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ModelsStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ModelsStatus.Error(e.asErrorMessage)
         }
     }

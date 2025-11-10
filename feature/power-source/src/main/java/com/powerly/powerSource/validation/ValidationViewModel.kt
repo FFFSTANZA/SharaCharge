@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.SharaSpot.core.data.repositories.ContributionRepository
 import com.SharaSpot.core.data.repositories.LeaderboardPeriod
+import com.SharaSpot.core.data.repositories.UserRepository
 import com.SharaSpot.core.data.repositories.ValidationStats
 import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
 import com.powerly.core.model.api.ApiStatus
@@ -20,11 +21,16 @@ import org.koin.android.annotation.KoinViewModel
  */
 @KoinViewModel
 class ValidationViewModel(
-    private val contributionRepository: ContributionRepository
+    private val contributionRepository: ContributionRepository,
+    private val userRepository: UserRepository
 ) : ViewModel() {
 
-    // Current user ID (TODO: Get from auth repository)
-    private val currentUserId = "current_user"
+    // Current user ID - fetched from UserRepository
+    private var currentUserId: String = ""
+        get() {
+            // Fallback to empty string if not initialized
+            return field
+        }
 
     private val _validationState = MutableStateFlow<ValidationState>(ValidationState.Idle)
     val validationState: StateFlow<ValidationState> = _validationState.asStateFlow()
@@ -39,6 +45,13 @@ class ValidationViewModel(
     val topValidators: StateFlow<ApiStatus<List<ValidatorLeaderboardEntry>>> = _topValidators.asStateFlow()
 
     init {
+        // Initialize current user ID
+        viewModelScope.launch {
+            val userResult = userRepository.getUserDetails()
+            if (userResult is ApiStatus.Success) {
+                currentUserId = userResult.data.id.toString()
+            }
+        }
         loadValidationStats()
         loadDailyValidationCount()
     }

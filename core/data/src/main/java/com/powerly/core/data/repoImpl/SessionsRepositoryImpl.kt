@@ -1,5 +1,6 @@
 package com.SharaSpot.core.data.repoImpl
 
+import android.util.Log
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import com.SharaSpot.core.data.model.ChargingStatus
@@ -20,6 +21,10 @@ class SessionsRepositoryImpl (
     private val remoteDataSource: RemoteDataSource,
     @Named("IO") private val ioDispatcher: CoroutineDispatcher
 ) : SessionsRepository {
+
+    companion object {
+        private const val TAG = "SessionsRepositoryImpl"
+    }
 
     /**
      * Charging
@@ -42,7 +47,7 @@ class SessionsRepositoryImpl (
         } catch (e: HttpException) {
             ChargingStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ChargingStatus.Error(e.asErrorMessage)
         }
     }
@@ -64,7 +69,7 @@ class SessionsRepositoryImpl (
         } catch (e: HttpException) {
             ChargingStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ChargingStatus.Error(e.asErrorMessage)
         }
     }
@@ -81,7 +86,7 @@ class SessionsRepositoryImpl (
         } catch (e: HttpException) {
             ChargingStatus.Error(e.asErrorMessage)
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Error: ${e.message}", e)
             ChargingStatus.Error(e.asErrorMessage)
         }
     }

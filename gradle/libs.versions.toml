@@ -110,6 +110,7 @@ maps-compose-utils = { module = "com.google.maps.android:maps-compose-utils", ve
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore-ktx" }
 
 # Network
 squareup-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
