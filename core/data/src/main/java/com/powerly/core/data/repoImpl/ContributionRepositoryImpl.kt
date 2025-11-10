@@ -8,6 +8,7 @@ import com.SharaSpot.core.data.repositories.ValidatorLeaderboardEntry
 import com.powerly.core.model.api.ApiStatus
 import com.powerly.core.model.contribution.*
 import com.SharaSpot.core.network.asErrorMessage
+import com.powerly.core.model.util.asErrorMessage
 import com.powerly.core.model.reliability.ReliabilityScore
 import com.powerly.core.model.reliability.calculateReliabilityScore
 import kotlinx.coroutines.CoroutineDispatcher
