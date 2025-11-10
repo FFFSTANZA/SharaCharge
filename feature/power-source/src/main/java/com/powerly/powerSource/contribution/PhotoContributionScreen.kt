@@ -1,5 +1,6 @@
 package com.SharaSpot.powerSource.contribution
 
+import android.content.Context
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -10,11 +11,14 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.FileProvider
 import com.powerly.core.model.contribution.PhotoCategory
 import com.SharaSpot.ui.dialogs.MyBasicBottomSheet
+import java.io.File
 
 /**
  * Screen for adding photo contributions
@@ -25,6 +29,7 @@ fun PhotoContributionScreen(
     viewModel: ContributionViewModel,
     onDismiss: () -> Unit
 ) {
+    val context = LocalContext.current
     var selectedCategory by remember { mutableStateOf<PhotoCategory?>(null) }
     var selectedImageUri by remember { mutableStateOf<Uri?>(null) }
 
@@ -103,10 +108,11 @@ fun PhotoContributionScreen(
                 ) {
                     Button(
                         onClick = {
-                            // TODO: Create temp file for camera
-                            // cameraLauncher.launch(tempUri)
-                            // For now, use gallery
-                            galleryLauncher.launch("image/*")
+                            // Create temp file for camera
+                            selectedImageUri = createTempImageUri(context)
+                            selectedImageUri?.let { uri ->
+                                cameraLauncher.launch(uri)
+                            }
                         },
                         modifier = Modifier.weight(1f)
                     ) {
@@ -122,5 +128,31 @@ fun PhotoContributionScreen(
                 }
             }
         }
+    }
+}
+
+/**
+ * Creates a temporary URI for camera capture using FileProvider
+ */
+private fun createTempImageUri(context: Context): Uri? {
+    return try {
+        val timeStamp = System.currentTimeMillis()
+        val imageFileName = "JPEG_${timeStamp}_"
+        val storageDir = context.cacheDir
+
+        val imageFile = File.createTempFile(
+            imageFileName,
+            ".jpg",
+            storageDir
+        )
+
+        FileProvider.getUriForFile(
+            context,
+            "${context.packageName}.fileprovider",
+            imageFile
+        )
+    } catch (e: Exception) {
+        e.printStackTrace()
+        null
     }
 }

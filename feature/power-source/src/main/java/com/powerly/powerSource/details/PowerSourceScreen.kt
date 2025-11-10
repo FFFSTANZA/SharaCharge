@@ -89,6 +89,7 @@ fun PowerSourceScreen(
         balance = balance,
         contributionSummary = contributionSummaryState,
         contributions = contributions,
+        currentUserId = viewModel.currentUserId,
         uiEvents = { event ->
             when (event) {
                 is SourceEvents.CAll -> {

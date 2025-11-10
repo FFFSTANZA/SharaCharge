@@ -187,12 +187,19 @@ private fun PhotoCard(
 
 /**
  * Reviews section with average rating and recent reviews
+ *
+ * @param summary Contribution summary containing aggregated review data
+ * @param contributions List of all contributions for this charger
+ * @param currentUserId Current logged-in user's ID (from StorageManager.userId)
+ * @param onValidate Callback when user validates/invalidates a contribution
+ * @param onViewAllClick Callback when "View All Reviews" is clicked
+ * @param modifier Optional modifier for this composable
  */
 @Composable
 fun CommunityReviews(
     summary: ContributionSummary,
     contributions: List<Contribution>,
-    currentUserId: String = "current_user", // TODO: Get from auth
+    currentUserId: String = "anonymous",
     onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> },
     onViewAllClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -233,7 +240,7 @@ fun CommunityReviews(
                     color = MaterialTheme.colorScheme.primary
                 )
                 Icon(
-                    painter = painterResource(id = R.drawable.outline_info_24), // TODO: Use star icon
+                    painter = painterResource(id = R.drawable.ic_baseline_star_24),
                     contentDescription = "Rating",
                     tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(20.dp)
@@ -274,10 +281,17 @@ fun CommunityReviews(
     }
 }
 
+/**
+ * Review card component displaying a single review with validation options
+ *
+ * @param contribution The contribution/review to display
+ * @param currentUserId Current logged-in user's ID (from StorageManager.userId)
+ * @param onValidate Callback when user validates/invalidates this contribution
+ */
 @Composable
 private fun ReviewCard(
     contribution: Contribution,
-    currentUserId: String = "current_user", // TODO: Get from auth
+    currentUserId: String = "anonymous",
     onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> }
 ) {
     Column(
@@ -345,13 +359,19 @@ private fun ReviewCard(
 }
 
 /**
- * Real-time insights cards
+ * Real-time insights cards showing wait time, plug status, and availability
+ *
+ * @param summary Contribution summary containing latest real-time data
+ * @param contributions List of all contributions for validation lookup
+ * @param currentUserId Current logged-in user's ID (from StorageManager.userId)
+ * @param onValidate Callback when user validates/invalidates a contribution
+ * @param modifier Optional modifier for this composable
  */
 @Composable
 fun RealTimeInsightsCards(
     summary: ContributionSummary,
     contributions: List<Contribution> = emptyList(),
-    currentUserId: String = "current_user", // TODO: Get from auth
+    currentUserId: String = "anonymous",
     onValidate: (contributionId: String, isValidation: Boolean) -> Unit = { _, _ -> },
     modifier: Modifier = Modifier
 ) {
