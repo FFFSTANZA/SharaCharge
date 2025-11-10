@@ -37,7 +37,7 @@ mapsComposeUtilsVersion = "6.11.0"
 pagingComposeVersion = "3.3.6"
 coilComposeVersion = "2.7.0"
 ## Google
-firebaseBom = "33.7.0"
+firebaseBom = "33.1.0"
 googlePlaces = "4.4.1"
 playServicesLocation = "21.3.0"
 ## Third Parties
