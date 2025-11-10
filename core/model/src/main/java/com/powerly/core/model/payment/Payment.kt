@@ -6,6 +6,11 @@ import com.google.gson.annotations.SerializedName
 class CardsResponse : BaseResponse<List<PaymentCard>>()
 class CardUpdateResponse : BaseResponse<Any>()
 
+// Request body for adding a card
+data class AddCardBody(
+    @SerializedName("token") val token: String
+)
+
 // Razorpay Configuration
 data class RazorpayConfig(
     val keyId: String,
