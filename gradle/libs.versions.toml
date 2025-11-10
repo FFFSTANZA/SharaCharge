@@ -37,8 +37,7 @@ mapsComposeUtilsVersion = "6.11.0"
 pagingComposeVersion = "3.3.6"
 coilComposeVersion = "2.7.0"
 ## Google
-firebaseBom = "34.3.0"
-firebaseMessaging = "25.0.1"
+firebaseBom = "33.7.0"
 googlePlaces = "4.4.1"
 playServicesLocation = "21.3.0"
 ## Third Parties
@@ -108,7 +107,7 @@ maps-compose-utils = { module = "com.google.maps.android:maps-compose-utils", ve
 
 # Firebase
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
-firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 firebase-firestore = { module = "com.google.firebase:firebase-firestore-ktx" }
 

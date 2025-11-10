@@ -29,6 +29,8 @@ dependencies {
     api(libs.kotlinx.datetime)
     implementation(libs.navigation.compose)
 
+    // Firebase
+    gmsImplementation(platform(libs.firebase.bom))
     gmsImplementation(libs.firebase.messaging)
 
     // Search places
