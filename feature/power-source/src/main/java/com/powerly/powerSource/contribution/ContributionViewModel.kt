@@ -213,10 +213,12 @@ class ContributionViewModel(
 
     /**
      * Validates a contribution
+     * Note: This method needs userId and isValidation parameters.
+     * Consider using ValidationViewModel instead for proper validation flow.
      */
-    fun validateContribution(contributionId: String) {
+    fun validateContribution(contributionId: String, userId: String, isValidation: Boolean) {
         viewModelScope.launch {
-            contributionRepository.validateContribution(contributionId)
+            contributionRepository.validateContribution(contributionId, userId, isValidation)
         }
     }
 
