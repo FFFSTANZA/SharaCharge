@@ -1,0 +1,25 @@
+# Prevent local development files from being copied to Docker
+local.properties
+
+# Gradle build artifacts
+.gradle/
+build/
+*/build/
+.gradletasknamecache
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Local secrets and configurations
+*.jks
+*.keystore
+secrets.properties
+
+# Git
+.git/
+.gitignore
+.gitattributes
