@@ -27,7 +27,7 @@ import java.util.Calendar
 @Single
 class ContributionRepositoryImpl(
     @Named("IO") private val ioDispatcher: CoroutineDispatcher,
-    private val storageManager: com.powerly.lib.managers.StorageManager,
+    private val storageManager: com.SharaSpot.lib.managers.StorageManager,
     // Uncomment when Firebase is available:
     // private val firestore: FirebaseFirestore,
     // private val storage: FirebaseStorage,
